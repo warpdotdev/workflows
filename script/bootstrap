@@ -1,7 +1,4 @@
 #!/bin/sh
-#
-# Run this script once to prepare your machine to develop Warp. This script is
-# a work in progress, and may be incomplete.
 
 set -e
 
