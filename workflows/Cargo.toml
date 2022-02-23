@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-warp-workflows-metadata = {path = "../metadata"}
+warp-workflows-types = {path = "../workflow-types" }
 
 [build-dependencies]
 anyhow = "1.0.55"
@@ -13,4 +13,4 @@ memmap = "0.7.0"
 serde_yaml = "0.8.23"
 uneval = {git = "https://github.com/warpdotdev/uneval", rev = "df4d9fad372aedc447e6f93ca0f930fabaf9dd1a"}
 walkdir = "2.3.2"
-warp-workflows-metadata = {path = "../metadata"}
+warp-workflows-types = {path = "../workflow-types" }

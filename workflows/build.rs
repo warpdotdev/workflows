@@ -2,37 +2,16 @@ use anyhow::Result;
 use convert_case::{Case, Casing};
 use std::fs::File;
 use std::io::Write;
+use std::process::Command;
 use walkdir::WalkDir;
-use warp_workflows_metadata::Workflow;
+use warp_workflows_types::Workflow;
 
-/**
-Workflow
-name: String
-accepted_shells: [String], optional
-tags: [String], optional (necessary for commands.dev)
-command: String
-description: String, optional
-arguments: [Argument], optional
-Attribution source: String, optional
-Author: String, required
-
-Argument:
-name: String
-identifier: String
-description: String?, optional
-default_value: String?, optional
-
-**/
-
-
-/// Generates completions specs as rust files from the json stored in /json. Each command signature
-/// is stored within its own mod within the commands module. Additionally, a function called
-/// `signatures` is generated on the commands mod that returns a vector of all the `Signature`s that
-/// were created.
+/// Generates Workflows as rust files from the yaml stored in /specs. Each Workflow is stored within
+/// its own mod within the `generated_workflows` module. Additionally, a function called `workflows`
+/// is generated that returns a vector of all the `Workflow`s that were created.
 fn main() -> Result<()> {
     println!("cargo:rerun-if-changed=../specs");
 
-    // Create a commands module that will contain all of the signatures.
     std::fs::create_dir_all("src/generated_workflows")?;
     let parent_module = std::fs::File::create("src/generated_workflows/mod.rs")?;
 
@@ -47,9 +26,8 @@ fn main() -> Result<()> {
             let mmap = unsafe { memmap::Mmap::map(&file) }?;
             let yaml_content = std::str::from_utf8(&mmap)?;
 
-            let workflow : Workflow = serde_yaml::from_str(yaml_content)?;
+            let workflow: Workflow = serde_yaml::from_str(yaml_content)?;
             println!("generated workflow is {:?}", workflow);
-
 
             let file_name = entry
                 .file_name()
@@ -59,7 +37,7 @@ fn main() -> Result<()> {
                 .to_case(Case::Snake);
             println!("file name is {:?}", file_name);
 
-            // Create a module for each signature within the parent commands file.
+            // Create a module for each Workflow within the parent module.
             workflows_added.push(file_name.clone());
 
             write_workflow(workflow, file_name.as_str())?;
@@ -70,30 +48,35 @@ fn main() -> Result<()> {
 
     write_workflows_function(parent_module, &mut workflows_added)?;
 
+    Command::new("cargo")
+        .arg("fmt")
+        .current_dir("src/generated_workflows/")
+        .output()?;
+
     Ok(())
 }
 
-/// Writes a `signatures` function into the module at path `parent_modules`. The generated function
-/// will look approximated like:
+/// Writes a `workflowz` function into the module at path `parent_modules`. The generated function
+/// will look approximately like:
 /// ```ignore
 /// use warp_workflows_metadata::*;
-/// pub fn signatures() -> Vec<Signature> {
+/// pub fn workflows() -> Vec<Workflow> {
 ///     vec![
-///         foo::signature(),
-///         bar::signature(),
-///         bazz:signature(),
+///         foo::workflow(),
+///         bar::workflow(),
+///         bazz:workflow(),
 ///     ]
 /// }
 /// ```
 fn write_workflows_function(
     mut parent_module: File,
-    signatures_added: &mut Vec<String>,
+    workflows_added: &mut Vec<String>,
 ) -> Result<()> {
-    writeln!(parent_module, "\nuse warp_workflows_metadata::*;")?;
+    writeln!(parent_module, "\nuse warp_workflows_types::*;")?;
     writeln!(parent_module, "pub fn workflows() -> Vec<Workflow> {{")?;
     writeln!(parent_module, "vec![")?;
-    for signature in signatures_added {
-        writeln!(parent_module, "{}::workflow(),", signature)?;
+    for workflows in workflows_added {
+        writeln!(parent_module, "{}::workflow(),", workflows)?;
     }
     writeln!(parent_module, "]")?;
     writeln!(parent_module, "}}")?;
@@ -101,12 +84,12 @@ fn write_workflows_function(
     Ok(())
 }
 
-/// Writes a signature into the path at `src/commands/<file_name>.rs`. The generated Rust will look
-/// like:
+/// Writes a Workflow into the path at `src/generated_workflows/<file_name>.rs`. The generated Rust
+/// will look like:
 /// ```ignore
 /// use warp_workflows_metadata::*;
-/// pub fn signature -> Signature {
-///    Signature {
+/// pub fn workflow -> Workflow {
+///    Workflow {
 ///      ...
 ///    }
 /// }
@@ -114,14 +97,9 @@ fn write_workflows_function(
 fn write_workflow(workflow: Workflow, file_name: &str) -> Result<()> {
     let module = std::fs::File::create(&format!("src/generated_workflows/{}.rs", file_name))?;
 
-    writeln!(&module, "use warp_workflows_metadata::*;")?;
-    writeln!(&module, "\n#[allow(clippy::invisible_characters)]")?;
+    writeln!(&module, "use warp_workflows_types::*;")?;
     writeln!(&module, r#"pub fn workflow() -> Workflow {{"#)?;
-    writeln!(
-        &module,
-        "{}",
-        uneval::to_string(workflow)?
-    )?;
+    writeln!(&module, "{}", uneval::to_string(workflow)?)?;
     writeln!(&module, "}}")?;
 
     Ok(())
