@@ -48,15 +48,15 @@ fn main() -> Result<()> {
 
     write_workflows_function(parent_module, &mut workflows_added)?;
 
+    println!("running cargo fmt...");
     Command::new("cargo")
-        .arg("fmt")
-        .current_dir("src/generated_workflows/")
+        .args(["fmt", "-p", "warp-workflows"])
         .output()?;
 
     Ok(())
 }
 
-/// Writes a `workflowz` function into the module at path `parent_modules`. The generated function
+/// Writes a `workflows` function into the module at path `parent_modules`. The generated function
 /// will look approximately like:
 /// ```ignore
 /// use warp_workflows_metadata::*;
