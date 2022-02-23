@@ -18,7 +18,7 @@ pub struct Workflow {
     pub description: Option<String>,
     #[serde(default)]
     pub arguments: Vec<Argument>,
-    pub source: Option<String>,
+    pub source_url: Option<String>,
     pub author: Option<String>,
     pub author_url: Option<String>,
     #[serde(default)]
@@ -33,7 +33,7 @@ impl Workflow {
             command,
             description: None,
             arguments: vec![],
-            source: None,
+            source_url: None,
             author: None,
             author_url: None,
             shells: vec![],
@@ -60,11 +60,11 @@ impl Workflow {
         &self.arguments
     }
 
-    pub fn source(&self) -> &Option<String> {
-        &self.source
+    pub fn source_url(&self) -> &Option<String> {
+        &self.source_url
     }
 
-    pub fn author(&self) -> &Option<String> {
+    pub fn author_name(&self) -> &Option<String> {
         &self.author
     }
 
@@ -76,7 +76,6 @@ impl Workflow {
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Argument {
     pub name: String,
-    pub identifier: String,
     pub description: Option<String>,
     pub default_value: Option<String>,
 }
@@ -84,10 +83,6 @@ pub struct Argument {
 impl Argument {
     pub fn name(&self) -> &str {
         &self.name
-    }
-
-    pub fn identifier(&self) -> &str {
-        &self.identifier
     }
 
     pub fn description(&self) -> &Option<String> {

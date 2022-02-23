@@ -4,10 +4,10 @@ command: "while $CONDITION; do\n\t$COMMAND\ndone"
 arguments:
   -
     name: "condition"
-    identifier: "$CONDITION"
+    description: "The condition for the while loop"
   -
     name: "command"
-    identifier: "$COMMAND"
+    description: "The command to execute within the while loop"
 
 
 author: "Warp Team"
