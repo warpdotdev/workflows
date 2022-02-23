@@ -1,0 +1,14 @@
+name: "While loop"
+tags: ["shell"]
+command: "while $CONDITION; do\n\t$COMMAND\ndone"
+arguments:
+  -
+    name: "condition"
+    identifier: "$CONDITION"
+  -
+    name: "command"
+    identifier: "$COMMAND"
+
+
+author: "Warp Team"
+shells: ["bash", "zsh"]

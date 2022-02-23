@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# Run this script once to prepare your machine to develop Warp. This script is
+# a work in progress, and may be incomplete.
+
+set -e
+
+if ! command -v brew; then
+    echo "Installing brew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo "Please make sure brew is set correctly in your PATH"
+    exit 1
+fi
+
+if ! command -v cargo; then
+    echo "Installing rust..."
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    echo "Please start a new terminal session so that cargo is in your PATH"
+    exit 1
+fi
+
+cargo install cargo-bundle
+cargo install cargo-diff-tools --git https://github.com/warpdotdev/cargo-diff-tools
+
+# Update brew
+brew update
+
+rustup component add clippy
