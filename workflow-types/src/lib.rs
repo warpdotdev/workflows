@@ -25,6 +25,7 @@ pub struct Workflow {
     #[builder(setter(into, strip_option), default)]
     pub description: Option<String>,
     #[serde(default)]
+    #[builder(default)]
     pub arguments: Vec<Argument>,
     #[builder(setter(into, strip_option), default)]
     pub source_url: Option<String>,
