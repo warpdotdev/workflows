@@ -1,6 +1,6 @@
 name: "While loop"
 tags: ["shell"]
-command: "while $CONDITION; do\n\t$COMMAND\ndone"
+command: "while {{condition}}; do\n\t{{command}}\ndone"
 arguments:
   -
     name: "condition"
