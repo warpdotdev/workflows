@@ -1,5 +1,3 @@
-const yaml = require("js-yaml");
-
 export interface Workflow {
   slug: WorkflowSlug;
   name: string;
