@@ -1,6 +1,3 @@
-#[macro_use]
-extern crate derive_builder;
-
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
@@ -13,28 +10,19 @@ pub enum Shell {
     Zsh,
 }
 
-#[derive(Builder, Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Workflow {
-    #[builder(setter(into))]
     pub name: String,
-    #[builder(setter(into))]
     pub command: String,
     #[serde(default)]
-    #[builder(default)]
     pub tags: Vec<String>,
-    #[builder(setter(into, strip_option), default)]
     pub description: Option<String>,
     #[serde(default)]
-    #[builder(default)]
     pub arguments: Vec<Argument>,
-    #[builder(setter(into, strip_option), default)]
     pub source_url: Option<String>,
-    #[builder(setter(into, strip_option), default)]
     pub author: Option<String>,
-    #[builder(setter(into, strip_option), default)]
     pub author_url: Option<String>,
     #[serde(default)]
-    #[builder(default)]
     pub shells: Vec<Shell>,
 }
 
@@ -91,13 +79,10 @@ impl Workflow {
     }
 }
 
-#[derive(Builder, Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Argument {
-    #[builder(setter(into))]
     pub name: String,
-    #[builder(setter(into, strip_option), default)]
     pub description: Option<String>,
-    #[builder(setter(into, strip_option), default)]
     pub default_value: Option<String>,
 }
 
