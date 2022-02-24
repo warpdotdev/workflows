@@ -15,7 +15,9 @@ pub enum Shell {
 
 #[derive(Builder, Clone, Debug, Deserialize, Serialize)]
 pub struct Workflow {
+    #[builder(setter(into))]
     pub name: String,
+    #[builder(setter(into))]
     pub command: String,
     #[serde(default)]
     #[builder(default)]
@@ -71,6 +73,7 @@ impl Workflow {
 
 #[derive(Builder, Clone, Debug, Deserialize, Serialize)]
 pub struct Argument {
+    #[builder(setter(into))]
     pub name: String,
     #[builder(setter(into, strip_option), default)]
     pub description: Option<String>,
