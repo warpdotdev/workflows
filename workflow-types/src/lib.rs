@@ -106,6 +106,7 @@ impl Argument {
         Argument {
             description: None,
             name: name.into(),
+            default_value: None
         }
     }
 
