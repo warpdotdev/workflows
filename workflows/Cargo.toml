@@ -10,7 +10,7 @@ warp-workflows-types = {path = "../workflow-types" }
 anyhow = "1.0"
 convert_case = "0.4.0"
 memmap = "0.7.0"
-serde_yaml = "0.8.23"
+serde_yaml = "0.8"
 uneval = {git = "https://github.com/warpdotdev/uneval", rev = "df4d9fad372aedc447e6f93ca0f930fabaf9dd1a"}
 walkdir = "2.3.2"
 warp-workflows-types = {path = "../workflow-types" }
