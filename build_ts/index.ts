@@ -18,9 +18,9 @@ export interface Argument {
 }
 
 export const enum Shell {
-  Bash,
-  Fish,
-  Zsh,
+  Bash = "bash",
+  Fish = "fish",
+  Zsh = "zsh",
 }
 
 export type WorkflowSlug = string;
@@ -39,10 +39,10 @@ export const WORKFLOWS = new Map<WorkflowSlug, Workflow>();
 
 requireContext.keys().forEach((key: string) => {
   const obj = requireContext(key);
-  const simpleKey = getFileNameOnly(key);
+  const slug = getFileNameOnly(key);
   let workflow = {
     ...obj,
-    slug: simpleKey,
+    slug,
   } as Workflow;
-  WORKFLOWS.set(simpleKey, workflow);
+  WORKFLOWS.set(slug, workflow);
 });
