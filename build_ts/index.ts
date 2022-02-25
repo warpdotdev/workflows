@@ -29,13 +29,15 @@ function getFileNameOnly(filePath: string) : string {
   return filePath.split("/").pop()!.split(".")!.shift()!;
 }
 
+export const WORKFLOWS = new Map<WorkflowSlug, Workflow>();
+
+// Using Webpack, dynamically load all the YAML files in the `specs` directory
+// as Javascript objects and store the objects within the `WORKFLOWS` map.
 const requireContext = require.context(
   "yaml-loader!../specs",
   false,
   /\.ya?ml$/
 );
-
-export const WORKFLOWS = new Map<WorkflowSlug, Workflow>();
 
 requireContext.keys().forEach((key: string) => {
   const obj = requireContext(key);
