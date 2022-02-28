@@ -1,0 +1,14 @@
+---
+name: Squash last n commits together
+command: "git reset --soft HEAD~{{num_commits}} &&\ngit commit"
+tags:
+  - git
+description: Squash the last n commits together into a single commit
+arguments:
+  - name: num_commits
+    description: The number of commits that should be squashed together
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git"
+author: Chris Johnsen
+author_url: "https://stackoverflow.com/users/193688/chris-johnsen"
+shells: []

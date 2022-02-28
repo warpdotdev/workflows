@@ -1,0 +1,17 @@
+---
+name: Reset file back to git revision
+command: "git reset {{commit_hash}} {{file_name}}"
+tags:
+  - git
+description: Reset the file back to a previous commit hash
+arguments:
+  - name: commit_hash
+    description: The commit hash the file should be restored to
+    default_value: ~
+  - name: file_name
+    description: The file that should be restored
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/215718/how-can-i-reset-or-revert-a-file-to-a-specific-revision"
+author: Chris Lloyd
+author_url: "https://stackoverflow.com/users/42413/chris-lloyd"
+shells: []

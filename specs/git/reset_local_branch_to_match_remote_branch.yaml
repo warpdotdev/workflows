@@ -1,0 +1,14 @@
+---
+name: Reset local branch to match remote branch
+command: "git fetch origin\ngit reset --hard {{ branch }}"
+tags:
+  - git
+description: Reset the current local branch to match the remote branch
+arguments:
+  - name: branch
+    description: The name of the remote branch that the local branch should be reset to
+    default_value: origin/master
+source_url: "https://stackoverflow.com/questions/1628088/reset-local-repository-branch-to-be-just-like-remote-repository-head"
+author: Dan Moulding
+author_url: "https://stackoverflow.com/users/95706/dan-moulding"
+shells: []

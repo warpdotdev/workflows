@@ -1,5 +1,6 @@
 use anyhow::Result;
 use convert_case::{Case, Casing};
+use std::ffi::OsStr;
 use std::fs::File;
 use std::io::Write;
 use std::process::Command;
@@ -17,10 +18,15 @@ fn main() -> Result<()> {
 
     let mut workflows_added = Vec::new();
 
-    for entry in WalkDir::new("../specs").max_depth(1) {
+    for entry in WalkDir::new("../specs") {
         let entry = entry?;
+        let valid_yaml_file = entry
+            .path()
+            .extension()
+            .and_then(OsStr::to_str)
+            .map_or(false, |extension| extension == "yaml" || extension == "yml");
 
-        if entry.file_type().is_file() {
+        if valid_yaml_file {
             let file = File::open(entry.path())?;
 
             let mmap = unsafe { memmap::Mmap::map(&file) }?;

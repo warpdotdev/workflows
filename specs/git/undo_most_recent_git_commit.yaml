@@ -1,0 +1,11 @@
+---
+name: Undo most recent git commit
+command: git reset HEAD~
+tags:
+  - git
+description: "Undo the most recent git commit, while keeping changes"
+arguments: []
+source_url: "https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git"
+author: Mark Amery
+author_url: "https://stackoverflow.com/users/1709587"
+shells: []
