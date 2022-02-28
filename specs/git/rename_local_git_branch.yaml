@@ -1,0 +1,17 @@
+---
+name: Rename local git branch
+command: "git branch -m {{oldname}} {{newname}}"
+tags:
+  - git
+description: Rename local git branch
+arguments:
+  - name: oldname
+    description: The old name of the branch
+    default_value: ~
+  - name: newname
+    description: The name the branch should be renamed to
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/6591213/how-do-i-rename-a-local-git-branch"
+author: siride
+author_url: "https://stackoverflow.com/users/394487/siride"
+shells: []

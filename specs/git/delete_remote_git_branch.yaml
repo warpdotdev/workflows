@@ -1,0 +1,17 @@
+---
+name: Delete remote git branch
+command: "git push -d {{remote_name}} {{branchname}}"
+tags:
+  - git
+description: Delete a remote git branch
+arguments:
+  - name: remote_name
+    description: The name of the remote where the branch lives
+    default_value: ~
+  - name: branch_name
+    description: The name of the branch to delete
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely"
+author: Matthew Rankin
+author_url: "https://stackoverflow.com/users/95592/matthew-rankin"
+shells: []

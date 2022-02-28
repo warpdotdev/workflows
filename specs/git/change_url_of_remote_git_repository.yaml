@@ -1,0 +1,14 @@
+---
+name: Change URL of remote git repository
+command: "git remote set-url origin {{url}}"
+tags:
+  - git
+description: Set the URL for a remote git repository to a new URL
+arguments:
+  - name: url
+    description: The new URL the remote repository should point to
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/2432764/how-to-change-the-uri-url-for-a-remote-git-repository"
+author: hobbs
+author_url: "https://stackoverflow.com/users/152948/hobbs"
+shells: []

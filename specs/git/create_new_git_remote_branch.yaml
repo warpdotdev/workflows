@@ -1,0 +1,17 @@
+---
+name: Create new git remote branch
+command: "git checkout -b {{branch_name}} # Create a new branch and check it out\ngit push {{remote_name}} {{branch_name}}"
+tags:
+  - git
+description: ~
+arguments:
+  - name: branch_name
+    description: The name of the branch to be created
+    default_value: ~
+  - name: remote_name
+    description: The name of the remote git repository
+    default_value: origin
+source_url: "https://stackoverflow.com/questions/1519006/how-do-you-create-a-remote-git-branch"
+author: Ikke
+author_url: "https://stackoverflow.com/users/20261/ikke"
+shells: []

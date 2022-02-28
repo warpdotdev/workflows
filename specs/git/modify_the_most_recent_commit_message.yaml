@@ -1,0 +1,14 @@
+---
+name: Modify the most recent commit message
+command: "git commit --amend -m \"{{new_commit_message}}\""
+tags:
+  - git
+description: Ammend the most recent git commit with a new message
+arguments:
+  - name: new_commit_message
+    description: The new commit message
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/179123/how-to-modify-existing-unpushed-commit-messages"
+author: lfx_cool
+author_url: "https://stackoverflow.com/users/268413/lfx-cool"
+shells: []

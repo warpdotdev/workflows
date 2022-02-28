@@ -1,0 +1,14 @@
+---
+name: Push a tag to a remote git repository
+command: "git push origin {{tag_name}}"
+tags:
+  - git
+description: ~
+arguments:
+  - name: tag_name
+    description: The name of the tag that should be pushed to the remote git repository
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/5195859/how-do-you-push-a-tag-to-a-remote-repository-using-git"
+author: Trevor
+author_url: "https://stackoverflow.com/users/207162/trevor"
+shells: []
