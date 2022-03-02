@@ -2,5 +2,6 @@
 Cargo.lock
 workflows/src/generated_workflows/*
 .idea
-build_ts/dist
+build_ts/dist/*
+!build_ts/dist/warp-workflows.js
 build_ts/node_modules/
