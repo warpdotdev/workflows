@@ -1,0 +1,12 @@
+---
+name: Clear the Android logcat buffer
+command: adb logcat -c
+tags:
+  - android
+  - adb
+description: ~
+arguments: []
+source_url: "https://stackoverflow.com/questions/3315389/how-to-empty-clear-the-logcat-buffer-in-android"
+author: Michael Burr
+author_url: "https://stackoverflow.com/users/12711/michael-burr"
+shells: []

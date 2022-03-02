@@ -1,0 +1,15 @@
+---
+name: Replace newline with a space in a file
+command: "tr '\\n' ' ' < {{file_name}}"
+tags:
+  - file manipulation
+  - tr
+description: ~
+arguments:
+  - name: file_name
+    description: ~
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/1251999/how-can-i-replace-each-newline-n-with-a-space-using-sed"
+author: dmckee --- ex-moderator kitten
+author_url: "https://stackoverflow.com/users/2509/dmckee-ex-moderator-kitten"
+shells: []

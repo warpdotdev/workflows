@@ -1,0 +1,18 @@
+---
+name: Start an Android application using Android ADB tools
+command: "adb shell am start -n {{package_name}}/{{package_name}}.{{activity_name}}"
+tags:
+  - android
+  - adb
+description: ~
+arguments:
+  - name: package_name
+    description: The package name for the application
+    default_value: com.my.app.package
+  - name: activity_name
+    description: The name of the main activity of the application
+    default_value: MainActivity
+source_url: "https://stackoverflow.com/questions/4567904/how-to-start-an-application-using-android-adb-tools"
+author: Cristian
+author_url: "https://stackoverflow.com/users/244296/cristian"
+shells: []

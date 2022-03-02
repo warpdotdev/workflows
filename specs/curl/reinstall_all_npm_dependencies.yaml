@@ -1,0 +1,11 @@
+---
+name: Reinstall all NPM dependencies
+command: rm -rf node_modules && npm install
+tags:
+  - npm
+description: Reinstalls all dependencies by removing the node_modules folder and then reinstalling
+arguments: []
+source_url: "https://stackoverflow.com/questions/12866494/how-do-you-reinstall-an-apps-dependencies-using-npm"
+author: himanshu
+author_url: "https://stackoverflow.com/users/737286/himanshu"
+shells: []

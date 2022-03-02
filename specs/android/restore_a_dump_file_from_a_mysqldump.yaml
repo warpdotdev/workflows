@@ -1,0 +1,17 @@
+---
+name: Restore a dump file from a mysqldump
+command: "mysql -u {{user}} -p < {{dump_filepath}}"
+tags:
+  - mysql
+description: ~
+arguments:
+  - name: user
+    description: ~
+    default_value: ~
+  - name: dump_filepath
+    description: The filepath to the dump file
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/105776/how-do-i-restore-a-dump-file-from-mysqldump"
+author: Justin Bennett
+author_url: "https://stackoverflow.com/users/271/justin-bennett"
+shells: []

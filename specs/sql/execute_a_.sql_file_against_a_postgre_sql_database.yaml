@@ -1,0 +1,20 @@
+---
+name: Execute a .sql file against a PostgreSQL database
+command: "psql -U {{user_name}} -d {{database_name}} -a -f {{file_name}}"
+tags:
+  - postgresql
+description: ~
+arguments:
+  - name: user_name
+    description: ~
+    default_value: ~
+  - name: database_name
+    description: ~
+    default_value: ~
+  - name: file_name
+    description: ~
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/9736085/run-a-postgresql-sql-file-using-command-line-arguments"
+author: pmverma
+author_url: "https://stackoverflow.com/users/1618789/pmverma"
+shells: []

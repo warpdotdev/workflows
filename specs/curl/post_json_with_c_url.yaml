@@ -1,0 +1,20 @@
+---
+name: POST JSON with cURL
+command: "curl --header {{content_type}} \\\n  --request {{request_type}} \\\n  --data {{payload}} \\\n {{url}}"
+tags:
+  - curl
+description: Creates a POST request to send data to an endpoint.
+arguments:
+  - name: content_type
+    description: "The format of the content to send e.g. for a JSON. \"Content-Type: application/json\""
+    default_value: "Content-Type: Application/json"
+  - name: request_type
+    description: "The type of curl request: POST or GET"
+    default_value: POST
+  - name: payload
+    description: "The data that is being sent over the POST request, usually a JSON."
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/7172784/how-do-i-post-json-data-with-curl"
+author: Sean Patrick Floyd
+author_url: "https://stackoverflow.com/users/342852/sean-patrick-floyd"
+shells: []

@@ -1,0 +1,18 @@
+---
+name: Print the nth line of a file
+command: "sed '{{line_number}}q;d' {{file_path}}"
+tags:
+  - file manipulation
+  - grep
+description: ~
+arguments:
+  - name: line_number
+    description: The line number within the file to print
+    default_value: ~
+  - name: file_path
+    description: ~
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/6022384/bash-tool-to-get-nth-line-from-a-file"
+author: anubhava
+author_url: "https://stackoverflow.com/users/548225/anubhava"
+shells: []

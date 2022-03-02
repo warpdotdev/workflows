@@ -1,0 +1,11 @@
+---
+name: Yarn install with reproducible dependencies
+command: yarn install --frozen-lockfile
+tags:
+  - yarn
+description: "Install yarn dependencies withuot a lockfile. This is useful if you need reproducible dependencies, which usually the case with continuous integration systems."
+arguments: []
+source_url: "https://stackoverflow.com/questions/58482655/what-is-the-closest-to-npm-ci-in-yarn"
+author: fab67
+author_url: "https://stackoverflow.com/users/11243310/fab67"
+shells: []

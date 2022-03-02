@@ -1,0 +1,11 @@
+---
+name: Uninstall Yarn
+command: "brew uninstall --force yarn\nnpm uninstall -g yarn"
+tags:
+  - yarn
+description: Uninstall Yarn
+arguments: []
+source_url: "https://stackoverflow.com/questions/42334978/how-do-i-uninstall-yarn"
+author: Jan Jarčík
+author_url: "https://stackoverflow.com/users/1207962/jan-jar%c4%8d%c3%adk"
+shells: []

@@ -1,0 +1,15 @@
+---
+name: Show SSL certificate expiration date from an encoded certificate
+command: "openssl x509 -enddate -noout -in {{cert_file}}"
+tags:
+  - ssl
+  - openssl
+description: ~
+arguments:
+  - name: cert_file
+    description: The PEM-encoded certificate that should be used to determine the expiration date
+    default_value: cert.pem
+source_url: "https://stackoverflow.com/questions/21297853/how-to-determine-ssl-cert-expiration-date-from-a-pem-encoded-certificate"
+author: that other guy
+author_url: "https://stackoverflow.com/users/1899640/that-other-guy"
+shells: []

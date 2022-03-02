@@ -1,0 +1,18 @@
+---
+name: Push local file onto Android device
+command: "adb push '{{local_file}}' '{{android_directory}}'"
+tags:
+  - android
+  - adb
+description: ~
+arguments:
+  - name: local_file
+    description: The local file that should be copied to the Android device.
+    default_value: ~
+  - name: android_directory
+    description: The directory on the Android device that the file should be copied to.
+    default_value: /data/local
+source_url: "https://stackoverflow.com/questions/20834241/how-to-use-adb-command-to-push-a-file-on-device-without-sd-card"
+author: Hardik Trivedi
+author_url: "https://stackoverflow.com/users/1166926/hardik-trivedi"
+shells: []

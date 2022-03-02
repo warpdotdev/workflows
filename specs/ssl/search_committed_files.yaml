@@ -1,0 +1,15 @@
+---
+name: Search committed files
+command: "git grep {{pattern}} $(git rev-list --all)"
+tags:
+  - search
+  - git
+description: Search for a pattern among committed files
+arguments:
+  - name: pattern
+    description: The pattern to search for
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/2928584/how-to-grep-search-committed-code-in-the-git-history"
+author: Jeet
+author_url: "https://stackoverflow.com/users/268330/jeet"
+shells: []

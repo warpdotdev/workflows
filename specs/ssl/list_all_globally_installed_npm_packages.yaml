@@ -1,0 +1,11 @@
+---
+name: List all globally installed NPM packages
+command: npm list -g --depth=0
+tags:
+  - npm
+description: ~
+arguments: []
+source_url: "https://stackoverflow.com/questions/17937960/how-to-list-npm-user-installed-packages"
+author: aris
+author_url: "https://stackoverflow.com/users/2628879/aris"
+shells: []

@@ -1,0 +1,20 @@
+---
+name: Encode data in a curl request
+command: "curl \\\n    --data-urlencode {{param_option_1}} \\\n    --data-urlencode {{param_option_2}} \\\n    {{url}}"
+tags:
+  - curl
+description: Creates a curl request that encodes the input parameters
+arguments:
+  - name: param_option_1
+    description: Form key and value
+    default_value: "\"userid=1\""
+  - name: Form argument 2
+    description: Form key and value
+    default_value: ~
+  - name: url
+    description: URL to encode
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/296536/how-to-urlencode-data-for-curl-command"
+author: Jacob Rask
+author_url: "https://stackoverflow.com/users/114168/jacob-rask"
+shells: []

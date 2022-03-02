@@ -1,0 +1,17 @@
+---
+name: Run a Yarn command in a different directory
+command: "yarn --cwd {{path}} {{command}}"
+tags:
+  - yarn
+description: ~
+arguments:
+  - name: path
+    description: The path the yarn command should be run from
+    default_value: ~
+  - name: command
+    description: The yarn command to run
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/46891622/run-yarn-in-a-different-path"
+author: madav
+author_url: "https://stackoverflow.com/users/4993912/madav"
+shells: []

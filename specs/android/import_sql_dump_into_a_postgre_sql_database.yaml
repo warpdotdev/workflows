@@ -1,0 +1,17 @@
+---
+name: Import SQL dump into a PostgreSQL database
+command: "psql {{database_name}} < {{database_dump}}"
+tags:
+  - postgresql
+description: ~
+arguments:
+  - name: database_name
+    description: The name of the database that the dump should be written into. Note this database must be created before importing.
+    default_value: ~
+  - name: database_dump
+    description: The file path to the database dump.
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/6842393/import-sql-dump-into-postgresql-database"
+author: dazz
+author_url: "https://stackoverflow.com/users/152381/dazz"
+shells: []

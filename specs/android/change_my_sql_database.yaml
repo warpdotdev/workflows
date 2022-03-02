@@ -1,0 +1,23 @@
+---
+name: Change MySQL database
+command: "for table in `mysql -u root -p{{password}} -s -N -e \"use {{old_db}};show tables from {{old_db}};\"`; do mysql -u {{username}} -p{{password}} -s -N -e \"use {{old_db}};rename table {{old_db}}.$table to {{new_db}}.$table;\"; done;"
+tags:
+  - mysql
+description: Rename a MySQL database by creating a new empty database and renaming in each table into the new tabase.
+arguments:
+  - name: username
+    description: ~
+    default_value: ~
+  - name: password
+    description: ~
+    default_value: ~
+  - name: old_db
+    description: The old database name
+    default_value: ~
+  - name: new_db
+    description: The new database name
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/67093/how-do-i-quickly-rename-a-mysql-database-change-schema-name"
+author: Benoit Duffez
+author_url: "https://stackoverflow.com/users/334493"
+shells: []

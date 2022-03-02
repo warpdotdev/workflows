@@ -1,0 +1,20 @@
+---
+name: Create a copy of a PostgreSQL database
+command: "createdb -O {{owner_name}} -T {{original_db}} {{new_db}}"
+tags:
+  - postgresql
+description: ~
+arguments:
+  - name: owner_name
+    description: ~
+    default_value: ~
+  - name: original_db
+    description: The original DB name that will be cloned
+    default_value: ~
+  - name: new_db
+    description: The DB name of the cloned database
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/876522/creating-a-copy-of-a-database-in-postgresql"
+author: zbyszek
+author_url: "https://stackoverflow.com/users/405505/zbyszek"
+shells: []
