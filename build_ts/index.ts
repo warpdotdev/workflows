@@ -35,7 +35,7 @@ export const WORKFLOWS = new Map<WorkflowSlug, Workflow>();
 // as Javascript objects and store the objects within the `WORKFLOWS` map.
 const requireContext = require.context(
   "yaml-loader!../specs",
-  false,
+  true,
   /\.ya?ml$/
 );
 
