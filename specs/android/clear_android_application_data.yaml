@@ -1,0 +1,15 @@
+---
+name: Clear Android application data
+command: "adb shell pm clear {{package_name}}"
+tags:
+  - android
+  - adb
+description: ~
+arguments:
+  - name: package_name
+    description: The package name for the application
+    default_value: com.my.app.package
+source_url: "https://stackoverflow.com/questions/10934304/clear-android-application-user-data"
+author: Manmohan Soni
+author_url: "https://stackoverflow.com/users/2260963/manmohan-soni"
+shells: []

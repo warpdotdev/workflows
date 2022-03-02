@@ -1,0 +1,22 @@
+---
+name: Recursively find and replace within a directory
+command: "grep -rl {{old_text}} {{file_path}} | xargs sed -i 's/{{old_text}}/{{new_text}]/g'"
+tags:
+  - file manipulation
+  - sed
+  - grep
+description: Replaces all occurences of a string recursively within a directory
+arguments:
+  - name: old_text
+    description: The text that should be replaced
+    default_value: ~
+  - name: file_path
+    description: The file path where the recursive find/replace should occur
+    default_value: ~
+  - name: new_text
+    description: The text that the found text should be replaced with
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/1583219/how-can-i-do-a-recursive-find-replace-of-a-string-with-awk-or-sed"
+author: Anatoly
+author_url: "https://stackoverflow.com/users/930371/anatoly"
+shells: []

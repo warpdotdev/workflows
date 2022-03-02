@@ -1,0 +1,11 @@
+---
+name: Find unused npm packages in package.json
+command: npx depcheck
+tags:
+  - npm
+description: Runs depcheck to find all unused packages listed in package.json
+arguments: []
+source_url: "https://stackoverflow.com/questions/22675725/find-unused-npm-packages-in-package-json"
+author: German Attanasio
+author_url: "https://stackoverflow.com/users/456564/german-attanasio"
+shells: []
