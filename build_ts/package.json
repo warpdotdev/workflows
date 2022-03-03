@@ -1,11 +1,12 @@
 {
   "name": "warp-workflows",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Workflows used within Warp",
   "main": "dist/warp-workflows.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc && webpack"
+    "build": "tsc && webpack",
+    "prepare": "npm run build"
   },
   "author": "Warp Team (eng@warp.dev)",
   "license": "MIT",
