@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
 pub enum Shell {
     #[serde(rename(deserialize = "fish"))]
     Fish,
@@ -10,7 +10,7 @@ pub enum Shell {
     Zsh,
 }
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
 pub struct Workflow {
     pub name: String,
     pub command: String,
@@ -79,7 +79,7 @@ impl Workflow {
     }
 }
 
-#[derive(Clone, Debug, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
 pub struct Argument {
     pub name: String,
     pub description: Option<String>,
