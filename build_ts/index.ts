@@ -9,7 +9,7 @@ export interface Workflow {
   author?: string;
   author_url?: string;
   shells?: [Shell];
-  relative_git_path: string;
+  relative_git_url: string;
 }
 
 export interface Argument {
@@ -43,11 +43,11 @@ const requireContext = require.context(
 requireContext.keys().forEach((key: string) => {
   const obj = requireContext(key);
   const slug = getFileNameOnly(key);
-  const realtivePath = "/blob/main/specs" + key.substring(1);
+  const realtiveUrl = "/specs" + key.substring(1);
   let workflow = {
     ...obj,
     slug,
-    relative_git_path: realtivePath,
+    relative_git_url: realtiveUrl,
   } as Workflow;
   WORKFLOWS.set(slug, workflow);
 });
