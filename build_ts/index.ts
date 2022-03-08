@@ -9,6 +9,7 @@ export interface Workflow {
   author?: string;
   author_url?: string;
   shells?: [Shell];
+  relative_git_path: string;
 }
 
 export interface Argument {
@@ -25,7 +26,7 @@ export const enum Shell {
 
 export type WorkflowSlug = string;
 
-function getFileNameOnly(filePath: string) : string {
+function getFileNameOnly(filePath: string): string {
   return filePath.split("/").pop()!.split(".")!.shift()!;
 }
 
@@ -42,9 +43,11 @@ const requireContext = require.context(
 requireContext.keys().forEach((key: string) => {
   const obj = requireContext(key);
   const slug = getFileNameOnly(key);
+  const realtivePath = "blob/main/specs" + key.substring(1);
   let workflow = {
     ...obj,
     slug,
+    relative_git_path: realtivePath,
   } as Workflow;
   WORKFLOWS.set(slug, workflow);
 });
