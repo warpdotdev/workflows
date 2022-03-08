@@ -43,11 +43,11 @@ const requireContext = require.context(
 requireContext.keys().forEach((key: string) => {
   const obj = requireContext(key);
   const slug = getFileNameOnly(key);
-  const realtiveUrl = "/specs" + key.substring(1);
+  const relativeUrl = "/specs" + key.substring(1); // removes '.' from key
   let workflow = {
     ...obj,
     slug,
-    relative_git_url: realtiveUrl,
+    relative_git_url: relativeUrl,
   } as Workflow;
   WORKFLOWS.set(slug, workflow);
 });
