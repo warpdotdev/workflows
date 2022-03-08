@@ -43,7 +43,7 @@ const requireContext = require.context(
 requireContext.keys().forEach((key: string) => {
   const obj = requireContext(key);
   const slug = getFileNameOnly(key);
-  const realtivePath = "blob/main/specs" + key.substring(1);
+  const realtivePath = "/blob/main/specs" + key.substring(1);
   let workflow = {
     ...obj,
     slug,
