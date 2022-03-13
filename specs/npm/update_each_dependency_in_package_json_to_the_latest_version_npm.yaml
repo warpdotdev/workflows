@@ -1,0 +1,11 @@
+---
+name: Update each dependency in package.json to the latest version (NPM)
+command: "npm i -g npm-check-updates\nncu -u\nnpm install"
+tags:
+  - npm
+description: "Installs the `npm-check-updates` tool, and runs it to update every package to the latest version."
+arguments: []
+source_url: "https://stackoverflow.com/questions/16073603/how-to-update-each-dependency-in-package-json-to-the-latest-version"
+author: josh3736
+author_url: "https://stackoverflow.com/users/201952/josh3736"
+shells: []

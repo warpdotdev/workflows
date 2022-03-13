@@ -4,7 +4,7 @@ command: "adb shell am force-stop {{package_name}}"
 tags:
   - android
   - adb
-description: ~
+description: Force stops an Android app using adb by using the package name.
 arguments:
   - name: package_name
     description: The package name for the application

@@ -4,7 +4,7 @@ command: "grep -L \"foo\" {{pattern}}"
 tags:
   - search
   - git
-description: ~
+description: "Finds all files in a repository that don't contain a given pattern."
 arguments:
   - name: pattern
     description: The pattern to search for

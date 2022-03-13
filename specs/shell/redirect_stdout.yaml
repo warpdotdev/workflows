@@ -1,0 +1,13 @@
+---
+name: Redirect stdout
+command: "{{command}} 1> {{file}}"
+tags:
+  - shell
+description: "Executes the command, redirecting stdout to a file. Specify `/dev/null` to ignore stdout completely."
+arguments: []
+source_url: "https://tldp.org/LDP/abs/html/io-redirection.html"
+author: Mendel Cooper
+author_url: ~
+shells:
+  - Zsh
+  - Bash

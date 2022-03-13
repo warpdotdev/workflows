@@ -2,9 +2,9 @@
 name: Sum all numbers in a file
 command: "awk 'BEGIN {OFMT = \"%.0f\"} { sum += $1 } END { print sum }' {{file_name}}"
 tags:
-  - file_manipulation
+  - file manipulation
   - awk
-description: ~
+description: Uses awk to sum all the numbers in a file. This command is also resilient to big numbers since it internally converts each number to a string.
 arguments:
   - name: file_name
     description: ~

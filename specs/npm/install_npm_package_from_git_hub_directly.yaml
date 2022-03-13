@@ -1,0 +1,18 @@
+---
+name: Install npm package from GitHub directly
+command: "npm install {{repo}}#{{branch}}"
+tags:
+  - npm
+  - GitHub
+description: "Installs an NPM package from GitHub by specifying the repo and branch. For example, if the repo was `warpdotdev/warp`. the command would be `npm install warpdotdev/warp#main`."
+arguments:
+  - name: repo
+    description: "The name of the GitHub repository. For example,  \"visionmedia/express\""
+    default_value: ~
+  - name: branch
+    description: The name of the branch within the repository to download
+    default_value: master
+source_url: "https://stackoverflow.com/questions/17509669/how-to-install-an-npm-package-from-github-directly"
+author: user2487135
+author_url: "https://stackoverflow.com/users/2487135/user2487135"
+shells: []

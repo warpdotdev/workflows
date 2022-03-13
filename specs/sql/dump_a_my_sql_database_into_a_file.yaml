@@ -1,0 +1,20 @@
+---
+name: Dump a MySQL database into a file
+command: "mysqldump -u {{user_name}} -p {{db_name}} > {{file_name}}"
+tags:
+  - mysql
+description: "Dump a MySQL database, including its data, into a file."
+arguments:
+  - name: user_name
+    description: ~
+    default_value: ~
+  - name: db_name
+    description: The database that should exported
+    default_value: ~
+  - name: file_name
+    description: The name of the file of the SQL dump
+    default_value: db_backup.sql
+source_url: "https://stackoverflow.com/questions/13484667/downloading-mysql-dump-from-command-line/13484728#13484728"
+author: ~
+author_url: ~
+shells: []

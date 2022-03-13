@@ -32,6 +32,7 @@ fn main() -> Result<()> {
             let mmap = unsafe { memmap::Mmap::map(&file) }?;
             let yaml_content = std::str::from_utf8(&mmap)?;
 
+            println!("attempting to generate workflow at {:?}", entry.path());
             let workflow: Workflow = serde_yaml::from_str(yaml_content)?;
             println!("generated workflow is {:?}", workflow);
 

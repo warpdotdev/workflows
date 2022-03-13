@@ -1,0 +1,13 @@
+---
+name: Shell while-loop
+command: "while {{condition}} do\n     {{command}}\ndone"
+tags:
+  - shell
+description: "A while loop, similar to one in other programming languages."
+arguments: []
+source_url: "https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-7.html"
+author: Mike G
+author_url: ~
+shells:
+  - Zsh
+  - Bash

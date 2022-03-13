@@ -4,7 +4,7 @@ command: "git grep {{pattern}} $(git rev-list --all)"
 tags:
   - search
   - git
-description: Search for a pattern among committed files
+description: Search for a pattern among all committed files in a repository.
 arguments:
   - name: pattern
     description: The pattern to search for

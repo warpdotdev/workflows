@@ -4,7 +4,7 @@ command: "tr '\\n' ' ' < {{file_name}}"
 tags:
   - file manipulation
   - tr
-description: ~
+description: "Replaces all newlines with a space, by using the `tr` command."
 arguments:
   - name: file_name
     description: ~

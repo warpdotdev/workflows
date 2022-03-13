@@ -1,0 +1,20 @@
+---
+name: Export SQLite query to a CSV file
+command: "sqlite3 -header -csv {{db_filepath}}  {{sql_query}} > {{output_filepath}}"
+tags:
+  - sqlite
+description: Executes a sql query against the given SQLite database and outputs the the results to a CSV file.
+arguments:
+  - name: db_filepath
+    description: The filepath to the sqlite database
+    default_value: ~
+  - name: sql_query
+    description: "The sql query that's run on the database."
+    default_value: ~
+  - name: output_filepath
+    description: The CSV output filepath
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/5776660/export-from-sqlite-to-csv-using-shell-script"
+author: rorro
+author_url: "https://stackoverflow.com/users/704178/rorro"
+shells: []

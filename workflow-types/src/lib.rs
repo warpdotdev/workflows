@@ -2,11 +2,11 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Debug, Deserialize, Serialize, Eq, PartialEq, Hash, PartialOrd)]
 pub enum Shell {
-    #[serde(rename(deserialize = "fish"))]
+    #[serde(alias = "fish")]
     Fish,
-    #[serde(rename(deserialize = "bash"))]
+    #[serde(alias = "bash")]
     Bash,
-    #[serde(rename(deserialize = "zsh"))]
+    #[serde(alias = "zsh")]
     Zsh,
 }
 
@@ -69,7 +69,7 @@ impl Workflow {
             source_url: None,
             author: None,
             author_url: None,
-            shells: vec![]
+            shells: vec![],
         }
     }
 
@@ -91,7 +91,7 @@ impl Argument {
         Argument {
             description: None,
             name: name.into(),
-            default_value: None
+            default_value: None,
         }
     }
 

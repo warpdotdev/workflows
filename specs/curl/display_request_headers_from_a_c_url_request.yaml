@@ -1,0 +1,14 @@
+---
+name: Display request headers from a cURL request
+command: "curl -v {{url}}"
+tags:
+  - curl
+description: Runs curl in verbose mode to display the request headers that were sent with a request.
+arguments:
+  - name: url
+    description: The url where the request should be sent.
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/3252851/how-to-display-request-headers-with-command-line-curl"
+author: Asaph
+author_url: "https://stackoverflow.com/users/166339/asaph"
+shells: []

@@ -1,0 +1,13 @@
+---
+name: Redirect stderr
+command: "{{command}} 2> {{file}}"
+tags:
+  - shell
+description: "Executes the command, redirecting stderr to a file. Specify `/dev/null` to ignore stderr completely."
+arguments: []
+source_url: "https://tldp.org/LDP/abs/html/io-redirection.html"
+author: Mendel Cooper
+author_url: ~
+shells:
+  - Zsh
+  - Bash

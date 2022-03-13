@@ -3,7 +3,7 @@ name: Import SQL dump into a PostgreSQL database
 command: "psql {{database_name}} < {{database_dump}}"
 tags:
   - postgresql
-description: ~
+description: Imports a SQL dump into an existing database. Note the database must already be created for this to work.
 arguments:
   - name: database_name
     description: The name of the database that the dump should be written into. Note this database must be created before importing.

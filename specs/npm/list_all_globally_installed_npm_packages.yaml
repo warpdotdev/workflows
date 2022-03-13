@@ -3,7 +3,7 @@ name: List all globally installed NPM packages
 command: npm list -g --depth=0
 tags:
   - npm
-description: ~
+description: "Lists all globally installed NPM packages, avoiding including any package's dependencies in the view."
 arguments: []
 source_url: "https://stackoverflow.com/questions/17937960/how-to-list-npm-user-installed-packages"
 author: aris

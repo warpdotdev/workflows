@@ -1,0 +1,11 @@
+---
+name: Upgrade all installed Homebrew caksks
+command: brew upgrade --cask
+tags:
+  - homebrew
+description: "Upgrades all applications that were downloaded using Homebrewk Cask. This will not update casks that do not have versioning information or applications that have a built-in upgrade mechanism. To reinstall these casks, append the `--greedy` flag."
+arguments: []
+source_url: "https://stackoverflow.com/questions/31968664/upgrade-all-the-casks-installed-via-homebrew-cask"
+author: scribblemaniac
+author_url: "https://stackoverflow.com/users/629029/scribblemaniac"
+shells: []

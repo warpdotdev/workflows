@@ -1,0 +1,13 @@
+---
+name: Redirect output of command to a file
+command: "{{command}} > {{file}}"
+tags:
+  - shell
+description: "Writes the output of a command to a file, overwriting anything that was already in the file."
+arguments: []
+source_url: "https://tldp.org/LDP/abs/html/io-redirection.html"
+author: Mendel Cooper
+author_url: ~
+shells:
+  - Zsh
+  - Bash

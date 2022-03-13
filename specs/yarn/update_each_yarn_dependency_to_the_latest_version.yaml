@@ -1,0 +1,11 @@
+---
+name: Update each Yarn dependency to the latest version
+command: yarn upgrade-interactive --latest
+tags:
+  - yarn
+description: Upgrade each yarn dependency by using the Yarn upgrade tool in interactive mode.
+arguments: []
+source_url: "https://stackoverflow.com/questions/62650640/yarn-how-do-i-update-each-dependency-in-package-json-to-the-latest-version"
+author: cybercoder
+author_url: "https://stackoverflow.com/users/1896107/cybercoder"
+shells: []

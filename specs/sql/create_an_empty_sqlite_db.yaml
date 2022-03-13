@@ -1,0 +1,14 @@
+---
+name: Create an empty sqlite db
+command: "sqlite3 {db_filepath} \"VACUUM;\""
+tags:
+  - sqlite
+description: Uses the VACUUM command to create a valid empty SQLite database file.
+arguments:
+  - name: db_filepath
+    description: The path to the sqlite database
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/20155693/create-empty-sqlite-db-from-command-line/47909051#47909051"
+author: emkey08
+author_url: "https://stackoverflow.com/users/1070129/emkey08"
+shells: []

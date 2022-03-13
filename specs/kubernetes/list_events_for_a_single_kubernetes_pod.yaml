@@ -1,0 +1,11 @@
+---
+name: List events for a single Kubernetes pod
+command: "kubectl get event --namespace {{namespace}} --field-selector involvedObject.name={{pod_name}}"
+tags:
+  - kubernetes
+description: Lists the events for a single Kubernetes pod by using the field-selector flag.
+arguments: []
+source_url: "https://stackoverflow.com/questions/51931113/kubectl-get-events-only-for-a-pod"
+author: mszalbach
+author_url: "https://stackoverflow.com/users/2363517/mszalbach"
+shells: []

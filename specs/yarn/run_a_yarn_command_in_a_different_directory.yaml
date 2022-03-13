@@ -3,7 +3,7 @@ name: Run a Yarn command in a different directory
 command: "yarn --cwd {{path}} {{command}}"
 tags:
   - yarn
-description: ~
+description: Specifies the working directory for yarn so that a command can be run in a directory other than the current directory.
 arguments:
   - name: path
     description: The path the yarn command should be run from

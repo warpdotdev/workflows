@@ -3,7 +3,7 @@ name: Upgrade Yarn to latest version
 command: "npm install --global yarn\nnpm upgrade --global yarn"
 tags:
   - yarn
-description: Updgrade yarn to the latest version
+description: Upgrades the current yarn version to the latest version using the npm package manager.
 arguments: []
 source_url: "https://stackoverflow.com/questions/49689174/yarn-how-to-upgrade-yarn-version-using-terminal"
 author: Abdul Rahman

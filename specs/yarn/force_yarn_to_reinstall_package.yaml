@@ -3,7 +3,7 @@ name: Force Yarn to reinstall package
 command: "yarn upgrade {{package_name}}"
 tags:
   - yarn
-description: ~
+description: Force updates a package to the latest version based on the version based on the version range specified in the package.json file.
 arguments:
   - name: package_name
     description: The name of the package that should be reinstalled

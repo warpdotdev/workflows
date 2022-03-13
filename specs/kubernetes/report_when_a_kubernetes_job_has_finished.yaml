@@ -1,0 +1,14 @@
+---
+name: Report when a Kubernetes job has finished
+command: "kubectl wait --for=condition=complete job/{{job_name}}"
+tags:
+  - kubernetes
+description: "Waits for a specified Kubernetes job to complete. The default timeout is 30 seconds, but can be adjusted by passing in the `--timeout` flag."
+arguments:
+  - name: job_name
+    description: "The job that's currently running"
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/44686568/tell-when-job-is-complete"
+author: abagshaw
+author_url: "https://stackoverflow.com/users/3474089/abagshaw"
+shells: []

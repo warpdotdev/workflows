@@ -4,7 +4,7 @@ command: "adb push '{{local_file}}' '{{android_directory}}'"
 tags:
   - android
   - adb
-description: ~
+description: Uses adb to push a file from a local computer to an Android device.
 arguments:
   - name: local_file
     description: The local file that should be copied to the Android device.

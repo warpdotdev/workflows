@@ -1,0 +1,13 @@
+---
+name: Check if two strings are not equal to each other
+command: "[[ {{string_1}} != {{string_2}} ]]"
+tags:
+  - shell
+description: Tests if two strings are not equal and returns an exit code of 0 if so.
+arguments: []
+source_url: "https://linuxhint.com/bash-test-command/"
+author: Sidratul Muntaha
+author_url: "https://linuxhint.com/author/lh_sidratul_muntaha/"
+shells:
+  - Zsh
+  - Bash

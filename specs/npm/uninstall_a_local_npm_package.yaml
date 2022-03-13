@@ -1,0 +1,14 @@
+---
+name: Uninstall a local NPM package
+command: "npm uninstall {{name}}"
+tags:
+  - npm
+description: "Removes a module from `node_modules` but does not update `package.json`. To also remove the package from the list of dependencies in `package.json`, add the `--save` flag."
+arguments:
+  - name: name
+    description: The name of the package to uninstall
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/13066532/how-can-i-uninstall-npm-modules-in-node-js"
+author: Menztrual
+author_url: "https://stackoverflow.com/users/1258398/menztrual"
+shells: []

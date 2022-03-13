@@ -1,0 +1,17 @@
+---
+name: Set an OAuth authorization header with a cURL request
+command: "curl -H \"Authorization: OAuth {{access_token}}\" {{url}}"
+tags:
+  - curl
+description: Sends a request using cURL with an OAuth access token.
+arguments:
+  - name: access_token
+    description: The OAuth access token that should be used for the request.
+    default_value: ~
+  - name: url
+    description: The url where the request should be sent.
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/3044315/how-to-set-the-authorization-header-using-curl"
+author: Tony
+author_url: "https://stackoverflow.com/users/585835/tony"
+shells: []

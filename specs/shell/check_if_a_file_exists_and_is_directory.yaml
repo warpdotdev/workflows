@@ -1,0 +1,13 @@
+---
+name: Check if a file exists and is directory
+command: "[[ -d {{file}} ]]"
+tags:
+  - shell
+description: Returns an exit code of 0 if the file exists and is a directory.
+arguments: []
+source_url: "https://linuxhint.com/bash-test-command/"
+author: Sidratul Muntaha
+author_url: "https://linuxhint.com/author/lh_sidratul_muntaha/"
+shells:
+  - Zsh
+  - Bash

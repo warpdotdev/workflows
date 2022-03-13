@@ -1,0 +1,20 @@
+---
+name: Copy files from a host to a docker container
+command: "docker cp {{container_id}}:/{{container_file_path}} {{local_file_path}}"
+tags:
+  - Docker
+description: Copies a file (or multiple files) from a container to the host machine.
+arguments:
+  - name: container_id
+    description: The container ID of the docker container.
+    default_value: ~
+  - name: container_filepath
+    description: The filepath within the container that should be copied
+    default_value: ~
+  - name: local_file_path
+    description: The local file path to where the file should be copied
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/22907231/how-to-copy-files-from-host-to-docker-container"
+author: Henrik Sachse
+author_url: "https://stackoverflow.com/users/2706422/henrik-sachse"
+shells: []

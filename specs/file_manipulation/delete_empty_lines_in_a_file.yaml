@@ -1,15 +1,15 @@
 ---
 name: Delete empty lines in a file
-command: "awk 'NF' {{file_name}}"
+command: "sed '/^[[:space:]]*$/d'"
 tags:
   - file manipulation
-  - awk
-description: ~
+  - sed
+description: Deletes all lines that contain only whitespace from a file.
 arguments:
   - name: file_name
     description: ~
     default_value: ~
 source_url: "https://stackoverflow.com/questions/16414410/delete-empty-lines-using-sed"
-author: "fedorqui 'SO stop harming'"
-author_url: "https://stackoverflow.com/users/1983854/fedorqui-so-stop-harming"
+author: Kent
+author_url: "https://stackoverflow.com/users/164835/kent"
 shells: []

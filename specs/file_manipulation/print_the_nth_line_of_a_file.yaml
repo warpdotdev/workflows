@@ -3,8 +3,8 @@ name: Print the nth line of a file
 command: "sed '{{line_number}}q;d' {{file_path}}"
 tags:
   - file manipulation
-  - grep
-description: ~
+  - sed
+description: "Uses sed to print the the the nth line of a file.  This is faster than most other solutions since `NUMq` immediately quits when the line number is hit."
 arguments:
   - name: line_number
     description: The line number within the file to print

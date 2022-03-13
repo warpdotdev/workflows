@@ -1,0 +1,11 @@
+---
+name: Update NPM to the latest version
+command: npm update -g npm
+tags:
+  - npm
+description: Updates npm to the latest version .
+arguments: []
+source_url: "https://stackoverflow.com/questions/6237295/how-can-i-update-nodejs-and-npm-to-the-next-versions"
+author: James
+author_url: "https://stackoverflow.com/users/21677/james"
+shells: []

@@ -1,0 +1,13 @@
+---
+name: Check if a number is less than another number
+command: "[[ {{integer_a}} -lt {{integer_b}} ]]"
+tags:
+  - shell
+description: Returns an exit code of 0 if integer_a is less than or equal to integer_b.
+arguments: []
+source_url: "https://linuxhint.com/bash-test-command/"
+author: Sidratul Muntaha
+author_url: "https://linuxhint.com/author/lh_sidratul_muntaha/"
+shells:
+  - Zsh
+  - Bash

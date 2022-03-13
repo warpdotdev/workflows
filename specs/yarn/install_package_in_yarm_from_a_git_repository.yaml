@@ -1,0 +1,17 @@
+---
+name: Install package in Yarm from a Git repository
+command: "yarn add {{git_remote_url}}#{{branch}}"
+tags:
+  - yarn
+description: Add a a git repository as a dependency in Yarn.
+arguments:
+  - name: git_remote_url
+    description: The URL of the repository to add
+    default_value: ~
+  - name: branch
+    description: The name of the branch within the repository where the package should be installed from
+    default_value: main
+source_url: "https://stackoverflow.com/questions/43411864/how-to-install-package-from-github-repo-in-yarn"
+author: Kasiriveni
+author_url: "https://stackoverflow.com/users/3800329/kasiriveni"
+shells: []
