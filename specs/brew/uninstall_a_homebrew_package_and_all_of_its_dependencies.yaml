@@ -1,0 +1,14 @@
+---
+name: Uninstall a Homebrew package and all of its dependencies
+command: "brew tap beeftornado/rmtree\nbrew rmtree {{package_name}}"
+tags:
+  - homebrew
+description: Uses the external command rmtree to remove a Homebrew package and all of its dependencies
+arguments:
+  - name: package_name
+    description: The name of the package that should be removed
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/7323261/uninstall-remove-a-homebrew-package-including-all-its-dependencies"
+author: Ory Band
+author_url: "https://stackoverflow.com/users/207894"
+shells: []

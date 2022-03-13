@@ -4,7 +4,7 @@ command: "adb pull {{android_file_path}} {{local_file_path}}"
 tags:
   - android
   - adb
-description: ~
+description: Pulls a file from an Android device to a local computer using adb.
 arguments:
   - name: android_file_path
     description: The file from the Android device that will be copied.

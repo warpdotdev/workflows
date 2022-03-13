@@ -4,7 +4,7 @@ command: "sed -i '' '{{line_number}}i\\\n{{line_number}} {{text}}' {{file_name}}
 tags:
   - file manipulation
   - sed
-description: ~
+description: "Inserts a line of text into a specific line number of a file using sed. The `-i` flag indicates the file is modified in place."
 arguments:
   - name: line_number
     description: The line number where the text should be inserted

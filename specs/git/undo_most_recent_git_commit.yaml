@@ -3,7 +3,7 @@ name: Undo most recent git commit
 command: git reset HEAD~
 tags:
   - git
-description: "Undo the most recent git commit, while keeping changes"
+description: Undos the last git commit while leaving the working tree (the state of the files on disk) untouched.
 arguments: []
 source_url: "https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git"
 author: Mark Amery

@@ -1,0 +1,20 @@
+---
+name: Copy a file from a Docker container to the current host
+command: "docker cp {{container_id}}:{{container_filepath}} {{local_filepath}}"
+tags:
+  - Docker
+description: Copies files from a Docker container back to the host. Note the container does not need to be running in order to use this command.
+arguments:
+  - name: container_id
+    description: ~
+    default_value: ~
+  - name: container_filepath
+    description: ~
+    default_value: ~
+  - name: local_filepath
+    description: ~
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/22049212/docker-copying-files-from-docker-container-to-host"
+author: creack
+author_url: "https://stackoverflow.com/users/884978/creack"
+shells: []

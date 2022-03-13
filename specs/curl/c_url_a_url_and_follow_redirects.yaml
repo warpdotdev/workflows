@@ -1,0 +1,14 @@
+---
+name: cURL a URL and follow redirects
+command: "curl -L {{url}}"
+tags:
+  - curl
+description: "Curls a URL and follows redirects by using the -L flag. To limit the number of redirects, append `--max-redirects <num>`."
+arguments:
+  - name: url
+    description: The url where the request should be sent.
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/18474690/is-there-a-way-to-follow-redirects-with-command-line-curl"
+author: freedev
+author_url: "https://stackoverflow.com/users/336827/freedev"
+shells: []

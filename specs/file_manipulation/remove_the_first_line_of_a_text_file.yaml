@@ -4,7 +4,7 @@ command: "tail -n +2 \"${{file_name}}\""
 tags:
   - file manipulation
   - tail
-description: ~
+description: "Removes the first line line of a file using tail. Tail defaults to printing the first `x-1` lines, so `+2` indicates it should skip the first line."
 arguments:
   - name: file_name
     description: ~

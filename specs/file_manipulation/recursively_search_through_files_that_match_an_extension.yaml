@@ -1,8 +1,8 @@
 ---
 name: Recursively search through files that match an extension
-command: "grep -r --include=\\*.{{extension}} '{{search_term}}' {{file_path}}"
+command: "grep -r --include=\\*.{{extension}} '{{search_term}}' {{file_name}}"
 tags:
-  - file_manipulation
+  - file manipulation
   - search
   - grep
 description: "Recursively searches all the files that end in `extension` for the term `search_term`."

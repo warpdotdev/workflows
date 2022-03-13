@@ -3,7 +3,7 @@ name: Push a tag to a remote git repository
 command: "git push origin {{tag_name}}"
 tags:
   - git
-description: ~
+description: Pushes a single tag to a remote server
 arguments:
   - name: tag_name
     description: The name of the tag that should be pushed to the remote git repository

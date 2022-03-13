@@ -4,7 +4,7 @@ command: "sed -i '' '/{{string}}/d' {{file}}"
 tags:
   - file manipulation
   - sed
-description: ~
+description: "Deletes all lines from a text file that contain a specific string. Pass the `-i` flag to modify the file in place."
 arguments:
   - name: string
     description: The string to match on

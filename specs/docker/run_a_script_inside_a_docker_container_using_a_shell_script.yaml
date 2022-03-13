@@ -1,0 +1,17 @@
+---
+name: Run a script inside a docker container using a shell script
+command: "docker exec {{container_id}} {{filepath_in_container}}"
+tags:
+  - Docker
+description: Runs a shell script located within a running Docker container.
+arguments:
+  - name: container_id
+    description: ~
+    default_value: ~
+  - name: filepath_in_container
+    description: ~
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/31578446/running-a-script-inside-a-docker-container-using-shell-script"
+author: cortejoso
+author_url: "https://stackoverflow.com/users/2862098/javier-cortejoso"
+shells: []

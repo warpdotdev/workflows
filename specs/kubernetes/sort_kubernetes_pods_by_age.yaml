@@ -1,0 +1,11 @@
+---
+name: Sort Kubernetes pods by age
+command: kubectl get po --sort-by=.status.startTime
+tags:
+  - kubernetes
+description: "Sorts all Kubernetes pods by the pod's start time. To sort by the pod's creation time, specify `.metadata.creationTimestamp` as the value for `--sort-by`."
+arguments: []
+source_url: "https://stackoverflow.com/questions/45310287/kubernetes-sort-pods-by-age"
+author: vjdhama
+author_url: "https://stackoverflow.com/users/1214341/vjdhama"
+shells: []

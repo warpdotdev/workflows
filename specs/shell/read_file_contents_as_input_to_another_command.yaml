@@ -1,0 +1,13 @@
+---
+name: Read file contents as input to another command
+command: "{{command}} < {{file}}"
+tags:
+  - shell
+description: Reads the contents within file and passes it as input to the command.
+arguments: []
+source_url: "https://tldp.org/LDP/abs/html/io-redirection.html"
+author: Mendel Cooper
+author_url: ~
+shells:
+  - Zsh
+  - Bash

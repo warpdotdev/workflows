@@ -3,7 +3,7 @@ name: Rename local git branch
 command: "git branch -m {{oldname}} {{newname}}"
 tags:
   - git
-description: Rename local git branch
+description: Renames a local git branch while keeping the name of the upstream branch unchanged.
 arguments:
   - name: oldname
     description: The old name of the branch

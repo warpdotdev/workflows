@@ -1,0 +1,20 @@
+---
+name: Import a SQL file into a MySQL server
+command: "mysql -u {{username}} -p {{database_name}} < {{sql_filepath}}"
+tags:
+  - mysql
+description: Imports an exported SQL dump into a MySQL server
+arguments:
+  - name: username
+    description: ~
+    default_value: ~
+  - name: database_name
+    description: ~
+    default_value: ~
+  - name: sql_filepath
+    description: The filepath to the .sql file
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/17666249/how-do-i-import-an-sql-file-using-the-command-line-in-mysql"
+author: bansi
+author_url: "https://stackoverflow.com/users/2522554/bansi"
+shells: []

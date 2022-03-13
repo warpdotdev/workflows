@@ -1,9 +1,9 @@
 ---
 name: Delete local and remote git branch
-command: "git push -d {{remote_name}} {{branchname}}\ngit branch -d {{branch_name}}"
+command: "git push -d {{remote_name}} {{branch_name}}\ngit branch -d {{branch_name}}"
 tags:
   - git
-description: Delete a git branch both locally and remotely
+description: "Deletes a branch both locally and remotely. The first command deletes the remote branch, whereas the second command deletes the command locally."
 arguments:
   - name: remote_name
     description: The name of the remote where the branch lives

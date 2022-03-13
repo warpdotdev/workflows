@@ -1,9 +1,9 @@
 ---
 name: Reset local branch to match remote branch
-command: "git fetch origin\ngit reset --hard {{ branch }}"
+command: "git fetch origin\ngit reset --hard {{branch}}"
 tags:
   - git
-description: Reset the current local branch to match the remote branch
+description: Resets a local branch to match a remote branch by pulling the most recent changes from the remote branch and then force resetting the local branch to match the remote branch.
 arguments:
   - name: branch
     description: The name of the remote branch that the local branch should be reset to

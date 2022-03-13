@@ -1,0 +1,11 @@
+---
+name: Remove all stopped Docker containers
+command: docker container prune
+tags:
+  - Docker
+description: "Removes all stopped containers. To clean up all unused containers, networks, images and volumes in one command, run `docker system prune`."
+arguments: []
+source_url: "https://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers"
+author: Ken Cochrane
+author_url: "https://stackoverflow.com/users/356788/ken-cochrane"
+shells: []

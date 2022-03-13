@@ -1,0 +1,13 @@
+---
+name: Redirect output of command to a file by appending
+command: "{{command}} >> {{file}}"
+tags:
+  - shell
+description: "Redirects the output of the command to a file. Creates the file if not present, otherwise appends to it."
+arguments: []
+source_url: "https://tldp.org/LDP/abs/html/io-redirection.html"
+author: Mendel Cooper
+author_url: ~
+shells:
+  - Zsh
+  - Bash

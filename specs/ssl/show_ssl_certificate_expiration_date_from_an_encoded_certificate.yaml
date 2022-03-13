@@ -4,7 +4,7 @@ command: "openssl x509 -enddate -noout -in {{cert_file}}"
 tags:
   - ssl
   - openssl
-description: ~
+description: "Prints the SSL cert expiration date from a PEM encoded certificate. The output is of the form `notAfter=Nov  3 22:23:50 2014 GMT`."
 arguments:
   - name: cert_file
     description: The PEM-encoded certificate that should be used to determine the expiration date

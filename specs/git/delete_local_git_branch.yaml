@@ -1,9 +1,9 @@
 ---
 name: Delete local git branch
-command: "git branch -d {{branch_name}}"
+command: "git branch --delete {{branch_name}}"
 tags:
   - git
-description: Delete a local git branch
+description: "Deletes a local git branch only if it has been fully merged into the upstream branch. To force delete the branch irrespective of the its merged status, add the `--force` flag."
 arguments:
   - name: branch_name
     description: The name of the branch to delete

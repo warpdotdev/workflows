@@ -1,0 +1,14 @@
+---
+name: Show a continuous stream of Kubernetes logs
+command: "kubectl logs -f {{pod_id}}"
+tags:
+  - kubernetes
+description: "Continuously streams logs from a given Kubernetes pod by using the `-f` flag."
+arguments:
+  - name: pod_id
+    description: The Pod ID that should be used to display
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/39454962/kubectl-logs-continuously"
+author: Yu-Ju Hong
+author_url: "https://stackoverflow.com/users/5265822/yu-ju-hong"
+shells: []

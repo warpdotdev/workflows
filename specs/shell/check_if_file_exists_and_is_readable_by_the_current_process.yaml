@@ -1,0 +1,13 @@
+---
+name: Check if file exists and is readable by the current process
+command: "[[ -r {{file}} ]]"
+tags:
+  - shell
+description: Returns an exit code of 0 if the file is readable by the current process.
+arguments: []
+source_url: "https://linuxhint.com/bash-test-command/"
+author: Sidratul Muntaha
+author_url: "https://linuxhint.com/author/lh_sidratul_muntaha/"
+shells:
+  - Zsh
+  - Bash

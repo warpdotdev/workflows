@@ -1,0 +1,14 @@
+---
+name: Start a Bash shell within a Docker container
+command: "docker exec -it {{container_name}} bash"
+tags:
+  - Docker
+description: Runs a Bash subshell within a Docker container.
+arguments:
+  - name: container_name
+    description: The container name of the Docker container
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/30172605/how-do-i-get-into-a-docker-containers-shell"
+author: larsks
+author_url: "https://stackoverflow.com/users/147356/larsks"
+shells: []

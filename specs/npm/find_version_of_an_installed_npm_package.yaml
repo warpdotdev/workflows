@@ -1,0 +1,14 @@
+---
+name: Find version of an installed npm package
+command: "npm list {{package_name}}"
+tags:
+  - npm
+description: "Lists the version name of an installed package. To see the versions of all installed packages, run `npm list` without passing a package name."
+arguments:
+  - name: package_name
+    description: The name of the package
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/10972176/find-the-version-of-an-installed-npm-package"
+author: TheHippo
+author_url: "https://stackoverflow.com/users/45786/thehippo"
+shells: []

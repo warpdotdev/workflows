@@ -1,0 +1,13 @@
+---
+name: Chain commands together by forwarding output as input to the next command (pipe)
+command: "{{command_1}} | {{command_2}}"
+tags:
+  - shell
+description: Executs command_1 and passes the output as input to command_2
+arguments: []
+source_url: "https://tldp.org/LDP/abs/html/io-redirection.html"
+author: Mendel Cooper
+author_url: ~
+shells:
+  - Zsh
+  - Bash

@@ -3,7 +3,7 @@ name: Execute a .sql file against a PostgreSQL database
 command: "psql -U {{user_name}} -d {{database_name}} -a -f {{file_name}}"
 tags:
   - postgresql
-description: ~
+description: "Runs .sql file against a Postgres database, while also handling authentication."
 arguments:
   - name: user_name
     description: ~

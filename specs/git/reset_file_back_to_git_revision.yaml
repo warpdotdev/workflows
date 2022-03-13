@@ -3,7 +3,7 @@ name: Reset file back to git revision
 command: "git reset {{commit_hash}} {{file_name}}"
 tags:
   - git
-description: Reset the file back to a previous commit hash
+description: Resets a file back to a specific commit hash.
 arguments:
   - name: commit_hash
     description: The commit hash the file should be restored to

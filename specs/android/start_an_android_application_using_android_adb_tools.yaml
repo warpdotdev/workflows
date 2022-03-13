@@ -4,7 +4,7 @@ command: "adb shell am start -n {{package_name}}/{{package_name}}.{{activity_nam
 tags:
   - android
   - adb
-description: ~
+description: Sends an intent to start an Android application directly from the command line by using adb.
 arguments:
   - name: package_name
     description: The package name for the application

@@ -1,0 +1,17 @@
+---
+name: Store result of a PostgreSQL query as a CSV file
+command: "psql -d dbname -t -A -F\",\" -c \"{{query}}\" > {{file_name}}"
+tags:
+  - postgresql
+description: Executes a query against a Postgres database and writes the output to a new file
+arguments:
+  - name: query
+    description: ~
+    default_value: ~
+  - name: file_name
+    description: ~
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/1517635/save-pl-pgsql-output-from-postgresql-to-a-csv-file"
+author: sorin
+author_url: "https://stackoverflow.com/users/99834/sorin"
+shells: []

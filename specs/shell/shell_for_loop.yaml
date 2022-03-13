@@ -1,0 +1,13 @@
+---
+name: Shell for-loop
+command: "for {{variable}} in {{sequence}}; do\n      {{command}}\ndone"
+tags:
+  - shell
+description: "A for loop that iterates through a sequence. A common example of this is to iterate through words in in a string, for example:\n\nfor i in $( ls ); do\n     echo item: $i\ndone"
+arguments: []
+source_url: "https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-7.html"
+author: Mike G
+author_url: ~
+shells:
+  - Zsh
+  - Bash

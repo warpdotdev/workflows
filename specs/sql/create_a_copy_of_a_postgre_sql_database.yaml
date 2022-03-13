@@ -3,7 +3,7 @@ name: Create a copy of a PostgreSQL database
 command: "createdb -O {{owner_name}} -T {{original_db}} {{new_db}}"
 tags:
   - postgresql
-description: ~
+description: "Creates a new Postgres database, using an existing database as a template for which to build the database."
 arguments:
   - name: owner_name
     description: ~

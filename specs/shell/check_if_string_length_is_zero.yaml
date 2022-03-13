@@ -1,0 +1,13 @@
+---
+name: Check if string length is zero
+command: "[[ -n {{string}} ]]"
+tags:
+  - shell
+description: Returns an exit code of 0 if the length of the string is zero.
+arguments: []
+source_url: "https://linuxhint.com/bash-test-command/"
+author: Sidratul Muntaha
+author_url: "https://linuxhint.com/author/lh_sidratul_muntaha/"
+shells:
+  - Zsh
+  - Bash
