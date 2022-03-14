@@ -4,7 +4,10 @@ command: "[[ -r {{file}} ]]"
 tags:
   - shell
 description: Returns an exit code of 0 if the file is readable by the current process.
-arguments: []
+arguments:
+  - name: file
+    description: The file to test
+    default_value: ~
 source_url: "https://linuxhint.com/bash-test-command/"
 author: Sidratul Muntaha
 author_url: "https://linuxhint.com/author/lh_sidratul_muntaha/"

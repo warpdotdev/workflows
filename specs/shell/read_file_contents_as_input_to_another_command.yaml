@@ -4,7 +4,13 @@ command: "{{command}} < {{file}}"
 tags:
   - shell
 description: Reads the contents within file and passes it as input to the command.
-arguments: []
+arguments:
+  - name: command
+    description: The command whose input should be read from a file.
+    default_value: ~
+  - name: file
+    description: The path to the file from where the input should be read.
+    default_value: ~
 source_url: "https://tldp.org/LDP/abs/html/io-redirection.html"
 author: Mendel Cooper
 author_url: ~

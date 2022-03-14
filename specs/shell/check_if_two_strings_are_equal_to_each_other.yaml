@@ -4,7 +4,13 @@ command: "[[ {{string_1}} = {{string_2}} ]]"
 tags:
   - shell
 description: Tests if two strings are equal and returns an exit code of 0 if so.
-arguments: []
+arguments:
+  - name: string_1
+    description: ~
+    default_value: ~
+  - name: string_2
+    description: ~
+    default_value: ~
 source_url: "https://linuxhint.com/bash-test-command/"
 author: Sidratul Muntaha
 author_url: "https://linuxhint.com/author/lh_sidratul_muntaha/"

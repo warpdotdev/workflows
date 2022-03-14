@@ -4,7 +4,13 @@ command: "[[ {{integer_a}} -ge {{integer_b}} ]]"
 tags:
   - shell
 description: Returns an exit code of 0 if integer_a is greater than or equal to integer_b.
-arguments: []
+arguments:
+  - name: integer_a
+    description: ~
+    default_value: ~
+  - name: integer_b
+    description: ~
+    default_value: ~
 source_url: "https://linuxhint.com/bash-test-command/"
 author: Sidratul Muntaha
 author_url: "https://linuxhint.com/author/lh_sidratul_muntaha/"
