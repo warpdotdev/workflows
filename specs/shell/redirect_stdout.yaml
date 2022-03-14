@@ -4,7 +4,13 @@ command: "{{command}} 1> {{file}}"
 tags:
   - shell
 description: "Executes the command, redirecting stdout to a file. Specify `/dev/null` to ignore stdout completely."
-arguments: []
+arguments:
+  - name: command
+    description: The command to run.
+    default_value: ~
+  - name: file
+    description: The path to the file where the stdout should be written.
+    default_value: ~
 source_url: "https://tldp.org/LDP/abs/html/io-redirection.html"
 author: Mendel Cooper
 author_url: ~

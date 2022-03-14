@@ -4,7 +4,13 @@ command: "{{command}} > {{file}}"
 tags:
   - shell
 description: "Writes the output of a command to a file, overwriting anything that was already in the file."
-arguments: []
+arguments:
+  - name: command
+    description: The command whose output should be forwarded to a file.
+    default_value: ~
+  - name: file
+    description: The path to the file where the output should be written.
+    default_value: ~
 source_url: "https://tldp.org/LDP/abs/html/io-redirection.html"
 author: Mendel Cooper
 author_url: ~

@@ -4,7 +4,13 @@ command: "{{command_1}} | {{command_2}}"
 tags:
   - shell
 description: Executs command_1 and passes the output as input to command_2
-arguments: []
+arguments:
+  - name: command_1
+    description: The first command to run (whose output will be passed to the second command)
+    default_value: ~
+  - name: command_2
+    description: "The second command to run, whose input will be taken from the output of the first command."
+    default_value: ~
 source_url: "https://tldp.org/LDP/abs/html/io-redirection.html"
 author: Mendel Cooper
 author_url: ~

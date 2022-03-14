@@ -4,7 +4,13 @@ command: "[[ {{integer_a}} -ne {{integer_b}} ]]"
 tags:
   - shell
 description: Returns an exit code of 0 if the two integers are not equal to each other.
-arguments: []
+arguments:
+  - name: integer_a
+    description: ~
+    default_value: ~
+  - name: integer_b
+    description: ~
+    default_value: ~
 source_url: "https://linuxhint.com/bash-test-command/"
 author: Sidratul Muntaha
 author_url: "https://linuxhint.com/author/lh_sidratul_muntaha/"
