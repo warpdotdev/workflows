@@ -24,7 +24,7 @@ jobs:
         run: npm --prefix build_ts/ install
         # Transpile all specs from ts to js
       - name: build
-        run: npm --prefix build_ts/ build
+        run: npm --prefix build_ts/ run build
 
     # Need to tell it the path to the build_ts
       - name: "Automated Version Bump"
