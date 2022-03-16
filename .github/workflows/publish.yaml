@@ -21,10 +21,10 @@ jobs:
         uses: actions/checkout@v2
         # Install all dependencies
       - name: install
-        run: npm --path build_ts/ install
+        run: npm --prefix build_ts/ install
         # Transpile all specs from ts to js
       - name: build
-        run: npm --path build_ts/ build
+        run: npm --prefix build_ts/ build
 
     # Need to tell it the path to the build_ts
       - name: "Automated Version Bump"
