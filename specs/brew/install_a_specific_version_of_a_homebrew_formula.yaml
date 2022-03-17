@@ -5,11 +5,11 @@ tags:
   - homebrew
 description: "Install a specific version of a formula using Homebrew. To list all available versions, you can run `brew search {{formula_name}}@`."
 arguments:
-  - name: The fomula to install
-    description: ~
+  - name: formula_name
+    description: The fomula to install
     default_value: ~
   - name: version_name
-    description: "The version of the formula to install. You can ensure this version is availalble on homebrew by running `brew search {{fornula_name}}`"
+    description: "The version of the formula to install. You can ensure this version is availalble on homebrew by running `brew search {{formula_name}}`"
     default_value: ~
 source_url: "https://stackoverflow.com/questions/3987683/homebrew-install-specific-version-of-formula"
 author: Debilski

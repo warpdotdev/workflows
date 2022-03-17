@@ -4,7 +4,13 @@ command: "kubectl get event --namespace {{namespace}} --field-selector involvedO
 tags:
   - kubernetes
 description: Lists the events for a single Kubernetes pod by using the field-selector flag.
-arguments: []
+arguments:
+  - name: namespace
+    description: ~
+    default_value: ~
+  - name: pod_name
+    description: ~
+    default_value: ~
 source_url: "https://stackoverflow.com/questions/51931113/kubectl-get-events-only-for-a-pod"
 author: mszalbach
 author_url: "https://stackoverflow.com/users/2363517/mszalbach"

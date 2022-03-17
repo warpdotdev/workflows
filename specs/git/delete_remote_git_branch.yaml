@@ -1,6 +1,6 @@
 ---
 name: Delete remote git branch
-command: "git push -d {{remote_name}} {{branchname}}"
+command: "git push -d {{remote_name}} {{branch_name}}"
 tags:
   - git
 description: "Deletes a remote git branch. A local git branch of the same name, if any, will remain untouched."
