@@ -1,5 +1,5 @@
 ---
-name: Pull file from Andorid device
+name: Pull file from Android device
 command: "adb pull {{android_file_path}} {{local_file_path}}"
 tags:
   - android
