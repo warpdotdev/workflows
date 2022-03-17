@@ -1,0 +1,18 @@
+---
+name: Pull file from Android device
+command: "adb pull {{android_file_path}} {{local_file_path}}"
+tags:
+  - android
+  - adb
+description: Pulls a file from an Android device to a local computer using adb.
+arguments:
+  - name: android_file_path
+    description: The file from the Android device that will be copied.
+    default_value: ~
+  - name: local_file_path
+    description: The local file path where the file should be copied
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/17629889/android-adb-pull-file-on-desktop"
+author: CommonsWare
+author_url: "https://stackoverflow.com/users/115145/commonsware"
+shells: []
