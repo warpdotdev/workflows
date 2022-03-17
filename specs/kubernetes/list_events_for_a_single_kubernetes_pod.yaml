@@ -6,10 +6,10 @@ tags:
 description: Lists the events for a single Kubernetes pod by using the field-selector flag.
 arguments:
   - name: namespace
-    description: ~
+    description: The specified kubernetes namespace
     default_value: ~
   - name: pod_name
-    description: ~
+    description: Name of the target kubernetes pod
     default_value: ~
 source_url: "https://stackoverflow.com/questions/51931113/kubectl-get-events-only-for-a-pod"
 author: mszalbach
