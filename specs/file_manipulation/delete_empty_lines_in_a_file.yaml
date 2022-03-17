@@ -1,6 +1,6 @@
 ---
 name: Delete empty lines in a file
-command: "sed '/^[[:space:]]*$/d'"
+command: "sed '/^[[:space:]]*$/d' {{file_name}}"
 tags:
   - file manipulation
   - sed

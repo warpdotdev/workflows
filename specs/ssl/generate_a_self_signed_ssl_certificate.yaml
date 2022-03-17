@@ -1,6 +1,6 @@
 ---
 name: Generate a self-signed SSL certificate
-command: "openssl req -x509 -newkey rsa:4096 -keyout {{key_file}} -out {{cert_file} -sha256 -days {[expiration_days}}"
+command: "openssl req -x509 -newkey rsa:4096 -keyout {{key_file}} -out {{cert_file} -sha256 -days {{[expiration_days}}"
 tags:
   - ssl
   - openssl
@@ -14,7 +14,7 @@ arguments:
     default_value: cert.pem
   - name: expiration_days
     description: The number of days until the certification expires
-    default_value: "\"365\""
+    default_value: '"365"'
 source_url: "https://stackoverflow.com/questions/10175812/how-to-generate-a-self-signed-ssl-certificate-using-openssl"
 author: Diego Woitasen
 author_url: "https://stackoverflow.com/users/1276950/diego-woitasen"
