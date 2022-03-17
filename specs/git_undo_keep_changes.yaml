@@ -1,4 +1,0 @@
-name: "Undo last git commit and keep changes"
-tags: ["git"]
-command: "git reset --soft HEAD~1"
-author: "Warp Team"

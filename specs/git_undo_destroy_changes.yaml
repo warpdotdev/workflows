@@ -1,4 +1,0 @@
-name: "Undo last git commit and destroy changes"
-tags: ["git"]
-command: "git reset --hard HEAD~1"
-author: "Warp Team"
