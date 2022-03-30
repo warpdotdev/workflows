@@ -1,5 +1,5 @@
 ---
-name: Upgrade all installed Homebrew caksks
+name: Upgrade all installed Homebrew casks
 command: brew upgrade --cask
 tags:
   - homebrew
