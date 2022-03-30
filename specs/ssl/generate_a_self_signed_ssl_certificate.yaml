@@ -1,6 +1,6 @@
 ---
 name: Generate a self-signed SSL certificate
-command: "openssl req -x509 -newkey rsa:4096 -keyout {{key_file}} -out {{cert_file} -sha256 -days {{[expiration_days}}"
+command: "openssl req -x509 -newkey rsa:4096 -keyout {{key_file}} -out {{cert_file}} -sha256 -days {{expiration_days}}"
 tags:
   - ssl
   - openssl

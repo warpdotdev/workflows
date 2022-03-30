@@ -2,7 +2,7 @@
 name: Run a script inside a docker container using a shell script
 command: "docker exec {{container_id}} {{filepath_in_container}}"
 tags:
-  - Docker
+  - docker
 description: Runs a shell script located within a running Docker container.
 arguments:
   - name: container_id

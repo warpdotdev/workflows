@@ -2,7 +2,7 @@
 name: Start a Bash shell within a Docker container
 command: "docker exec -it {{container_name}} bash"
 tags:
-  - Docker
+  - docker
 description: Runs a Bash subshell within a Docker container.
 arguments:
   - name: container_name
