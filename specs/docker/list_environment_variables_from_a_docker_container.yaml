@@ -2,7 +2,7 @@
 name: List environment variables from a Docker container
 command: docker exec container env
 tags:
-  - Docker
+  - docker
 description: Lists all environment variables from a Docker container.
 arguments: []
 source_url: "https://stackoverflow.com/questions/34051747/get-environment-variable-from-docker-container"
