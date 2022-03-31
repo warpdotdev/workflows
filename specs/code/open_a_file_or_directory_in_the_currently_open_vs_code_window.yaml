@@ -1,0 +1,13 @@
+---
+name: Open a file or directory in the currently open VS Code window
+command: "code -r {{file_or_directory}}"
+tags: ["code"]
+description: Use -r or --reuse-window command line option to attach the currently open VS Code window.
+arguments:
+  - name: file_or_directory
+    description: The file or directory that you want to open.
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/41377489/how-to-open-a-file-from-the-integrated-terminal-in-visual-studio-code"
+author: zloy-zhake
+author_url: "https://stackoverflow.com/users/2807320/zloy-zhake"
+shells: []
