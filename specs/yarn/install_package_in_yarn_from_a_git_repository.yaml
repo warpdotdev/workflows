@@ -1,9 +1,9 @@
 ---
-name: Install package in Yarm from a Git repository
+name: Install package in Yarn from a Git repository
 command: "yarn add {{git_remote_url}}#{{branch}}"
 tags:
   - yarn
-description: Add a a git repository as a dependency in Yarn.
+description: Add a git repository as a dependency in Yarn.
 arguments:
   - name: git_remote_url
     description: The URL of the repository to add
