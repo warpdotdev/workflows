@@ -1,0 +1,13 @@
+name: Remove project from Nx workspace
+command: "npx nx generate @nrwl/workspace:remove --projectName={{name}}"
+tags:
+  - nx
+description: "Remove a project from your Nx workspace."
+arguments:
+  - name: name
+    description: The name of the project to remove.
+    default_value: ~
+source_url: "https://nx.dev/packages/workspace/generators/remove#nrwlworkspaceremove"
+author: mandarini
+author_url: "https://github.com/mandarini"
+shells: []

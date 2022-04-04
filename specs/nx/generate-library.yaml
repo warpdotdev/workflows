@@ -1,0 +1,16 @@
+name: Generate a new library in your Nx workspace
+command: "npx nx g @nrwl/{{framework}}:library --name={{name}}"
+tags:
+  - nx
+description: "This command generates a new library in your existing Nx workspace."
+arguments:
+  - name: framework
+    description: The presets you want to use when generating your library. Supported values -> angular, react, web, node, nest, next, detox, react-native, workspace, js.
+    default_value: ~
+  - name: name
+    description: The name you want to use for your library
+    default_value: ~
+source_url: "https://nx.dev/generators/using-schematics"
+author: mandarini
+author_url: "https://github.com/mandarini"
+shells: []
