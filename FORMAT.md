@@ -66,7 +66,7 @@ name: Example workflow
 command: echo {{string}}
 arguments:
   - name: string
-  - description: The value to echo
+    description: The value to echo
 ```
 
 ## `arguments.description` 
