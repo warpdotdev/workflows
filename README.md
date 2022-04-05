@@ -6,8 +6,7 @@ The repo for Workflows that appear within Warp and within [commands.dev](https:/
 Workflows are an easier way to execute and share commands within Warp. They are searchable by name, description, or command and are easily parameterized. 
 
 ## How Do I Access Workflows?
-Workflows can be accessed within Warp directly within the app, either through the command palette or by pressing `ctrl-shift-r`. 
-
+Workflows can be accessed within Warp directly within the app, either through the Command Palette or by pressing `shift-ctrl-r`. 
 All public workflows (i.e. workflows within this repo) are also available at [commands.dev](https://www.commands.dev/).
 
 ## Contributing
