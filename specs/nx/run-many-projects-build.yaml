@@ -1,0 +1,10 @@
+name: Build all projects at once in parallel
+command: "npx nx run-many --target=build --all --parallel=true"
+tags:
+  - nx
+description: "Build all projects in your workspace, in parallel."
+arguments: []
+source_url: "https://nx.dev/cli/run-many#run-many"
+author: mandarini
+author_url: "https://github.com/mandarini"
+shells: []

@@ -1,0 +1,16 @@
+name: Generate a new application in your Nx workspace
+command: "npx nx g @nrwl/{{framework}}:application --name={{name}}"
+tags:
+  - nx
+description: "This command generates a new application in your existing Nx workspace."
+arguments:
+  - name: framework
+    description: The framework you want to use when generating your application. Supported values -> angular, react, web, node, nest, next, detox, react-native.
+    default_value: ~
+  - name: name
+    description: The name you want to use for your application
+    default_value: ~
+source_url: "https://nx.dev/generators/using-schematics"
+author: mandarini
+author_url: "https://github.com/mandarini"
+shells: []

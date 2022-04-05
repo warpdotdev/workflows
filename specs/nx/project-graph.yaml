@@ -1,0 +1,10 @@
+name: View the project graph
+command: "npx nx graph"
+tags:
+  - nx
+description: "Start the project graph for the current Nx workspace. This will graph the dependencies within your workspace."
+arguments: []
+source_url: "https://nx.dev/cli/dep-graph#graph"
+author: mandarini
+author_url: "https://github.com/mandarini"
+shells: []

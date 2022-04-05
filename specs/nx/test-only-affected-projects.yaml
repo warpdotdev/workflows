@@ -1,0 +1,10 @@
+name: Test only the affected code in your Nx workspace
+command: "npx nx affected:test"
+tags:
+  - nx
+description: "Test only those projects that are affected by the changes in the current Nx workspace."
+arguments: []
+source_url: "https://nx.dev/using-nx/affected#affected"
+author: mandarini
+author_url: "https://github.com/mandarini"
+shells: []
