@@ -1,0 +1,10 @@
+--- 
+name: Run Build Ruuner Watch
+command: "flutter pub run build_runner watch --delete-conflicting-outputs" 
+tags:
+  - flutter
+description: Run build runner to generate code-gen for flutter project when files changes.
+source_url: "https://pub.dev/packages/build_runner" 
+author: Birju Vachhani
+author_url: "https://github.com/BirjuVachhani"
+shells: []
