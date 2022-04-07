@@ -1,0 +1,17 @@
+---
+name: Set a new size for a deployment.
+command: kubectl scale deployment/{{deployment_name}} --replicas={{count}}
+tags:
+  - kubernetes
+description: "Set a new size for a deployment. If --current-replicas or --resource-version is specified, it is validated before the scale is attempted, and it is guaranteed that the precondition holds true when the scale is sent to the server."
+arguments:
+  - name: deployment_name
+    description: The specified deployment name
+    default_value: ~
+  - name: count
+    description: desired replica count
+    default_value: ~
+source_url: "https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#scale"
+author: AI
+author_url: "https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#scale"
+shells: []

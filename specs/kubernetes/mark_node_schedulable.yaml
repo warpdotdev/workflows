@@ -1,0 +1,14 @@
+---
+name: Mark node as schedulable
+command: kubectl uncordon {{node}}
+tags:
+  - kubernetes
+description: "Mark node as schedulable"
+arguments:
+  - name: node
+    description: Node name
+    default_value: ~
+source_url: "https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#uncordon"
+author: AI
+author_url: "https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#uncordon"
+shells: []
