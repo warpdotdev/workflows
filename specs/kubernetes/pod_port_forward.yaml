@@ -1,0 +1,20 @@
+---
+name: Forward one or more local ports to a pod.
+command: kubectl port-forward pod/{{pod_name}} {{local_port}}:{{pod_port}}
+tags:
+  - kubernetes
+description: "Listen on port specified locally, forwarding to {{pod_port}} in the pod"
+arguments:
+  - name: pod_name
+    description: The specified pod name
+    default_value: ~
+  - name: local_port
+    description: localhost port number
+    default_value: ~
+  - name: pod_port
+    description: pod port number
+    default_value: ~
+source_url: "https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward"
+author: AI
+author_url: "https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward"
+shells: []

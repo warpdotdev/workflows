@@ -1,0 +1,14 @@
+---
+name: Rollback to the previous deployment
+command: kubectl rollout undo deployment/{{deployment_name}}
+tags:
+  - kubernetes
+description: "Rollback to the previous deployment"
+arguments:
+  - name: deployment_name
+    description: deployment name
+    default_value: ~
+source_url: "https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#rollout"
+author: AI
+author_url: "https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#rollout"
+shells: []

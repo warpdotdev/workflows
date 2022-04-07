@@ -1,0 +1,14 @@
+---
+name: Mark node as unschedulable
+command: kubectl cordon {{node}}
+tags:
+  - kubernetes
+description: "Mark node as unschedulable"
+arguments:
+  - name: node
+    description: Node name
+    default_value: ~
+source_url: "https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#cordon"
+author: AI
+author_url: "https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#cordon"
+shells: []
