@@ -1,0 +1,10 @@
+--- 
+name: Clean Project
+command: "flutter clean && flutter pub get" 
+tags:
+  - flutter
+description: Cleans flutter project and gets dependencies to make project ready for a fresh run.
+source_url: "https://docs.flutter.dev/reference/flutter-cli" 
+author: Birju Vachhani
+author_url: "https://github.com/BirjuVachhani"
+shells: []

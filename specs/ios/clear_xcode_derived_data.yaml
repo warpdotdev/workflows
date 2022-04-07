@@ -1,0 +1,9 @@
+---
+name: Clear Xcode Derived Data
+command: rm -rf ~/Library/Developer/Xcode/DerivedData
+tags:
+  - ios
+  - xcode
+description: ~
+arguments: []
+shells: []
