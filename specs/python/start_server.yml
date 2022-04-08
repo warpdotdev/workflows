@@ -9,7 +9,7 @@ arguments:
     default_value: ~
   - name: directory
     description: The directory to which the server will serve files.
-    default_value: ~
+    default_value: .
 source_url: "https://stackoverflow.com/questions/7943751/what-is-the-python-3-equivalent-of-python-m-simplehttpserver"
 author: anand-tripathi
 author_url: "https://stackoverflow.com/users/5230702/anand-tripathi"
