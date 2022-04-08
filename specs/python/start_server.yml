@@ -1,0 +1,16 @@
+---
+name: Start a simple HTTP server using Python
+command: "python3 -m http.server {{port}} -d {{directory}}"
+tags: ["python"]
+description: Start a simple HTTP server using Python 3, using the in-built http.server module.
+arguments:
+  - name: port
+    description: The port number that the server should listen on.
+    default_value: ~
+  - name: directory
+    description: The directory to which the server will serve files.
+    default_value: .
+source_url: "https://stackoverflow.com/questions/7943751/what-is-the-python-3-equivalent-of-python-m-simplehttpserver"
+author: anand-tripathi
+author_url: "https://stackoverflow.com/users/5230702/anand-tripathi"
+shells: []
