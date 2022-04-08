@@ -1,9 +1,9 @@
 ---
 name: Copy files from a host to a docker container
-command: "docker cp {{container_id}}:/{{container_filepath}} {{local_file_path}}"
+command: "docker cp {{local_file_path}} {{container_id}}:/{{container_filepath}}"
 tags:
   - docker
-description: Copies a file (or multiple files) from a container to the host machine.
+description: Copies a file (or multiple files) from a host machine to a container.
 arguments:
   - name: container_id
     description: The container ID of the docker container.
