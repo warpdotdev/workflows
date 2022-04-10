@@ -41,7 +41,6 @@ fn main() -> Result<()> {
                 .to_str()
                 .expect("OsStr should convert to str")
                 .replace(".yaml", "")
-                .replace(".yml", "")
                 .to_case(Case::Snake);
             println!("file name is {:?}", file_name);
 
