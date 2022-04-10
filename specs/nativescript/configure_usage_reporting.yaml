@@ -1,0 +1,11 @@
+name: Configure usage reporting.
+command: "ns usage-reporting"
+tags:
+  - ns
+  - tns
+  - nativescript
+description: "Configures anonymous usage reporting for the NativeScript CLI."
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/general/usage-reporting.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []
