@@ -8,7 +8,7 @@ Workflows are an easier way to execute and share commands within Warp. They are 
 
 ## How Do I Access Workflows?
 
-Workflows can be accessed within Warp directly within the app, either through the Command Palette or by pressing `shift-ctrl-r`.
+Workflows can be accessed within Warp directly within the app, either through the Command Palette or by pressing `ctrl-shift-r`.
 
 All public workflows (i.e. workflows within this repo) are also available at [commands.dev](https://www.commands.dev/).
 
