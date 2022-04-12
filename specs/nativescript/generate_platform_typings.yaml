@@ -1,10 +1,10 @@
-name: Generate platform's (iOS and/or Android) typings.
+name: Generate platform's (iOS and/or Android) typings for your NativeScript project.
 command: "ns typings {{platform}}"
 tags:
   - ns
   - tns
   - nativescript
-description: "Generate iOS & Android typings by default respecting platform support, so no iOS typings generated on Windows/Linux machines."
+description: "Generate iOS & Android typings for your NativeScript project. By default respecting platform support, so no iOS typings generated on Windows/Linux machines."
 arguments:
   - name: platform
     description: The name of the platform. E.g. ios, android, etc.

@@ -1,4 +1,4 @@
-name: Configure usage reporting.
+name: Configure NativeScript CLI usage reporting.
 command: "ns usage-reporting"
 tags:
   - ns

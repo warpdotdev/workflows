@@ -1,4 +1,4 @@
-name: Configure error reporting.
+name: Configure NativeScript CLI error reporting.
 command: "ns error-reporting"
 tags:
   - ns

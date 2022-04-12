@@ -1,10 +1,10 @@
-name: Remove the selected platform from the project.
+name: Remove the selected platform from your NativeScript project.
 command: "ns platform remove {{platform}}"
 tags:
   - ns
   - tns
   - nativescript
-description: "Removes the selected platform from the platforms that the project currently targets. After removing the target platform, you can no longer build and deploy your app on devices which run on the platform."
+description: "Removes the selected platform from the platforms that your NativeScript project currently targets. After removing the target platform, you can no longer build and deploy your app on devices which run on the platform."
 arguments:
   - name: platform
     description: The name of the platform. E.g. ios, android, etc.

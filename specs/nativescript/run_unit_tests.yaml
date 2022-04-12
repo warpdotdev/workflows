@@ -1,10 +1,10 @@
-name: Run unit tests.
+name: Run unit tests on your NativeScript project.
 command: "ns test {{platform}}"
 tags:
   - ns
   - tns
   - nativescript
-description: "Runs unit tests on the selected mobile platform. Your project must already be configured for unit testing by running $ ns test init."
+description: "Runs unit tests on the selected mobile platform. Your NativeScript project must already be configured for unit testing by running $ ns test init."
 arguments:
   - name: platform
     description: The name of the platform. E.g. ios, android, etc.

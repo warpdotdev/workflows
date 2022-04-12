@@ -1,10 +1,10 @@
-name: Configure command-line autocompletion.
+name: Configure NativeScript command-line autocompletion.
 command: "ns autocomplete {{command}}"
 tags:
   - ns
   - tns
   - nativescript
-description: "Prints your current command-line completion settings. If disabled, prompts you to enable it."
+description: "Prints your current NativeScript command-line completion settings. If disabled, prompts you to enable it."
 arguments:
   - name: command
     description: options are status, enable, disable.

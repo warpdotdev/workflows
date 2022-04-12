@@ -1,10 +1,10 @@
-name: Show current package manager.
+name: Show current package manager using NativeScript CLI.
 command: "ns package-manager"
 tags:
   - ns
   - tns
   - nativescript
-description: "Prints the value of the current package manager."
+description: "NativeScript prints the value of the current package manager."
 source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/general/package-manager.md"
 author: erodriguezh
 author_url: "https://github.com/erodriguezh"

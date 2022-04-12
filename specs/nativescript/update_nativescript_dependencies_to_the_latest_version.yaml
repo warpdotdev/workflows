@@ -4,7 +4,7 @@ tags:
   - ns
   - tns
   - nativescript
-description: "Updates the project with the latest versions of iOS/Android runtimes, cross-platform modules and "@nativescript/webpack"."
+description: "Updates your NativeScript project with the latest versions of iOS/Android runtimes, cross-platform modules and "@nativescript/webpack"."
 arguments:
   - name: version
     description: (Optional) An existing version. E.g. 5.0.0, next (latest development release)

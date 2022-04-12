@@ -1,10 +1,10 @@
-name: Show information about the commands in the browser.
+name: Show information about the NativeScript CLI commands in the browser.
 command: "ns help {{command}}"
 tags:
   - ns
   - tns
   - nativescript
-description: "Shows additional information about the commands in this list in the browser."
+description: "Shows additional information about the NativeScript CLI commands in this list in the browser."
 arguments:
   - name: command
     description: The name of the command in the list.

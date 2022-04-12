@@ -1,10 +1,10 @@
-name: Run the selected application on a connected device.
+name: Run the selected NativeScript application on a connected device.
 command: "ns run {{application_id}}"
 tags:
   - ns
   - tns
   - nativescript
-description: "Runs the selected application on a connected Android or iOS device."
+description: "Runs the selected NativeScript application on a connected Android or iOS device."
 arguments:
   - name: application_id
     description: (Optional) It is the application identifier as listed by $ ns device list-applications.

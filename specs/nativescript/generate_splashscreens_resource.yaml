@@ -1,10 +1,10 @@
-name: Generate all splashscreens for Android and iOS platforms.
+name: Generate all splashscreens for Android and iOS platforms for your NativeScript project.
 command: "ns resources generate splashes {{path_to_image}}"
 tags:
   - ns
   - tns
   - nativescript
-description: "Generates all splashscreens for Android and iOS platforms and places the generated images in the correct directories under App_Resources/<platform> directory."
+description: "Generates all splashscreens for Android and iOS platforms for your NativeScript project. It places the generated images in the correct directories under App_Resources/<platform> directory."
 arguments:
   - name: path_to_image
     description: It is a valid path to an image that will be used to generate all splashscreens.

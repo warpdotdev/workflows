@@ -1,4 +1,4 @@
-name: Install dependencies.
+name: Install dependencies for your NativeScript project.
 command: "ns install {{module}}"
 tags:
   - ns

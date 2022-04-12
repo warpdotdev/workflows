@@ -1,10 +1,10 @@
-name: Configures your project for unit testing with a selected framework.
+name: Configures your NativeScript project for unit testing with a selected framework.
 command: "ns test init {{framework}}"
 tags:
   - ns
   - tns
   - nativescript
-description: "Configures your project for unit testing with a selected framework. This operation installs the @nativescript/unit-test-runner npm module and its dependencies and creates a tests folder in the app directory."
+description: "Configures your NativeScript project for unit testing with a selected framework. This operation installs the @nativescript/unit-test-runner npm module and its dependencies and creates a tests folder in the app directory."
 arguments:
   - name: framework
     description: The following frameworks are available - mocha, jasmine and qunit.

@@ -1,4 +1,4 @@
-name: Create a Nativescript app.
+name: Create a NativeScript app.
 command: "ns create {{app_name}}"
 tags:
   - ns
