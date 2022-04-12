@@ -2,10 +2,7 @@
 
 ## Discord username (optional)
 
-If you're in our Discord server please include your formatted like so: elvis#4747.
-
-This is so we can give you the Contributor Discord role.
-Note: It must be labelled like so: username#4747 (make sure to include the #XXXX).
+If you're in our Discord server please include your formatted username so we can attribute you with our Contributor Discord role! Please include the #XXXX our regex depends on it: elvis#4747
 
 ## Description of changes (updated or new workflows)
 
