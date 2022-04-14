@@ -1,0 +1,14 @@
+---
+name: Commit message with sign
+command: "git commit -S -s -m "{{message}}""
+tags:
+  - git
+description: "Using GPG or S/MIME, you can sign tags and commits locally. These tags or commits are marked as verified on GitHub Enterprise Server so other people can be confident that the changes come from a trusted source."
+arguments:
+  - name: message
+    description: Commit message
+    default_value: ~
+source_url: "https://nickjanetakis.com/blog/signing-and-verifying-git-commits-on-the-command-line-and-github"
+author: Nick Janetakis
+author_url: "https://nickjanetakis.com/about"
+shells: []
