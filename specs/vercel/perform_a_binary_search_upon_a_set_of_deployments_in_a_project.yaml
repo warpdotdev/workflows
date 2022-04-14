@@ -1,9 +1,9 @@
 ---
-name: Perform a "binary search" upon a set of Deployments in a Project
+name: Perform a binary search upon a set of Deployments in a Project
 command: vercel bisect
 tags:
   - vercel
-description: "Perform a "binary search" upon a set of Deployments in a Project for the purpose of determining when an issue was introduced. Using the vercel bisect command will initiate an interactive prompt where you specify a good deployment, followed by a bad deployment and step through the deployments in between to find the first bad deployment."
+description: "Perform a binary search upon a set of Deployments in a Project for the purpose of determining when an issue was introduced. Using the vercel bisect command will initiate an interactive prompt where you specify a good deployment, followed by a bad deployment and step through the deployments in between to find the first bad deployment."
 arguments: []
 source_url: "https://vercel.com/docs/cli#commands/bisect"
 author: Vercel
