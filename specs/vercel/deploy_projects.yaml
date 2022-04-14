@@ -1,0 +1,11 @@
+---
+name: Deploy projects
+command: vercel
+tags:
+  - vercel
+description: "Deploy projects from the root of the project directory"
+arguments: []
+source_url: "https://vercel.com/docs/cli#introduction/basic-usage"
+author: Vercel
+author_url: "https://vercel.com/cli"
+shells: []

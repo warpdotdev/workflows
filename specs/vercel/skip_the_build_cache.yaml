@@ -1,0 +1,11 @@
+---
+name: Skip the build cache
+command: vercel --force
+tags:
+  - vercel
+description: "Skip the build cache"
+arguments: []
+source_url: "https://vercel.com/docs/cli#introduction/global-options/force"
+author: Vercel
+author_url: "https://vercel.com/cli"
+shells: []

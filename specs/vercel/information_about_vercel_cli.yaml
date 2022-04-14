@@ -1,0 +1,11 @@
+---
+name: Information about Vercel CLI
+command: vercel --help
+tags:
+  - vercel
+description: "Display more information about Vercel CLI commands."
+arguments: []
+source_url: "https://vercel.com/docs/cli#introduction/global-options/help"
+author: Vercel
+author_url: "https://vercel.com/cli"
+shells: []

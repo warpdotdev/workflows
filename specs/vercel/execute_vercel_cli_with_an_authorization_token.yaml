@@ -1,0 +1,14 @@
+---
+name: Execute Vercel CLI with an authorization token
+command: vercel --token {{token}}
+tags:
+  - vercel
+description: "Execute Vercel CLI commands with an authorization token."
+arguments: 
+  - name: token
+    description: Value of authorization token
+    default_value: ~
+source_url: "https://vercel.com/docs/cli#introduction/global-options/token"
+author: Vercel
+author_url: "https://vercel.com/cli"
+shells: []

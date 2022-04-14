@@ -1,0 +1,11 @@
+---
+name: Skip question when setting up a new project
+command: vercel --confirm
+tags:
+  - vercel
+description: "Skip questions you are asked when setting up a new project. The questions will be answered with the provided defaults, inferred from vercel.json and the folder name."
+arguments: []
+source_url: "https://vercel.com/docs/cli#introduction/unique-options/confirm"
+author: Vercel
+author_url: "https://vercel.com/cli"
+shells: []

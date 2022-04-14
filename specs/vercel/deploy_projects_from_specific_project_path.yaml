@@ -1,0 +1,14 @@
+---
+name: Deploy projects from specific project path
+command: vercel {{path-to-project}}
+tags:
+  - vercel
+description: "Deploy projects from specific project path by providing a path to it"
+arguments: 
+  - name: path-to-project
+    description: Path to the root directory of the project.
+    default_value: ~
+source_url: "https://vercel.com/docs/cli#introduction/extended-usage"
+author: Vercel
+author_url: "https://vercel.com/cli"
+shells: []
