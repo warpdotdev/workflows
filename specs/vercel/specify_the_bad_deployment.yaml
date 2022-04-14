@@ -1,0 +1,14 @@
+---
+name: Specify the bad deployment
+command: vercel bisect --bad {{deployment_url}}
+tags:
+  - vercel
+description: "Specify the "bad" deployment from the command line. When this option is present, the prompt will be skipped at the beginning of the bisect session. A production alias URL may be specified for convenience."
+arguments: 
+  - name: deployment_url
+    description: Deployment URL e.g (https://example-s93n1nfa.vercel.app)
+    default_value: ~
+source_url: "https://vercel.com/docs/cli#commands/bisect/unique-options/bad"
+author: Vercel
+author_url: "https://vercel.com/cli"
+shells: []

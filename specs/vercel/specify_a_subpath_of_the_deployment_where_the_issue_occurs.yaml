@@ -1,0 +1,14 @@
+---
+name: Specify a subpath of the deployment where the issue occurs
+command: vercel bisect --path {{subpath}}
+tags:
+  - vercel
+description: "Specify a subpath of the deployment where the issue occurs. The subpath will be appended to each URL during the bisect session."
+arguments: 
+  - name: subpath
+    description: Sub path e.g (/blog/first-post)
+    default_value: ~
+source_url: "https://vercel.com/docs/cli#commands/bisect/unique-options/path"
+author: Vercel
+author_url: "https://vercel.com/cli"
+shells: []

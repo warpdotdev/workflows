@@ -1,0 +1,14 @@
+---
+name: Ability for the bisect session to be automated
+command: vercel bisect --run {{script}}
+tags:
+  - vercel
+description: "Provides the ability for the bisect session to be automated using a shell script or command that will be invoked for each deployment URL. The shell script can run an automated test (for example, using the curl command to check the exit code) which the bisect command will use to determine whether each URL is good (exit code 0), bad (exit code non-0), or should be skipped (exit code 125)."
+arguments: 
+  - name: script
+    description: Shell script or command e.g (./test.sh)
+    default_value: ~
+source_url: "https://vercel.com/docs/cli#commands/bisect/unique-options/run"
+author: Umar Hadi
+author_url: "https://github.com/umarhadi"
+shells: []

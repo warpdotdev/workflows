@@ -1,0 +1,14 @@
+---
+name: Specify the good deployment
+command: vercel bisect --good {{deployment_url}}
+tags:
+  - vercel
+description: "Specify the initial "good" deployment from the command line. When this option is present, the prompt will be skipped at the beginning of the bisect session. A production alias URL may be specified for convenience."
+arguments: 
+  - name: deployment_url
+    description: Deployment URL e.g (https://example.vercel.app)
+    default_value: ~
+source_url: "https://vercel.com/docs/cli#commands/bisect/unique-options/good"
+author: Vercel
+author_url: "https://vercel.com/cli"
+shells: []
