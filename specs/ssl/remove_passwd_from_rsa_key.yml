@@ -1,0 +1,17 @@
+---
+name: Remove password from private RSA key
+command: "openssl rsa -in {{in_pass_key}} -out {{out_key}}"
+tags:
+  - ssl
+  - openssl
+description: "Remove password from private RSA key."
+arguments:
+  - name: in_pass_key
+    description: "Input RSA key protected with password."
+    default_value: in.key
+  - name: out_key
+    description: "Output RSA key without password."
+    default_value: out.key
+author: Petr Stepan (Deworn)
+author_url: "https://github.com/deworn"
+shells: []
