@@ -1,5 +1,5 @@
 --- 
-name: Run Build Ruuner Watch
+name: Run Build Runner Watch
 command: "flutter pub run build_runner watch --delete-conflicting-outputs" 
 tags:
   - flutter
