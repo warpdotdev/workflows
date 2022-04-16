@@ -1,0 +1,13 @@
+name: Run a Turborepo pipeline with a package filter
+command: npx turbo run {{workflows}} --filter={{filter}}
+tags:
+  - turborepo
+arguments:
+  - name: workflows
+    description: The workflows to run.
+    default_value: start
+  - name: filter
+    description: The package filter to use.
+    default_value: "*"
+author: ifthisthenthat
+author_url: "https://github.com/Wyatt-Stanke"
