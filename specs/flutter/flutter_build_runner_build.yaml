@@ -1,5 +1,5 @@
 --- 
-name: Run Build Ruuner 
+name: Run Build Runner 
 command: "flutter pub run build_runner build --delete-conflicting-outputs" 
 tags:
   - flutter
