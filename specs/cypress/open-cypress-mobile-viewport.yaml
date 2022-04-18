@@ -1,4 +1,4 @@
-name: Open Cypress With A Mobile Viewport
+name: Open Cypress With a Mobile Viewport
 command: "npx cypress open --config viewportWidth={{width}},viewportHeight={{height}}"
 tags:
   - cypress

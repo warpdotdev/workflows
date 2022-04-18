@@ -1,4 +1,4 @@
-name: Run Cypress Headless With A Mobile Viewport
+name: Run Cypress Headless With a Mobile Viewport
 command: "npx cypress run --config viewportWidth={{width}},viewportHeight={{height}}"
 tags:
   - cypress
