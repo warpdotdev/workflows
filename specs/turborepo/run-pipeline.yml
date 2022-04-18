@@ -1,10 +1,10 @@
 name: Run a Turborepo pipeline
-command: npx turbo run {{workflows}}
+command: npx turbo run {{pipelines}}
 tags:
   - turborepo
 arguments:
-  - name: workflows
-    description: The workflows to run.
+  - name: pipelines
+    description: The pipelines to run.
     default_value: start
 author: ifthisthenthat
 author_url: "https://github.com/Wyatt-Stanke"
