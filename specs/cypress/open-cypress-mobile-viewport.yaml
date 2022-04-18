@@ -1,8 +1,8 @@
-name: Run Cypress Headless on Mobile
-command: "npx cypress run --config viewportWidth={{width}},viewportHeight={{height}}"
+name: Open Cypress With A Mobile Viewport
+command: "npx cypress open --config viewportWidth={{width}},viewportHeight={{height}}"
 tags:
   - cypress
-description: "Run the Cypress Test Runner with a Mobile Viewport in Headless Mode"
+description: "Open the Cypress Test Runner with a Mobile Viewport."
 arguments:
   - name: width
     description: The width of the viewport in pixels
