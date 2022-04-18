@@ -4,7 +4,7 @@ The repo for Workflows that appear within Warp and within [commands.dev](https:/
 
 ## What are Workflows?
 
-Workflows are an easier way to execute and share commands within Warp. They are searchable by name, description, or command and are easily parameterized.
+Workflows are an easier way to execute and share commands within Warp. They are searchable by name, description, or command and are easily parameterized. See our documentation for more details: [https://docs.warp.dev/features/workflows](https://docs.warp.dev/features/workflows)
 
 ## How Do I Access Workflows?
 
