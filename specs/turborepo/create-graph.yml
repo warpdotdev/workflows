@@ -1,0 +1,10 @@
+name: Create a Turborepo dependency graph.
+command: npx turbo run {{pipelines}} --graph
+tags:
+  - turborepo
+arguments:
+  - name: pipelines
+    description: The pipelines to run.
+    default_value: start
+author: Wyatt-Stanke
+author_url: "https://github.com/Wyatt-Stanke"
