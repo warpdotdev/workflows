@@ -9,6 +9,6 @@ arguments:
     description: The formula to pin
     default_value: ~
 source_url: "https://docs.brew.sh/Manpage"
-author: ifthisthenthat
+author: Wyatt-Stanke
 author_url: "https://github.com/Wyatt-Stanke"
 shells: []

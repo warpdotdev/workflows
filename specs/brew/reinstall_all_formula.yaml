@@ -5,6 +5,6 @@ tags:
   - homebrew
 description: Reinstalls all installed Homebrew formulae and casks
 source_url: "https://docs.brew.sh/Manpage"
-author: ifthisthenthat
+author: Wyatt-Stanke
 author_url: "https://github.com/Wyatt-Stanke"
 shells: []
