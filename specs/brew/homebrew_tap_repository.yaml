@@ -1,9 +1,9 @@
 ---
-name: Tap a Homebrew tap repository from GitHub
+name: Tap a Homebrew formula repository from GitHub
 command: "brew tap {{formula_repository}}"
 tags:
   - homebrew
-description: Taps a Homebrew tap repository (a repository that contains Homebrew formulas) from GitHub.
+description: Taps a Homebrew formula repository (a repository that contains Homebrew formulae) from GitHub.
 arguments:
   - name: tap_repository
     description: The repository to tap
