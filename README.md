@@ -1,6 +1,6 @@
 # Workflows
 
-The repo for all _global_ Workflows that appear within Warp and within [commands.dev](https://www.commands.dev/).
+The repo for all _public_ Workflows that appear within Warp and within [commands.dev](https://www.commands.dev/).
 
 **To learn how to create local or repository workflows, see [our docs](https://github.com/warpdotdev/warp-internal/pull/2205).**
 
@@ -31,8 +31,10 @@ Additionally, see the workflow below as an example to quickly get started:
 # The name of the workflow.
 name: Uninstall a Homebrew package and all of its dependencies
 # The corresponding command for the workflow. Any arguments should be surrounded with two curly braces. E.g `command {{arg}}`.
-command: "brew tap beeftornado/rmtree\nbrew rmtree {{package_name}}"
-# Any tags that workflow should be categorized with.
+command: |-
+ brew tap beeftornado/rmtree
+ brew rmtree {{package_name}}
+# Any tags that the workflow should be categorized with.
 tags:
   - homebrew
 # A description the workflow.
@@ -83,8 +85,9 @@ cargo build
 ### What Makes a Useful Workflow?
 A good workflow is one that includes a command with many flags or arguments or one that is hard to remember.
 
-Additionally, a workflow should include:
+Additionally, a workflow _must_ include:
 
-* A descriptive title that includes the name of the command.
-* A description for the workflow and each of its argument, if applicable.
+* A descriptive title that includes the name of the command--this is useful for improving the experience of searching for workflows in Warp or [commands.dev](https://www.commands.dev/).
+* A tag that accurately categorizes the workflows. We ask that you avoid many repetitive tags to improve searchability of workflows within Warp.
+* A description for the workflow and each of its arguments, if applicable.
 * A default value for each argument, if applicable.
