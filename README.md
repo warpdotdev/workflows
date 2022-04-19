@@ -54,7 +54,8 @@ source_url: "https://stackoverflow.com/questions/7323261/uninstall-remove-a-home
 author: Ory Band
 # The URL of original author of the Workflow. For example, if this workflow was generated from StackOverflow, the `author_url` would be the StackOverflow author's profile page.
 author_url: "https://stackoverflow.com/users/207894"
-# The valid shells where this workflow should be active. If valid for all shells, this can be left empty.
+# The valid shells where this workflow should be active. If valid for all shells, this can be left empty. 
+# See FORMAT.md for the full list of accepted values.
 shells: []
 ```
 
