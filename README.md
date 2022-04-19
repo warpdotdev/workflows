@@ -32,8 +32,8 @@ Additionally, see the workflow below as an example to quickly get started:
 name: Uninstall a Homebrew package and all of its dependencies
 # The corresponding command for the workflow. Any arguments should be surrounded with two curly braces. E.g `command {{arg}}`.
 command: |-
- brew tap beeftornado/rmtree
- brew rmtree {{package_name}}
+    brew tap beeftornado/rmtree
+    brew rmtree {{package_name}}
 # Any tags that the workflow should be categorized with.
 tags:
   - homebrew
