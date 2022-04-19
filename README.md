@@ -37,12 +37,12 @@ command: |-
 # Any tags that the workflow should be categorized with.
 tags:
   - homebrew
-# A description the workflow.
+# A description of the workflow.
 description: Uses the external command rmtree to remove a Homebrew package and all of its dependencies
 # List of arguments within the command.
 arguments:
-    # Name of the argument within the command. This must match exactly with the name
-    # of the argument within the command (without the curly braces).
+    # Name of the argument within the command. This must exactly match the name of the argument
+    # within the command (without the curly braces).
   - name: package_name
     # The description of the argument.
     description: The name of the package that should be removed
@@ -88,6 +88,6 @@ A good workflow is one that includes a command with many flags or arguments or o
 Additionally, a workflow _must_ include:
 
 * A descriptive title that includes the name of the command--this is useful for improving the experience of searching for workflows in Warp or [commands.dev](https://www.commands.dev/).
-* A tag that accurately categorizes the workflows. We ask that you avoid many repetitive tags to improve searchability of workflows within Warp.
+* A tag that accurately categorizes the workflows. Avoid many repetitive tags to improve searchability of workflows within Warp.
 * A description for the workflow and each of its arguments, if applicable.
 * A default value for each argument, if applicable.
