@@ -14,6 +14,4 @@ All public workflows (i.e. workflows within this repo) are also available at [co
 
 ## Contributing
 
-Contributions are always welcome! If you have a workflow that would be useful to many Warp users, feel free to send a PR to add a Workflow spec.
-
-The existing preset files should serve as an example for the format, while the a more comprehensive description of the file format is available in [FORMAT.md](FORMAT.md). Please request a review from someone on the Warp team once a PR is ready for review.
+Contributions are always welcome! If you have a workflow that would be useful to many Warp users, feel free to send a PR to add a Workflow spec. Look at the [contributing guide](CONTRIBUTING.md) for more details.
