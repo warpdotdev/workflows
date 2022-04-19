@@ -1,0 +1,13 @@
+name: Create a new Turborepo
+command: npx -y create-turbo@latest {{directory}} --use-{{package_manager}}
+tags:
+  - turborepo
+arguments:
+  - name: package_manager
+    description: The package manager to use for the Turborepo.
+    default_value: npm
+  - name: directory
+    description: The directory to use for the Turborepo.
+    default_value: ./
+author: Wyatt-Stanke
+author_url: "https://github.com/Wyatt-Stanke"

@@ -1,0 +1,13 @@
+name: Run a Turborepo pipeline with a package filter
+command: npx turbo run {{pipelines}} --filter={{filter}}
+tags:
+  - turborepo
+arguments:
+  - name: pipelines
+    description: The pipelines to run.
+    default_value: start
+  - name: filter
+    description: The package filter to use.
+    default_value: "*"
+author: Wyatt-Stanke
+author_url: "https://github.com/Wyatt-Stanke"

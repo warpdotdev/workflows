@@ -1,0 +1,9 @@
+name: List processes at port
+description: List processes at a port to see if there are running processes.
+author: Maurice Gerhardt
+author_url: https://github.com/heymage
+tags: ["macos", "shell"]
+command: lsof -i:{{port}}
+arguments:
+  - name: port
+    description: The port that should be checked
