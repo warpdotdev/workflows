@@ -85,6 +85,6 @@ A good workflow is one that includes a command with many flags or arguments or o
 
 Additionally, a workflow should include:
 
-* A descriptive title the includes the name of the command.
+* A descriptive title that includes the name of the command.
 * A description for the workflow and each of its argument, if applicable.
 * A default value for each argument, if applicable.
