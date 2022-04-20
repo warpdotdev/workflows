@@ -1,0 +1,12 @@
+name: Check Nativescript system's configuration.
+command: "ns doctor {{platform}}"
+tags:
+  - nativescript
+description: "Checks your system for configuration problems which might prevent the NativeScript CLI from working properly for the specified platform, if configured."
+arguments:
+  - name: platform
+    description: The name of the platform. E.g. ios, android, etc.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/general/doctor.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

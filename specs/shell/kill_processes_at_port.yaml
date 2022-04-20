@@ -1,0 +1,9 @@
+name: Kill processes at port
+description: Kill processes at a port.
+author: Maurice Gerhardt
+author_url: https://github.com/heymage
+tags: ["macos", "shell"]
+command: kill $(lsof -t -i:{{port}})
+arguments:
+  - name: port
+    description: The port where processes should be killed

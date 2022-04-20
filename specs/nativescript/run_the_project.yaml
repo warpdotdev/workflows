@@ -1,0 +1,12 @@
+name: Run the NativeScript project for Android or iOS.
+command: "ns run {{platform}}"
+tags:
+  - nativescript
+description: "Runs your NativeScript project on all connected devices or in native emulators for the selected platform. The command will work with all currently running Android devices and emulators. The command will prepare, build and deploy the app when necessary. By default listens for changes in your code, synchronizes those changes and refreshes all selected devices."
+arguments:
+  - name: platform
+    description: The name of the platform. E.g. ios, android, etc.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/project/testing/run.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

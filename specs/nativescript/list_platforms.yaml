@@ -1,0 +1,9 @@
+name: Lists all platforms that your NativeScript project currently targets.
+command: "ns platform list"
+tags:
+  - nativescript
+description: "Lists all platforms that your NativeScript project currently targets. You can build and deploy your project only for these target platforms."
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/project/configuration/platform.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

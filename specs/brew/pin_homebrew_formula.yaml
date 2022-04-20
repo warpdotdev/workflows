@@ -1,0 +1,14 @@
+---
+name: Pin a formula to its current version
+command: "brew pin {{formula_name}}"
+tags:
+  - homebrew
+description: Pins a version of a homebrew formula to its current version, i.e. it will not be updated when a newer version is available.
+arguments:
+  - name: formula_name
+    description: The formula to pin
+    default_value: ~
+source_url: "https://docs.brew.sh/Manpage"
+author: Wyatt-Stanke
+author_url: "https://github.com/Wyatt-Stanke"
+shells: []

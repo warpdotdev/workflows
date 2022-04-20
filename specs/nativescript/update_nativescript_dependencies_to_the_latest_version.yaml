@@ -1,0 +1,12 @@
+name: Update Nativescript dependencies to the latest version.
+command: "ns update {{version}}"
+tags:
+  - nativescript
+description: "Updates your NativeScript project with the latest versions of iOS/Android runtimes, cross-platform modules and @nativescript/webpack."
+arguments:
+  - name: version
+    description: (Optional) An existing version. E.g. 5.0.0, next (latest development release)
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/general/update.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

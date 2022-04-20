@@ -1,0 +1,9 @@
+name: List applications installed on a device using NativeScript CLI.
+command: "ns device list-applications"
+tags:
+  - nativescript
+description: "NativeScript lists the installed applications on all connected Android and iOS devices."
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/device/device-list-applications.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []
