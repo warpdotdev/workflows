@@ -75,7 +75,7 @@ To do this:
 To quickly test if a workflow file format is valid, you can also build workflows locally to validate the schema is correct:
 ```
 # Download the rust toolchain, if not already installed.
-brew install rust-up
+brew install rustup
 rustup-init
 
 # Ensure the workflows can successfully be converted into Rust.
