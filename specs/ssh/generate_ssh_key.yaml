@@ -1,0 +1,24 @@
+---
+name: Generate a new SSH key
+command: "ssh-keygen -t {{algorithm}} -b {{bits}} -C {{comment}} -f {{key_file}}"
+tags:
+  - ssh
+description: Generate a new SSH key.
+arguments:
+  - name: algorithm
+    description: The algorithm to use for the key.
+    default_value: ed25519
+  - name: bits
+    description: The number of bits to use for the key.
+    default_value: 4096
+  - name: comment
+    description: The comment to use for the key.
+    default_value: ~
+  - name: key_file
+    description: The file to which the key should be written.
+    default_value: ~/.ssh/id_ed25519
+author: Chay Choong
+author_url: "https://github.com/chaychoong"
+shells:
+  - Zsh
+  - Bash

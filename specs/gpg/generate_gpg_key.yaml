@@ -1,0 +1,11 @@
+---
+name: Generate a new GPG key
+command: "gpg --full-generate-key"
+tags:
+  - gpg
+description: Interactively generate a new GPG key.
+author: Chay Choong
+author_url: "https://github.com/chaychoong"
+shells:
+  - Zsh
+  - Bash

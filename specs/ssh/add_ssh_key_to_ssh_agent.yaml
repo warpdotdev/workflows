@@ -1,0 +1,15 @@
+---
+name: Add SSH key to SSH agent
+command: "ssh-add -K {{key_file}}"
+tags:
+  - ssh
+description: Add SSH key to SSH agent.
+arguments:
+  - name: key_file
+    description: The file containing the SSH key.
+    default_value: ~/.ssh/id_ed25519
+author: Chay Choong
+author_url: "https://github.com/chaychoong"
+shells:
+  - Zsh
+  - Bash

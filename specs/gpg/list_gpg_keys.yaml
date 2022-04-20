@@ -1,0 +1,15 @@
+---
+name: List GPG keys
+command: "gpg --list-secret-keys --keyid-format {{key_id_format}}"
+tags:
+  - gpg
+description: Interactively generate a new GPG key.
+arguments:
+  - name: key_id_format
+    description: Select how to display key IDs.
+    default_value: LONG
+author: Chay Choong
+author_url: "https://github.com/chaychoong"
+shells:
+  - Zsh
+  - Bash
