@@ -1,8 +1,6 @@
 name: Update Nativescript dependencies to the latest version.
 command: "ns update {{version}}"
 tags:
-  - ns
-  - tns
   - nativescript
 description: "Updates your NativeScript project with the latest versions of iOS/Android runtimes, cross-platform modules and @nativescript/webpack."
 arguments:

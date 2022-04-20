@@ -1,8 +1,6 @@
 name: Update the NativeScript runtime for the specified platform.
 command: "ns platform update {{platform}}"
 tags:
-  - ns
-  - tns
   - nativescript
 description: "Updates the NativeScript runtime for the specified platform."
 arguments:

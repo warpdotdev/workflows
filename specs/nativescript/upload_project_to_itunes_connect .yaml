@@ -1,8 +1,6 @@
 name: Upload NativeScript project to iTunes Connect.
 command: "ns appstore upload {{apple_id}} {{password}} {{mobile_provisioning_profile_identifier}} {{code_sign_identity}}"
 tags:
-  - ns
-  - tns
   - nativescript
 description: "Uploads your NativeScript project to iTunes Connect. The command either issues a production build and uploads it to iTunes Connect, or uses an already built package to upload."
 arguments:

@@ -1,8 +1,6 @@
 name: List all application records in iTunes Connect using NativeScript CLI.
 command: "ns appstore {{apple_id}} {{password}}"
 tags:
-  - ns
-  - tns
   - nativescript
 description: "NativeScript lists all application records in iTunes Connect. The list contains name, version and bundle ID for each application record."
 arguments:
