@@ -1,8 +1,6 @@
 name: Manage Plugins in your NativeScript project.
 command: "ns plugin {{command}}"
 tags:
-  - ns
-  - tns
   - nativescript
 description: "Lets you manage the plugins for your NativeScript project."
 arguments:

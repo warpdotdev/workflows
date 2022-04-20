@@ -1,8 +1,6 @@
 name: Install dependencies for your NativeScript project.
 command: "ns install {{module}}"
 tags:
-  - ns
-  - tns
   - nativescript
 description: "Installs all dependencies described in a valid package.json or installs a selected NativeScript development module as a dev dependency."
 arguments:
