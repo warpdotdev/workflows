@@ -2,7 +2,7 @@
 
 The repo for all _public_ Workflows that appear within Warp and within [commands.dev](https://www.commands.dev/).
 
-**To learn how to create local or repository workflows, see [our docs](https://github.com/warpdotdev/warp-internal/pull/2205).**
+**To learn how to create local or repository workflows, see [our docs](https://docs.warp.dev/features/workflows#creating-custom-workflows).**
 
 <img width="736" alt="image" src="https://user-images.githubusercontent.com/4110292/164031239-49f0ec9e-f124-44c4-89e6-6facc9bf9a8f.png">
 
@@ -20,7 +20,7 @@ All public workflows (i.e. workflows within this repo) are also available at [co
 ## Contributing
 Contributions are always welcome! If you have a workflow that would be useful to many Warp users, feel free to send a PR to add a Workflow spec.
 
-All workflows are defined as YAML files within the [`specs/`](specs/) directory. 
+All workflows are defined as YAML files within the [`specs/`](specs/) directory.
 
 ### File Format
 A comprehensive description of the file format is available in [FORMAT.md](FORMAT.md).
@@ -54,7 +54,7 @@ source_url: "https://stackoverflow.com/questions/7323261/uninstall-remove-a-home
 author: Ory Band
 # The URL of original author of the Workflow. For example, if this workflow was generated from StackOverflow, the `author_url` would be the StackOverflow author's profile page.
 author_url: "https://stackoverflow.com/users/207894"
-# The valid shells where this workflow should be active. If valid for all shells, this can be left empty. 
+# The valid shells where this workflow should be active. If valid for all shells, this can be left empty.
 # See FORMAT.md for the full list of accepted values.
 shells: []
 ```
