@@ -1,8 +1,6 @@
 name: Create a NativeScript app.
 command: "ns create {{app_name}}"
 tags:
-  - ns
-  - tns
   - nativescript
 description: "Interactively creates a new NativeScript app based on a predefined template."
 arguments:
