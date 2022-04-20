@@ -1,8 +1,6 @@
 name: Prepare, build and deploy your NativeScript project to a connected device or native emulator.
 command: "ns deploy {{platform}}"
 tags:
-  - ns
-  - tns
   - nativescript
 description: "Prepares, builds and deploys your NativeScript project to a connected device or native emulator. It will deploy the app on all connected devices targeting the selected platform."
 arguments:

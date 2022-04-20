@@ -1,8 +1,6 @@
 name: List all recognized connected devices using NativeScript CLI.
 command: "ns device {{platform}}"
 tags:
-  - ns
-  - tns
   - nativescript
 description: "NativeScript lists all recognized connected Android or iOS devices with serial number and index, grouped by platform."
 arguments:

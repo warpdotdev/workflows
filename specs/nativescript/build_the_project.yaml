@@ -1,8 +1,6 @@
 name: Build your NativeScript project for Android or iOS.
 command: "ns build {{platform}}"
 tags:
-  - ns
-  - tns
   - nativescript
 description: "Builds your NativeScript project for Android or iOS and produces an application package that you can manually deploy on a device or native emulator."
 arguments:
