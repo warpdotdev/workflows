@@ -1,0 +1,12 @@
+name: Manage Plugins in your NativeScript project.
+command: "ns plugin {{command}}"
+tags:
+  - nativescript
+description: "Lets you manage the plugins for your NativeScript project."
+arguments:
+  - name: command
+    description: Extends the plugin command. Options - add, remove, update, build, create
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/lib-management/plugin.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

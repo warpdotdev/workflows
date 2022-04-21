@@ -1,0 +1,9 @@
+name: Clean your NativeScript project artifacts.
+command: "ns clean"
+tags:
+  - nativescript
+description: "Cleans your NativeScript project artifacts."
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/general/clean.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

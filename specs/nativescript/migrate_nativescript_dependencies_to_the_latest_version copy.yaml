@@ -1,0 +1,9 @@
+name: Migrate Nativescript dependencies to the latest version.
+command: "ns migrate"
+tags:
+  - nativescript
+description: "Migrates the app dependencies to a form compatible with the latest NativeScript. Running this command will not affect the codebase of the application and you might need to do additional changes manually."
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/general/migrate.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

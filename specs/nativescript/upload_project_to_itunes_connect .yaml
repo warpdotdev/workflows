@@ -1,0 +1,18 @@
+name: Upload NativeScript project to iTunes Connect.
+command: "ns appstore upload {{apple_id}} {{password}} {{mobile_provisioning_profile_identifier}} {{code_sign_identity}}"
+tags:
+  - nativescript
+description: "Uploads your NativeScript project to iTunes Connect. The command either issues a production build and uploads it to iTunes Connect, or uses an already built package to upload."
+arguments:
+  - name: apple_id
+    description: iTunes connect id.
+  - name: password
+    description: Itunes connect password.
+  - name: mobile_provisioning_profile_identifier
+    description: The identifier of the mobile provision (E.g.. d5d40f61-b303-4fc8-aea3-fbb229a8171c) which will be used for building. This can easily be acquired through the iPhone Configuration Utility.
+  - name: code_sign_identity
+    description: The code sign identity which will be used for building. You can set it to something generic like 'iPhone Distribution' to let the build automatically detect a code sign identity.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/publishing/appstore-upload.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []
