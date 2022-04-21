@@ -1,6 +1,6 @@
 ---
 name: Recursively find and replace within a directory
-command: "grep -rl {{old_text}} {{file_path}} | xargs sed -i 's/{{old_text}}/{{new_text}}/g'"
+command: "grep -rl {{old_text}} {{file_path}} | xargs sed -i '' 's/{{old_text}}/{{new_text}}/g'"
 tags:
   - file manipulation
   - sed
