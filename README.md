@@ -83,7 +83,7 @@ cargo build
 ```
 
 
-### What Makes a Useful Workflow?
+### What Makes a Useful workflow?
 A good workflow is one that includes a command with many flags or arguments or one that is hard to remember.
 
 Additionally, a workflow _must_ include:
