@@ -1,0 +1,20 @@
+---
+name: Gitlab merge request checkout
+command: |-
+    git fetch {{repo}} merge-requests/{{request_id}}/head:{{branch_name}}
+    git checkout {{branch_name}}
+tags:
+  - git
+description: Checkouting out gitlab merge request locally
+arguments:
+  - name: repo
+    description: The remote repository name
+    default_value: origin
+  - name: request_id
+    description: Merge request id
+    default_value: ~
+  - name: branch_name
+    description: The name of merge request branch locally you want
+    default_value: ~
+author: Yong Yang
+author_url: "https://github.com/imyangyong"
