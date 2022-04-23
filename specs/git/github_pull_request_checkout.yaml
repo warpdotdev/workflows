@@ -1,0 +1,20 @@
+---
+name: Github pull request checkout
+command: |-
+    git fetch {{repo}} pull/{{request_id}}/head:{{branch_name}}
+    git checkout {{branch_name}}
+tags:
+  - git
+description: Checkouting out github pull request locally
+arguments:
+  - name: repo
+    description: The remote repository name
+    default_value: origin
+  - name: request_id
+    description: Pull request id
+    default_value: ~
+  - name: branch_name
+    description: The name of pull request branch locally you want
+    default_value: ~
+author: Yong Yang
+author_url: "https://github.com/imyangyong"
