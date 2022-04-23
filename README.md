@@ -11,7 +11,7 @@ The repo for all _public_ Workflows that appear within Warp and within [commands
 
 Workflows are an easier way to execute and share commands within Warp. They are searchable by name, description, or command and are easily parameterized. See our documentation for more details: [https://docs.warp.dev/features/workflows](https://docs.warp.dev/features/workflows)
 
-## How Do I Access Workflows within Warp?
+## How do I access workflows within Warp?
 
 Workflows can be accessed directly within Warp, either through the Command Palette or by pressing `ctrl-shift-r`.
 
@@ -83,7 +83,7 @@ cargo build
 ```
 
 
-### What Makes a Useful workflow?
+### What makes a useful workflow?
 A good workflow is one that includes a command with many flags or arguments or one that is hard to remember.
 
 Additionally, a workflow _must_ include:
