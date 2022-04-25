@@ -1,0 +1,17 @@
+---
+name: Generate a CSR from configuration/template
+command: "openssl req -new -config {{conf_file}} -out {{csr_file}} -verbose"
+tags:
+  - ssl
+  - openssl
+description: "Generates a Certificate Signing Request (CSR) from configuration (template) file. This CSR is needs to be signed by Certification Authority."
+arguments:
+  - name: conf_file
+    description: "Configuration file containing all details for CSR."
+    default_value: csr_template.conf
+  - name: csr_file
+    description: "Output CSR file which needs to be signed by Certification Authority."
+    default_value: client.csr
+author: Petr Stepan (Deworn)
+author_url: "https://github.com/deworn"
+shells: []
