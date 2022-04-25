@@ -1,0 +1,12 @@
+name: Run the selected NativeScript application on a connected device.
+command: "ns run {{application_id}}"
+tags:
+  - nativescript
+description: "Runs the selected NativeScript application on a connected Android or iOS device."
+arguments:
+  - name: application_id
+    description: (Optional) It is the application identifier as listed by $ ns device list-applications.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/device/device-run.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

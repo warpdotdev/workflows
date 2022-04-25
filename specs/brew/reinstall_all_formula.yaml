@@ -1,0 +1,10 @@
+---
+name: Reinstall all installed Homebrew formulae/casks
+command: "brew list -1 | xargs brew reinstall"
+tags:
+  - homebrew
+description: Reinstalls all installed Homebrew formulae and casks
+source_url: "https://docs.brew.sh/Manpage"
+author: Wyatt-Stanke
+author_url: "https://github.com/Wyatt-Stanke"
+shells: []

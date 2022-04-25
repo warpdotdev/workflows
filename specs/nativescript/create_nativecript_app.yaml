@@ -1,0 +1,12 @@
+name: Create a NativeScript app.
+command: "ns create {{app_name}}"
+tags:
+  - nativescript
+description: "Interactively creates a new NativeScript app based on a predefined template."
+arguments:
+  - name: app_name
+    description: The name of project and must meet the requirements of each platform that you want to target.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/project/creation/create.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

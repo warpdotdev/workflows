@@ -1,0 +1,12 @@
+name: Prepare the app's App_Resources and the plugins platforms directories in your NativeScript project.
+command: "ns prepare {{platform}}"
+tags:
+  - nativescript
+description: "Starts a Webpack compilation and prepares the app's App_Resources and the plugins platforms directories in your NativeScript project. The output is generated in a subdirectory for the selected target platform in the platforms directory. This lets you build the project for the selected platform."
+arguments:
+  - name: platform
+    description: The name of the platform. E.g. ios, android, etc.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/project/configuration/prepare.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

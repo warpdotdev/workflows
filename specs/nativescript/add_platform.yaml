@@ -1,0 +1,12 @@
+name: Configure your current NativeScript project to target the selected platform.
+command: "ns platform add {{platform}}"
+tags:
+  - nativescript
+description: "Configures the current NativeScript project to target the selected platform. When you add a target platform, the NativeScript CLI creates a corresponding platform-specific subdirectory under the platforms directory. This platform-specific directory contains the necessary files to let you build your project for the target platform."
+arguments:
+  - name: platform
+    description: The name of the platform. E.g. ios, android, etc.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/project/configuration/platform-add.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

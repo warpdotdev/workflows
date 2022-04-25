@@ -1,0 +1,14 @@
+---
+name: Unpin a homebrew formula
+command: "brew unpin {{formula_name}}"
+tags:
+  - homebrew
+description: Unpins a version of a homebrew formula to its current version, i.e. it will not be updated when a newer version is available.
+arguments:
+  - name: formula_name
+    description: The formula to unpin
+    default_value: ~
+source_url: "https://docs.brew.sh/Manpage"
+author: Wyatt-Stanke
+author_url: "https://github.com/Wyatt-Stanke"
+shells: []

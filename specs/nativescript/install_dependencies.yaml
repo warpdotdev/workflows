@@ -1,0 +1,12 @@
+name: Install dependencies for your NativeScript project.
+command: "ns install {{module}}"
+tags:
+  - nativescript
+description: "Installs all dependencies described in a valid package.json or installs a selected NativeScript development module as a dev dependency."
+arguments:
+  - name: module
+    description: Specifies a NativeScript development module by path to a local directory containing a valid npm module or by name in the npm registry.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/project/configuration/install.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []
