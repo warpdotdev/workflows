@@ -1,0 +1,12 @@
+name: Initiate a debugging session for your NativeScript project.
+command: "ns debug {{platform}}"
+tags:
+  - nativescript
+description: "Initiates a debugging session for your NativeScript project on a connected device or native emulator. The command will prepare, build, deploy and launch the app before starting the debug session."
+arguments:
+  - name: platform
+    description: The name of the platform. E.g. ios, android, etc.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/project/testing/debug.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

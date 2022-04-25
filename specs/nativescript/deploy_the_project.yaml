@@ -1,0 +1,12 @@
+name: Prepare, build and deploy your NativeScript project to a connected device or native emulator.
+command: "ns deploy {{platform}}"
+tags:
+  - nativescript
+description: "Prepares, builds and deploys your NativeScript project to a connected device or native emulator. It will deploy the app on all connected devices targeting the selected platform."
+arguments:
+  - name: platform
+    description: The name of the platform. E.g. ios, android, etc.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/project/testing/deploy.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

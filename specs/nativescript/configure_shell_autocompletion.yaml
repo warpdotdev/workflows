@@ -1,0 +1,12 @@
+name: Configure NativeScript command-line autocompletion.
+command: "ns autocomplete {{command}}"
+tags:
+  - nativescript
+description: "Prints your current NativeScript command-line completion settings. If disabled, prompts you to enable it."
+arguments:
+  - name: command
+    description: options are status, enable, disable.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/general/autocomplete.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

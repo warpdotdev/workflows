@@ -1,0 +1,12 @@
+name: Generate platform's (iOS and/or Android) typings for your NativeScript project.
+command: "ns typings {{platform}}"
+tags:
+  - nativescript
+description: "Generate iOS & Android typings for your NativeScript project. By default respecting platform support, so no iOS typings generated on Windows/Linux machines."
+arguments:
+  - name: platform
+    description: The name of the platform. E.g. ios, android, etc.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/project/testing/typings.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

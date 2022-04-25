@@ -1,0 +1,9 @@
+name: Configure NativeScript CLI error reporting.
+command: "ns error-reporting"
+tags:
+  - nativescript
+description: "Configures anonymous error reporting for the NativeScript CLI."
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/general/error-reporting.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

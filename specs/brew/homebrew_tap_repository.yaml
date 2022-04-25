@@ -1,0 +1,14 @@
+---
+name: Tap a Homebrew formula repository from GitHub
+command: "brew tap {{formula_repository}}"
+tags:
+  - homebrew
+description: Taps a Homebrew formula repository (a repository that contains Homebrew formulae) from GitHub.
+arguments:
+  - name: tap_repository
+    description: The repository to tap (in format of "username/repo")
+    default_value: ~
+source_url: "https://docs.brew.sh/Manpage"
+author: Wyatt-Stanke
+author_url: "https://github.com/Wyatt-Stanke"
+shells: []

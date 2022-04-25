@@ -1,0 +1,9 @@
+name: Display version information about NativeScript.
+command: "ns info"
+tags:
+  - nativescript
+description: "Displays version information about the NativeScript CLI, core modules, and runtimes."
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/general/info.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

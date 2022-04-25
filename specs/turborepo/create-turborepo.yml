@@ -9,5 +9,5 @@ arguments:
   - name: directory
     description: The directory to use for the Turborepo.
     default_value: ./
-author: ifthisthenthat
+author: Wyatt-Stanke
 author_url: "https://github.com/Wyatt-Stanke"
