@@ -1,0 +1,8 @@
+name: Open Cypress
+command: "npx cypress open"
+tags:
+  - cypress
+description: "Open the Cypress Test Runner."
+source_url: "https://docs.cypress.io/guides/getting-started/installing-cypress#Opening-Cypress"
+author: cypress-dx
+shells: []

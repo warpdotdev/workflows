@@ -1,0 +1,17 @@
+---
+name: Convert certificate from PEM to DER
+command: "openssl x509 -inform pem -outform der -in {{in_pem_cert}} -out {{out_der_cert}}"
+tags:
+  - ssl
+  - openssl
+description: "Convert certificate in PEM format (base64) to DER binary encoding"
+arguments:
+  - name: in_pem_cert
+    description: "Input certificate file in PEM format. Files usually have .pem, .crt, or .cer extensions."
+    default_value: in_cert.pem
+  - name: out_der_cert
+    description: "Output certificate file which will be DER encoded. Files usually have .der or .cer extensions."
+    default_value: out_cert.der
+author: Petr Stepan (Deworn)
+author_url: "https://github.com/deworn"
+shells: []
