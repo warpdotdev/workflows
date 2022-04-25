@@ -75,7 +75,7 @@ To do this:
 To quickly test if a workflow file format is valid, you can also build workflows locally to validate the schema is correct:
 ```
 # Download the rust toolchain, if not already installed.
-brew install rust-up
+brew install rustup
 rustup-init
 
 # Ensure the workflows can successfully be converted into Rust.
@@ -83,7 +83,7 @@ cargo build
 ```
 
 
-### What Makes a Useful Workflow?
+### What Makes a Useful workflow?
 A good workflow is one that includes a command with many flags or arguments or one that is hard to remember.
 
 Additionally, a workflow _must_ include:
