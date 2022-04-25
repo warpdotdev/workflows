@@ -1,0 +1,14 @@
+---
+name: Check website certificate
+command: "openssl s_client -connect {{url}}:443 -showcerts"
+tags:
+  - ssl
+  - openssl
+description: "Check certificate of specific web site or URL."
+arguments:
+  - name: url
+    description: "URL to check."
+    default_value: ""
+author: Petr Stepan (Deworn)
+author_url: "https://github.com/deworn"
+shells: []
