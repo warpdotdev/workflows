@@ -1,0 +1,8 @@
+name: Run Cypress Headless
+command: "npx cypress run"
+tags:
+  - cypress
+description: "Run Cypress in Headless Mode"
+source_url: "https://docs.cypress.io/guides/guides/command-line#cypress-run"
+author: cypress-dx
+shells: []

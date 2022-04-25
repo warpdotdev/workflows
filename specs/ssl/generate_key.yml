@@ -1,0 +1,23 @@
+---
+name: Generate RSA key
+command: 'ssh-keygen -t {{key_type}} -b {{key_size}} -o -a 100 -C "{{key_comment}}" -f "{{key_file_name}}"'
+tags:
+  - ssl
+  - openssl
+description: "Generate new RSA key with 100 KDF rounds."
+arguments:
+  - name: key_type
+    description: "Type of the new key. Options are: rsa, dsa, ed25519, ed25519-sk, ecdsa, ecdsa-sk"
+    default_value: "rsa"
+  - name: key_size
+    description: "Size of new key in bits. DSA example: 1024. RSA example: 2048, 3072, 4096. ECDSA examples: 256, 384, 512. EXDSA-SK, ED25519 and ED25519-SK have fixed length (flag will be ignored)."
+    default_value: "2048"
+  - name: key_comment
+    description: "Comment displayed at the end of the key. Optional."
+    default_value: ""
+  - name: key_file_name
+    description: "Filename of the new key."
+    default_value: ""
+author: Petr Stepan (Deworn)
+author_url: "https://github.com/deworn"
+shells: []
