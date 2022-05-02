@@ -1,0 +1,9 @@
+name: Add Nx to an Existing Project
+command: "npx add-nx-to-monorepo"
+tags:
+  - nx
+description: "If you have an existing Lerna or Yarn monorepo, you can gain the benefits of Nx's computation cache and distributed task execution without modifying the file structure by running this command"
+source_url: "https://nx.dev/getting-started/nx-setup#add-nx-to-an-existing-project"
+author: mandarini
+author_url: "https://github.com/mandarini"
+shells: []
