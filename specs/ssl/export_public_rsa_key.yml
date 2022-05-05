@@ -1,0 +1,17 @@
+---
+name: Export public key from private RSA key
+command: "openssl rsa -in {{in_key}} -pubout -out {{out_pub_key}}"
+tags:
+  - ssl
+  - openssl
+description: "Export public part of the key from private RSA key."
+arguments:
+  - name: in_key
+    description: "Input private RSA key."
+    default_value: in.key
+  - name: out_pub_key
+    description: "Output key which contains only public part."
+    default_value: out.key
+author: Petr Stepan (Deworn)
+author_url: "https://github.com/deworn"
+shells: []

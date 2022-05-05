@@ -1,0 +1,17 @@
+---
+name: Convert certificate from PKCS#12 to PEM
+command: "openssl pkcs12 -in {{in_pkcs12_cert}} -out {{out_pem_cert}} -nodes"
+tags:
+  - ssl
+  - openssl
+description: "Convert certificate in PKCS#12 container format (private key included) to PEM format (base64)"
+arguments:
+  - name: in_pkcs12_cert
+    description: "Input certificate file in PKCS#12 container format. Files usually have .pfx or .p12 extensions."
+    default_value: in_cert.pfx
+  - name: out_pem_cert
+    description: "Output certificate file which will be in PEM format. Files usually have .pem, .crt, or .cer extensions."
+    default_value: out_cert.pem
+author: Petr Stepan (Deworn)
+author_url: "https://github.com/deworn"
+shells: []
