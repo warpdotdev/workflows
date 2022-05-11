@@ -1,6 +1,6 @@
 ---
 name: Start a Bash shell within a Docker container
-command: "docker exec -it {{container_name}} bash"
+command: "sudo docker exec -it -e COLUMNS=\"`tput cols`\" -e LINES=\"`tput lines`\" {{container_name}} /bin/bash"
 tags:
   - docker
 description: Runs a Bash subshell within a Docker container.
