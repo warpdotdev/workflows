@@ -1,0 +1,11 @@
+---
+name: Remove all stopped docker container, image and volumes
+command: docker system prune --all && docker volume prune
+tags:
+  - docker
+description: "Remove all stopped docker container, image and volumes. Be Careful when doing this action"
+arguments: []
+source_url: "https://docs.docker.com/engine/reference/commandline/system_prune/"
+author: Khanh Chau
+author_url: "https://github.com/khanhx"
+shells: []
