@@ -1,0 +1,22 @@
+---
+name: Shell for-loop
+command: "for {{variable}} in {{sequence}};\n  {{command}}\n; end"
+tags:
+  - shell
+  - fishshell
+description: "A for loop that iterates through a sequence. A common example of this is to iterate through words in in a string, for example:\n\nfor I in ( ls );\n  echo item: $i\n;end\n"
+arguments:
+  - name: variable
+    description: The variable to use in the body of the for loop.
+    default_value: ~
+  - name: sequence
+    description: The sequence to iterate over. This is commonly a string or command subprocess
+    default_value: ~
+  - name: command
+    description: The body of the for loop.
+    default_value: ~
+source_url: "https://fishshell.com/docs/current/cmds/for.html"
+author: Brian M (forked from Mike G)
+author_url: https://github.com/bdmorin
+shells:
+  - fish
