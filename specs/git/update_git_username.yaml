@@ -3,7 +3,7 @@ name: Change username of git
 command: "git config --global user.name '{{username}}'"
 tags:
   - git
-description: Sets the URL for a remote git repository to a new URL
+description: Sets the username for git
 arguments:
   - name: username
     description: The new username git should use
