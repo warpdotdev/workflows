@@ -8,8 +8,6 @@ command: |-
 # Any tags that the workflow should be categorized with.
 tags:
   - git
-  - gitignore
-  - version control
 # A description of the workflow.
 description: After adding new files to the .gitignore file, these commands will update the git index
 # The source URL for where the workflow was generated from, if any.
