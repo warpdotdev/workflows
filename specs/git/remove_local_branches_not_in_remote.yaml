@@ -1,5 +1,5 @@
 ---
-name: Remove all local branches that aren't in remote
+name: Remove all local branches that aren't on the remote repository
 command: |-
   "git branch --merged >/tmp/merged-branches && \
    vi /tmp/merged-branches && \
