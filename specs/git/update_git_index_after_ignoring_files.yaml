@@ -1,0 +1,21 @@
+---
+# The name of the workflow.
+name: Delete newly git-ignored files from your repository
+# The corresponding command for the workflow. Any arguments should be surrounded with two curly braces. E.g `command {{arg}}`.
+command: |-
+  git rm -r --cached .
+  git add .
+# Any tags that the workflow should be categorized with.
+tags:
+  - git
+# A description of the workflow.
+description: After adding new files to the .gitignore file, these commands will update the git index
+# The source URL for where the workflow was generated from, if any.
+source_url: "https://stackoverflow.com/questions/1274057/how-can-i-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitign"
+# The author of the workflow.
+author: Matt Frear
+# The URL of original author of the Workflow. For example, if this workflow was generated from StackOverflow, the `author_url` would be the StackOverflow author's profile page.
+author_url: "https://stackoverflow.com/users/32598/matt-frear"
+# The valid shells where this workflow should be active. If valid for all shells, this can be left empty.
+# See FORMAT.md for the full list of accepted values.
+shells: []
