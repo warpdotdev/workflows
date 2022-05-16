@@ -4,7 +4,7 @@ command: "pgloader mysql://{{mysql_username}}:{{mysql_password}}@{{mysql_hostnam
 tags:
   - postgresql
   - mysql
-description: Loads data from the MySQL database, transforms it to postgresql compatible format and uploads it to the PostgresSQL database. Note -  it requires pgloader to be installed and both PostgresSQL and MySQL hosts are accessible from the machine running this script.
+description: Loads data from the MySQL database, transforms it to PostgresSQL compatible format and uploads it to the PostgresSQL database. Note -  it requires pgloader to be installed and both PostgresSQL and MySQL hosts are accessible from the machine running this script.
 arguments:
   - name: mysql_username
     description: The username for the MySQL database.
