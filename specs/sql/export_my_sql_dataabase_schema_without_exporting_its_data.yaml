@@ -1,5 +1,5 @@
 ---
-name: Export MySQL dataabase schema without exporting its data
+name: Export MySQL database schema without exporting its data
 command: "mysqldump -h {{host_name_or_ip}} -u {{username}} -p --no-data dbname > {{output_sql_file_path}}"
 tags:
   - mysql
