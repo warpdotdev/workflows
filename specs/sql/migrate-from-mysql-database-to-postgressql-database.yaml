@@ -36,7 +36,7 @@ arguments:
   - name: postgres_database_name
     description: The name of the Postgres database.
     default_value: ~
-source_url: "https://docs.dipak.tech/docs/database/postgres/postgres-migration"
+source_url: "https://docs.dipak.tech/database/postgres/postgres-migration"
 author: Dipak Parmar
 author_url: "https://github.com/dipakparmar"
 shells: []
