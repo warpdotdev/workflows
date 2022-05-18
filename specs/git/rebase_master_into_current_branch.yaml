@@ -1,0 +1,19 @@
+---
+name: Set master as upstream and rebase master into feature branch
+command: |-
+    git branch -u master
+    git checkout master
+    git pull
+    git checkout {{featurebranch}}
+    git pull --rebase
+tags:
+  - git
+description: Rebases master into the feature branch
+arguments:
+  - name: featurebranch
+    description: The branch name that you're currently developing on
+    default_value: ~
+source_url: ""
+author: Zheng Tao
+author_url: "https://www.linkedin.com/in/zheng-tao-2b7b2855"
+shells: []
