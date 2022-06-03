@@ -3,7 +3,7 @@ name: "Find all files in a directory that don't contain a string"
 command: "grep -L \"foo\" {{pattern}}"
 tags:
   - search
-  - git
+  - grep
 description: "Finds all files in a repository that don't contain a given pattern."
 arguments:
   - name: pattern
