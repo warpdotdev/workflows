@@ -1,0 +1,42 @@
+---
+name: Migrate from MySQL Database to PostgresSQL Database
+command: "pgloader mysql://{{mysql_username}}:{{mysql_password}}@{{mysql_hostname}}:{{mysql_port}}/{{mysql_database_name}} postgresql://{{postgres_username}}:{{postgres_password}}@{{postgres_hostname}}:{{postgres_port}}/{{postgres_database_name}}"
+tags:
+  - postgresql
+  - mysql
+description: Loads data from the MySQL database, transforms it to PostgresSQL compatible format and uploads it to the PostgresSQL database. Note -  it requires pgloader to be installed and both PostgresSQL and MySQL hosts are accessible from the machine running this script.
+arguments:
+  - name: mysql_username
+    description: The username for the MySQL database.
+    default_value: ~
+  - name: mysql_password
+    description: The password for the MySQL database.
+    default_value: ~
+  - name: mysql_hostname
+    description: The hostname for the MySQL database.
+    default_value: ~
+  - name: mysql_port
+    description: The port for the MySQL database.
+    default_value: 3306
+  - name: mysql_database_name
+    description: The name of the MySQL database.
+    default_value: ~
+  - name: postgres_username
+    description: The username for the Postgres database.
+    default_value: ~
+  - name: postgres_password
+    description: The password for the Postgres database.
+    default_value: ~
+  - name: postgres_hostname
+    description: The hostname for the Postgres database.
+    default_value: ~
+  - name: postgres_port
+    description: The port for the Postgres database.
+    default_value: 5432
+  - name: postgres_database_name
+    description: The name of the Postgres database.
+    default_value: ~
+source_url: "https://docs.dipak.tech/database/postgres/postgres-migration"
+author: Dipak Parmar
+author_url: "https://github.com/dipakparmar"
+shells: []
