@@ -1,0 +1,14 @@
+---
+name: Remove all local branches that aren't on the remote repository
+command: |-
+  "git branch --merged >/tmp/merged-branches && \
+   vi /tmp/merged-branches && \
+   xargs git branch -d </tmp/merged-branches"
+tags:
+  - git
+description: "Remove all local branches that doesn't exists in remote repository."
+arguments: []  
+source_url: "https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote"
+author: Mailo Světel
+author_url: "https://stackoverflow.com/users/133986/mailo-sv%c4%9btel"
+shells: []
