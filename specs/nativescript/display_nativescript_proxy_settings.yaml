@@ -1,0 +1,9 @@
+name: Display proxy settings of the NativeScript CLI.
+command: "ns proxy"
+tags:
+  - nativescript
+description: "Displays the current proxy settings of the NativeScript CLI."
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/general/proxy.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

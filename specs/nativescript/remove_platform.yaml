@@ -1,0 +1,12 @@
+name: Remove the selected platform from your NativeScript project.
+command: "ns platform remove {{platform}}"
+tags:
+  - nativescript
+description: "Removes the selected platform from the platforms that your NativeScript project currently targets. After removing the target platform, you can no longer build and deploy your app on devices which run on the platform."
+arguments:
+  - name: platform
+    description: The name of the platform. E.g. ios, android, etc.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/project/configuration/platform-remove.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

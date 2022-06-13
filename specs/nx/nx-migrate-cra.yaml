@@ -1,0 +1,9 @@
+name: Migrate Create-React-App project into a Nx Workspace
+command: "npx cra-to-nx"
+tags:
+  - nx
+description: "If you have an existing Create-React-App project, you can gain the benefits of Nx's computation cache and distributed task execution by running this command"
+source_url: "https://nx.dev/migration/migration-cra"
+author: mandarini
+author_url: "https://github.com/mandarini"
+shells: []

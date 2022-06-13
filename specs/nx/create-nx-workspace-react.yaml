@@ -1,8 +1,8 @@
-name: Create a new Nx workspace
-command: "npx create-nx-workspace@latest {{name}}"
+name: Create a new Nx workspace with a React application
+command: "npx create-nx-workspace@latest {{name}} --preset=react"
 tags:
   - nx
-description: "Create a new Nx workspace using the latest version of Nx."
+description: "Create a new Nx workspace with a React application using the latest version of Nx."
 arguments:
   - name: name
     description: The name of the workspace.

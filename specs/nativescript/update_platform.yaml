@@ -1,0 +1,12 @@
+name: Update the NativeScript runtime for the specified platform.
+command: "ns platform update {{platform}}"
+tags:
+  - nativescript
+description: "Updates the NativeScript runtime for the specified platform."
+arguments:
+  - name: platform
+    description: The name of the platform. E.g. ios, android, etc.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/project/configuration/platform-update.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

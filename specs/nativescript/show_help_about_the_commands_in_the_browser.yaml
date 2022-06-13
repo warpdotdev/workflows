@@ -1,0 +1,12 @@
+name: Show information about the NativeScript CLI commands in the browser.
+command: "ns help {{command}}"
+tags:
+  - nativescript
+description: "Shows additional information about the NativeScript CLI commands in this list in the browser."
+arguments:
+  - name: command
+    description: The name of the command in the list.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/general/help.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []
