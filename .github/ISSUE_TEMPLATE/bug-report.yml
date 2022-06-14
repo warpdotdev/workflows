@@ -1,0 +1,35 @@
+name: "🐛 Bug Report"
+description: "When something doesn't seem right..."
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Thank you for your report! Please fill out this form.
+  - type: dropdown
+    attributes:
+      label: "What section of this project is the bug in?"
+      multiple: true
+      options:
+        - Workflows
+        - Building
+        - CI/CD
+        - Scripts
+        - Meta (e.g. README)
+        - Other
+  - type: input
+    attributes:
+      label: "What is the bug?"
+      placeholder: "Describe the bug here..."
+  - type: input
+    attributes:
+      label: "What is the expected behavior?"
+      placeholder: "Describe the expected behavior here..."
+  - type: input
+    attributes:
+      label: "What is the actual behavior?"
+      placeholder: "Describe the actual behavior here..."
+  - type: input
+    attributes:
+      label: "How would you replicate this bug?"
+      placeholder: "Describe the replication steps here..."
