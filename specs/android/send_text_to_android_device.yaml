@@ -1,0 +1,15 @@
+---
+name: Send text to android device
+command: adb shell input text "{{text_need_to_be_sent}}"
+tags:
+  - android
+  - adb
+description: Send text to android device, The input box on the Android device needs to be in focus
+arguments:
+  - name: text_need_to_be_sent
+    description: The text content that needs to be sent to the Android device. If there is a space in the text, use %s instead
+    default_value: ~
+source_url: "https://developer.android.com/studio/command-line/adb"
+author: wmszhe
+author_url: "https://github.com/wmszhe"
+shells: []
