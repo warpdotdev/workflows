@@ -6,7 +6,7 @@ tags:
 description: Loops through an array, running a command on each value.
 arguments:
   - name: array_name
-    description: The name of the array to loop through
+    description: The name of the array to append values
     default_value: ~
   - name: values
     description: The values to append to the array, space-separated
@@ -14,3 +14,6 @@ arguments:
 source_url: "https://opensource.com/article/18/5/you-dont-know-bash-intro-bash-arrays"
 author: Wyatt-Stanke
 author_url: "https://github.com/Wyatt-Stanke"
+shells:
+  - Zsh
+  - Bash
