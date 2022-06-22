@@ -1,13 +1,16 @@
 ---
 name: "Find all files in a directory that don't contain a string"
-command: "grep -L \"foo\" {{pattern}}"
+command: 'grep -L "{{string}}" {{directory}}'
 tags:
   - search
   - grep
-description: "Finds all files in a repository that don't contain a given pattern."
+description: "Finds all files in a directory that don't contain a given string."
 arguments:
-  - name: pattern
-    description: The pattern to search for
+  - name: string
+    description: The string to search for
+    default_value: ~
+  - name: directory
+    description: The directory to search. Use '*' for current directory.
     default_value: ~
 source_url: "https://stackoverflow.com/questions/1748129/how-do-i-find-files-that-do-not-contain-a-given-string-pattern"
 author: ghostdog74
