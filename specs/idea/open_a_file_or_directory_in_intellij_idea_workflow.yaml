@@ -1,0 +1,13 @@
+---
+name: Open a file or directory in a IntelliJ Idea editor
+command: "idea {{file_or_directory}}"
+tags: ["idea"]
+description: Use the command line to open a file in IntelliJ Idea.
+arguments:
+  - name: file_or_directory
+    description: The file or directory that you want to open.
+    default_value: ~
+source_url: "https://www.jetbrains.com/help/idea/opening-files-from-command-line.html"
+author: Patrick van Zadel
+author_url: "https://github.com/Shuyinsama"
+shells: []
