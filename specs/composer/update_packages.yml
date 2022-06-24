@@ -1,0 +1,12 @@
+---
+name: Updating dependencies to their latest versions
+command: composer update
+tags:
+  - composer
+  - php
+description: ~
+arguments: []
+source_url: "https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies"
+author: Rob Mellett
+author_url: "https://robmellett.com"
+shells: []

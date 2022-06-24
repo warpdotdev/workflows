@@ -1,0 +1,12 @@
+---
+name: List all installed packages including their latest version
+command: composer show --latest
+tags:
+  - composer
+  - php
+description: ~
+arguments: []
+source_url: "https://getcomposer.org/doc/03-cli.md#show"
+author: Rob Mellett
+author_url: "https://robmellett.com"
+shells: []
