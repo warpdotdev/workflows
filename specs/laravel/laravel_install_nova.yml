@@ -1,6 +1,6 @@
 ---
 name: Install Laravel Sail using Composer
-command: 'composer config repositories.nova ''{"type": "composer", "url": "https://nova.laravel.com"}'' --file composer.json' && composer require laravel/nova && composer update --prefer-dist
+command: composer config repositories.nova '{"type": "composer", "url": "https://nova.laravel.com"}' --file composer.json && composer require laravel/nova && composer update --prefer-dist
 tags:
   - composer
   - laravel
