@@ -1,0 +1,13 @@
+---
+name: Install Laravel Vapor using Composer
+command: composer require laravel/sail --dev
+tags:
+  - composer
+  - laravel
+  - php
+description: ~
+arguments: []
+source_url: "https://laravel.com/docs/9.x/sail#installing-sail-into-existing-applications"
+author: Rob Mellett
+author_url: "https://robmellett.com"
+shells: []
