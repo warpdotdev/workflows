@@ -1,6 +1,6 @@
 ---
 name: "Find all files in a directory that don't contain a string"
-command: "grep -L \"foo\" {{pattern}}"
+command: "grep -L \"{{pattern}}\" "
 tags:
   - search
   - grep

@@ -1,0 +1,16 @@
+---
+name: Open a file on a specific line in IntelliJ Idea
+command: "idea --line {{line_number}} {{file}}"
+tags: ["idea"]
+description: Use the command line to open a file on a specific line in IntelliJ Idea.
+arguments:
+  - name: line_number
+    description: The line number you want the file to open two
+    default_value: 1
+  - name: file
+    description: The file that you want to open.
+    default_value: ~
+source_url: "https://www.jetbrains.com/help/idea/opening-files-from-command-line.html"
+author: Patrick van Zadel
+author_url: "https://github.com/Shuyinsama"
+shells: []
