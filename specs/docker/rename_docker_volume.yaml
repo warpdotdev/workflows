@@ -1,0 +1,17 @@
+---
+name: Rename a Docker volume
+command: "docker volume create --name {{new_volume}} && docker run --rm -it -v {{old_volume}}:/from -v {{new_volume}}:/to alpine ash -c 'cd /from ; cp -av . /to' && docker volume rm {{old_volume}}"
+tags:
+  - docker
+description: Renames a Docker volume by creating a new volume, copying all of its content to from the old to the new volume and then deletes the old volume.
+arguments:
+  - name: old_volume
+    description: The name of the old volume
+    default_value: ~
+  - name: new_volume
+    description: The name of the new volume
+    default_value: ~
+source_url: "https://github.com/moby/moby/issues/31154#issuecomment-360531460"
+author: Hyruu
+author_url: "https://github.com/Hyruu"
+shells: []

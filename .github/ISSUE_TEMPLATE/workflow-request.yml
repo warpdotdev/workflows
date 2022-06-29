@@ -1,0 +1,27 @@
+name: "📄 Workflow RFC"
+description: "When you need to update/add a workflow..."
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: "Thank you for your request! Please fill out this form."
+  - type: dropdown
+    attributes:
+      label: "Is this a new workflow or an update?"
+      multiple: true
+      options:
+        - New
+        - Update
+  - type: input
+    attributes:
+      label: "What is the name of the workflow?"
+      placeholder: "Describe the workflow here..."
+  - type: input
+    attributes:
+      label: "What should the workflow do?"
+      placeholder: "Describe the workflow here..."
+  - type: input
+    attributes:
+      label: "What does it do (only if it's an update)?"
+      placeholder: "Describe what it should do.."
