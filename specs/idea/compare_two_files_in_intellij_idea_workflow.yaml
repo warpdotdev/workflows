@@ -1,0 +1,16 @@
+---
+name: Compare two file in IntelliJ Idea
+command: "idea diff {{file1}} {{file2}}"
+tags: ["idea"]
+description: Compare two files using IntelliJ Idea
+arguments:
+  - name: file1
+    description: The first file that you want to compare.
+    default_value: ~
+  - name: file2
+    description: The second file that you want to compare.
+    default_value: ~
+source_url: "https://www.jetbrains.com/help/idea/command-line-differences-viewer.html"
+author: Patrick van Zadel
+author_url: "https://github.com/Shuyinsama"
+shells: []
