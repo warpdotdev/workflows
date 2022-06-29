@@ -1,5 +1,5 @@
 ---
-name: Ability for the bisect session to be automated
+name: Run an automated bisect in a Vercel project
 command: vercel bisect --run {{script}}
 tags:
   - vercel
