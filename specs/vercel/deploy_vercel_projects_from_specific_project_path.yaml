@@ -1,5 +1,5 @@
 ---
-name: Deploy projects from specific project path
+name: Deploy Vercel projects from specific project path
 command: vercel {{path-to-project}}
 tags:
   - vercel

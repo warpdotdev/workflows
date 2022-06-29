@@ -1,5 +1,5 @@
 ---
-name: Perform a binary search upon a set of Deployments in a Project
+name: Perform a binary search upon a set of Deployments in a Vercel Project
 command: vercel bisect
 tags:
   - vercel

@@ -1,5 +1,5 @@
 ---
-name: Execute Vercel CLI with an authorization token
+name: Run Vercel CLI with an authorization token
 command: vercel --token {{token}}
 tags:
   - vercel

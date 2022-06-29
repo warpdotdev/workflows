@@ -1,5 +1,5 @@
 ---
-name: Specify the good deployment
+name: Specify the good Vercel deployment
 command: vercel bisect --good {{deployment_url}}
 tags:
   - vercel

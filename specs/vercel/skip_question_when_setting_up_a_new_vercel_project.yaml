@@ -1,5 +1,5 @@
 ---
-name: Skip question when setting up a new project
+name: Skip question when setting up a new Vercel project
 command: vercel --confirm
 tags:
   - vercel

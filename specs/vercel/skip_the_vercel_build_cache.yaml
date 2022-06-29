@@ -1,5 +1,5 @@
 ---
-name: Skip the build cache
+name: Skip the Vercel build cache
 command: vercel --force
 tags:
   - vercel

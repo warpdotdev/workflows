@@ -1,9 +1,9 @@
 ---
-name: Provide environment variables to the build step.
-command: vercel --build-env {{KEY1}}={{value1}} --build-env {{KEY2}}={{value2}}
+name: Provide Vercel Environment Variables at Runtime.
+command: vercel --env {{KEY1}}={{value1}} --env {{KEY2}}={{value2}}
 tags:
   - vercel
-description: "Provide environment variables to the build step. You can add more key like --build-end KEY3=value3...."
+description: "Provide environment variables at runtime. You can add more key like --env KEY3=value3...."
 arguments:
   - name: KEY1
     description: Name of the key 1
@@ -17,7 +17,7 @@ arguments:
   - name: value2
     description: Name of the value 2
     default_value: ~
-source_url: "https://vercel.com/docs/cli#introduction/unique-options/build-env"
+source_url: "https://vercel.com/docs/cli#introduction/unique-options/env"
 author: Umar Hadi
 author_url: "https://github.com/umarhadi"
 shells: []

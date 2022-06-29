@@ -1,5 +1,5 @@
 ---
-name: Specify a subpath of the deployment where the issue occurs
+name: Specify a subpath of the Vercel deployment where the issue occurs
 command: vercel bisect --path {{subpath}}
 tags:
   - vercel
