@@ -4,7 +4,7 @@ command: composer show
 tags:
   - composer
   - php
-description: ~
+description: Show a list of available packages
 arguments: []
 source_url: "https://getcomposer.org/doc/03-cli.md#show"
 author: Rob Mellett

@@ -4,7 +4,7 @@ command: composer show --latest
 tags:
   - composer
   - php
-description: ~
+description: List all installed packages including their latest version
 arguments: []
 source_url: "https://getcomposer.org/doc/03-cli.md#show"
 author: Rob Mellett

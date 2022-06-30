@@ -4,7 +4,7 @@ command: composer update
 tags:
   - composer
   - php
-description: ~
+description: Updating dependencies to their latest versions
 arguments: []
 source_url: "https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies"
 author: Rob Mellett
