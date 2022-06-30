@@ -5,7 +5,7 @@ tags:
   - composer
   - laravel
   - php
-description: ~
+description: Install Laravel Vapor using Composer
 arguments: []
 source_url: "https://docs.vapor.build/1.0/introduction.html#installing-the-vapor-cli"
 author: Rob Mellett

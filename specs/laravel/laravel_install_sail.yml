@@ -5,7 +5,7 @@ tags:
   - composer
   - laravel
   - php
-description: ~
+description: Install Laravel Sail using Composer
 arguments: []
 source_url: "https://laravel.com/docs/9.x/sail#installing-sail-into-existing-applications"
 author: Rob Mellett
