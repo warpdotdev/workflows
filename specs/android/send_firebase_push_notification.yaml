@@ -1,0 +1,29 @@
+---
+name: Send a firebase push notification to local Android emulator
+command: adb shell am broadcast \
+  -n {{your_app_package_name}}/com.google.firebase.iid.FirebaseInstanceIdReceiver \
+  -a "com.google.android.c2dm.intent.RECEIVE" \
+           --es "title" "{{notification_title}}" \
+           --es "body" "{{notification_body}}" \
+           --es "deeplink" "{{deeplink}}"
+tags:
+  - android
+  - adb
+  - firbase
+  - notification
+description: Uses adb to push a Firebase push notification to your local emulator. Remember that your emulator has to be rooted.You can run `adb root` or the root emulator workflow. Furthermore, you need to implement the firebase provider. This is recomended todo in your debug manifest.
+arguments:
+  - name: your_app_package_name
+    description: The package name of the app that you want to recieve the notification. It has to have implemented the reciever for it to work.
+    default_value: com.my.app.package
+  - name: notification_title
+    description: The title of the notification
+    default_value: title
+  - name: notification_body
+    description: The body of the notification
+    default_value: body
+  - name: deep_link
+    description: A deeplink for the notification (eg. `app://open.my.app`)
+author: Odin Asbjørnsen
+author_url: https://github.com/oas004
+shells: []
