@@ -1,0 +1,14 @@
+---
+name: Manually Initiate a Policy via policy ID
+command: sudo jamf policy -event "{{policy_id}}" -verbose
+tags:
+  - macos
+  - jamf
+  - mdm
+description: Use to run a Jamf policy manually
+arguments:
+  - name: policy_id
+    description: The ID number of the Jamf policy
+author: Amado Tejada
+author_url: https://github.com/amadotejada
+shells: []

@@ -1,0 +1,11 @@
+---
+name: Manually Initiate a recon inventory
+command: sudo jamf recon
+tags:
+  - macos
+  - jamf
+  - mdm
+description: Force a full Jamf inventory from the client
+author: Amado Tejada
+author_url: https://github.com/amadotejada
+shells: []
