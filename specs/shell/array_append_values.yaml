@@ -1,0 +1,19 @@
+--
+name: Append value(s) to an array
+command: "{{array_name}}+=({{values}})"
+tags:
+  - shell
+description: Loops through an array, running a command on each value.
+arguments:
+  - name: array_name
+    description: The name of the array to append values
+    default_value: ~
+  - name: values
+    description: The values to append to the array, space-separated
+    default_value: ~
+source_url: "https://opensource.com/article/18/5/you-dont-know-bash-intro-bash-arrays"
+author: Wyatt-Stanke
+author_url: "https://github.com/Wyatt-Stanke"
+shells:
+  - Zsh
+  - Bash 
