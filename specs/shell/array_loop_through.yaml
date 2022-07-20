@@ -1,0 +1,19 @@
+--
+name: Loop through an array and run a command on each value
+command: "for i in ${{{array_name}}[@]}; do {{command}}; done"
+tags:
+  - shell
+description: Loops through an array, running a command on each value.
+arguments:
+  - name: array_name
+    description: The name of the array to loop through
+    default_value: ~
+  - name: command
+    description: The command to run on each value in the array
+    default_value: ~
+source_url: "https://opensource.com/article/18/5/you-dont-know-bash-intro-bash-arrays"
+author: Wyatt-Stanke
+author_url: "https://github.com/Wyatt-Stanke"
+shells:
+  - Zsh
+  - Bash 
