@@ -2,10 +2,8 @@
 name: Manually run a cookbook by name
 command: sudo chef client -o recipe['{{cookbook}}'] 
 tags:
-  - macos
-  - linux
   - chef
-description: Use to fun a cookbook manually
+description: Use to run a cookbook manually
 arguments:
   - name: cookbook
     description: Name of the cookbook

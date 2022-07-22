@@ -1,14 +1,12 @@
 ---
-name: Manually Initiate a Policy via policy triggerName
+name: Manually initiate a policy via policy trigger name
 command: sudo jamf policy -event "{{triggerName}}" -verbose
 tags:
-  - macos
   - jamf
-  - mdm
 description: Use to run a Jamf policy manually
 arguments:
   - name: triggerName
-    description: Custom triggerName of the Jamf policy
+    description: Custom trigger name of the Jamf policy
 source_url: https://docs.jamf.com/technical-articles/Manually_Initiating_a_Policy.html
 author: Amado Tejada
 author_url: https://github.com/amadotejada
