@@ -1,0 +1,12 @@
+name: Get the text records for a domain
+command: dig +short {{domain}} txt
+tags:
+  - dig
+description: Use dig to get the txt records for a domain. Useful for a quick lookup of SPF records.
+arguments:
+  - name: domain
+    description: The domain you want to lookup.
+    default_value:
+author: Kia Matthews
+author_url: "https://www.github.com/kiamatthews"
+shells: []
