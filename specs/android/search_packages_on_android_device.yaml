@@ -1,0 +1,13 @@
+---
+name: Search for a package on a Android device
+command: adb shell pm list packages | grep "{{query}}"
+tags:
+  - android
+  - adb
+description: Use ADB to search for packages on a Android device.
+arguments:
+  - name: query
+    description: A search query for which package you want to find.
+author: Odin Asbjørnsen
+author_url: https://github.com/oas004
+shells: []
