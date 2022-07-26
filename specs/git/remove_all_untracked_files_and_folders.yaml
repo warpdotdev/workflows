@@ -1,0 +1,11 @@
+---
+name: Remove all untracked files and folders
+command: "git clean -fd"
+tags:
+  - git
+description: "Remove all local untracked files and folders"
+arguments: []  
+source_url: "https://stackoverflow.com/questions/61212/how-to-remove-local-untracked-files-from-the-current-git-working-tree"
+author: Robert Berger
+author_url: "https://stackoverflow.com/users/108743/robert-berger"
+shells: []
