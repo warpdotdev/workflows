@@ -1,0 +1,13 @@
+---
+name: Create a new Laravel App using Composer
+command: composer create-project laravel/laravel example-app
+tags:
+  - composer
+  - laravel
+  - php
+description: ~
+arguments: []
+source_url: "https://laravel.com/docs/9.x/installation#installation-via-composer"
+author: Rob Mellett
+author_url: "https://robmellett.com"
+shells: []
