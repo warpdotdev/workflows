@@ -1,0 +1,10 @@
+---
+name: Root your emulator
+command: adb root
+tags:
+  - android
+  - adb
+description: Roots your Android emulator
+author: Odin Asbjørnsen
+author_url: https://github.com/oas004
+shells: []
