@@ -1,0 +1,16 @@
+---
+name: Install a Rust toolchain
+command: rustup toolchain install {{toolchain}}
+tags:
+  - rust
+  - rustup
+  - toolchain
+  - install
+  # Commonly associated with an install
+  - beta
+  - nightly
+description: Installs a Rust toolchain (cargo.exe, rustup.exe, rustc.exe, etc.).
+arguments:
+  - name: toolchain
+    description: The name of the Rust toolchain (e.g. beta, nightly, nightly-yyyy-mm-dd).
+author: Sutton Bradley

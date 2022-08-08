@@ -1,0 +1,9 @@
+---
+name: Build a Rust project
+command: cargo build
+tags:
+  - rust
+  - cargo
+  - build
+description: Builds a Rust project according to the Cargo.toml file in this or a parent directory.
+author: Sutton Bradley

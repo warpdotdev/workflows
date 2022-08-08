@@ -1,0 +1,13 @@
+---
+name: Create a Rust project (binary)
+command: cargo new {{path}}
+tags:
+  - rust
+  - cargo
+  - new
+  - project
+  - binary
+description: Creates a directory with cargo & Rust starter files, including version control.
+  - name: path
+    description: The path to the new project, ending in the project's name.
+author: Sutton Bradley

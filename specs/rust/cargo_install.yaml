@@ -1,0 +1,13 @@
+---
+name: Install a Rust binary
+command: cargo install {{binary}}
+tags:
+  - rust
+  - cargo
+  - install
+  - binary
+description: Installs to $HOME/.cargo.bin, which should be on your path already.
+arguments:
+  - name: binary
+    description: The name of the binary from crates.io (or another registry).
+author: Sutton Bradley

@@ -1,0 +1,10 @@
+---
+name: Update dependencies for this Rust project
+command: cargo update
+tags:
+  - rust
+  - cargo
+  - update
+  - dependency
+description: Updates dependencies as recorded in the local lock file.
+author: Sutton Bradley

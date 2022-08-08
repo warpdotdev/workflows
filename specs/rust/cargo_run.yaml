@@ -1,0 +1,9 @@
+---
+name: Runs a Rust binary project, building first if necessary
+command: cargo run
+tags:
+  - rust
+  - cargo
+  - run
+description: Runs main.rs or the default rust binary specified in Cargol.toml.
+author: Sutton Bradley

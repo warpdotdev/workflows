@@ -1,0 +1,9 @@
+---
+name: Check for build errors/warnings in a Rust project
+command: cargo check
+tags:
+  - rust
+  - cargo
+  - check
+description: Without building binaries, checks a Rust project according to the Cargo.toml file in this or a parent directory.
+author: Sutton Bradley

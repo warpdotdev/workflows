@@ -1,0 +1,14 @@
+---
+name: Set default Rust toolchain
+command: rustup default {{toolchain}}
+tags:
+  - rust
+  - rustup
+  - default
+  - toolchain
+  - set
+arguments:
+  - name: toolchain
+    description: The name of the toolchain (e.g. stable, beta, nightly, nightly-yyyy-mm-dd).
+    default_value: stable
+author: Sutton Bradley

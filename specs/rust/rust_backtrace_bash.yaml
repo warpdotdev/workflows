@@ -1,0 +1,15 @@
+---
+name: Configure Rust to output crash backtraces
+command: export RUST_BACKTRACE={{level}}
+tags:
+  - rust
+  - backtrace
+  - stack
+  - trace
+description: Sets the RUST_BACKTRACE environment variable.
+arguments:
+  - name: level
+    description: The backtrace level (0, 1, or full)
+    default_value: 1
+shells: [zsh, bash]
+author: Sutton Bradley

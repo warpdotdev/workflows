@@ -1,0 +1,15 @@
+---
+name: Create a cargo command using a specific Rust toolchain
+command: cargo +{{toolchain}} {{command}}
+tags:
+  - rust
+  - cargo
+  - toolchain
+  - override
+description: Creates a cargo command that invokes a specific toolchain instead of your default.
+arguments:
+  - name: toolchain
+    description: The name of the toolchain (e.g. stable, beta, nightly)
+  - name: command
+    description: The cargo command to invoke
+author: Sutton Bradley

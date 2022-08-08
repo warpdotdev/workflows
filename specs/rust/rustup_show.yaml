@@ -1,0 +1,13 @@
+---
+name: Show Rust toolchain information
+command: rustup show
+tags:
+  - rust
+  - rustup
+  - toolchain
+  - list
+  - show
+  - display
+  - target
+description: Displays installed Rust toolchains, active toolchain/overrides, compilation targets, host triple, and rustup home location.
+author: Sutton Bradley

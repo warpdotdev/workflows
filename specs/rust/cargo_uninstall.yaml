@@ -1,0 +1,13 @@
+---
+name: Uninstall a Rust binary
+command: cargo uninstall {{binary}}
+tags:
+  - rust
+  - cargo
+  - uninstall
+  - binary
+description: Uninstalls a Rust binary, removing it from $HOME/.cargo.bin.
+arguments:
+  - name: binary
+    description: The name of the installed binary.
+author: Sutton Bradley

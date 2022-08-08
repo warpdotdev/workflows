@@ -1,0 +1,15 @@
+---
+name: Add a crates.io (or other registry) dependency to a Rust project
+command: cargo add {{dependency}}
+tags:
+  - rust
+  - cargo
+  - add
+  - dependency
+  - crates
+  - crates.io
+description: Adds a dependency to a Rust project according to the Cargo.toml file in this or a parent directory (added in 1.62).
+arguments:
+  - name: dependency
+    description: The name of the package that should be added to Cargo.toml.
+author: Sutton Bradley

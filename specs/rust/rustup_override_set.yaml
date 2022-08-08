@@ -1,0 +1,15 @@
+---
+name: Set a Rust toolchain override for the current working directory
+command: rustup override set {{toolchain}}
+tags:
+  - rust
+  - rustup
+  - toolchain
+  - override
+  - set
+  - add
+description: Configures rustup to run a specific Rust toolchain for the current working directory.
+arguments:
+  - name: toolchain
+    description: The name of the Rust toolchain (e.g. beta, nightly, nightly-yyyy-mm-dd).
+author: Sutton Bradley

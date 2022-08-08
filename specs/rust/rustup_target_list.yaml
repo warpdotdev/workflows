@@ -1,0 +1,10 @@
+---
+name: Lists all Rust compilation targets
+command: rustup target list
+tags:
+  - rust
+  - rustup
+  - target
+  - compilation
+  - list
+author: Sutton Bradley

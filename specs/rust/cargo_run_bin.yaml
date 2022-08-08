@@ -1,0 +1,14 @@
+---
+name: Runs a specific Rust binary, building first if necessary
+command: cargo run --bin {{file_name}}
+tags:
+  - rust
+  - cargo
+  - run
+  - bin
+  - specific
+description: Runs a binary from src/bin, or a different binary specified in Cargol.toml.
+arguments:
+  - name: file_name
+    description: Name of the file in src/bin (or specified to be elsewhere by Cargo.toml).
+author: Sutton Bradley

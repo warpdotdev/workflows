@@ -1,0 +1,17 @@
+---
+name: Create a cargo command that points to a specific Cargo.toml file
+command: cargo {{command}} --manifest-path {{manifest_path}}
+tags:
+  - rust
+  - cargo
+  - toml
+  - manifest
+  - path
+description: For invoking cargo with a non-default Cargo.toml file (outside of this dir or parent dirs).
+arguments:
+  - name: command
+    description: The cargo command to invoke
+  - name: manifest_path
+    description: Absolute or relative path to a Cargo.toml file
+    default_value: ./Cargo.toml
+author: Sutton Bradley

@@ -1,0 +1,9 @@
+---
+name: Test a Rust package (unit and integration)
+command: cargo test
+tags:
+  - rust
+  - cargo
+  - test
+description: Performs doc tests, \#[cfg(test)] tests, and integration tests (runs all binaries).
+author: Sutton Bradley

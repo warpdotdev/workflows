@@ -1,0 +1,10 @@
+---
+name: Build HTML/CSS/JS documentation for a Rust project
+command: cargo doc
+tags:
+  - rust
+  - cargo
+  - doc
+  - documentation
+description: Builds the docs for this project and its dependencies (placed in target/doc).
+author: Sutton Bradley

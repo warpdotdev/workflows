@@ -1,0 +1,15 @@
+---
+name: Create a rustup command using a specific Rust toolchain
+command: rustup +{{toolchain}} {{command}}
+tags:
+  - rust
+  - rustup
+  - toolchain
+  - override
+description: Creates a rustup command that invokes a specific toolchain instead of your default.
+arguments:
+  - name: toolchain
+    description: The name of the toolchain (e.g. stable, beta, nightly)
+  - name: command
+    description: The cargo command to invoke
+author: Sutton Bradley

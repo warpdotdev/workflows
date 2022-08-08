@@ -1,0 +1,11 @@
+---
+name: List Rust toolchain directory overrides
+command: rustup override list
+tags:
+  - rust
+  - rustup
+  - toolchain
+  - override
+  - get
+  - list
+author: Sutton Bradley

@@ -1,0 +1,14 @@
+---
+name: Unset the Rust toolchain override for the current working directory
+command: rustup override unset {{toolchain}}
+tags:
+  - rust
+  - rustup
+  - toolchain
+  - override
+  - unset
+  - remove
+arguments:
+  - name: toolchain
+    description: The name of the Rust toolchain (e.g. beta, nightly, nightly-yyyy-mm-dd).
+author: Sutton Bradley

@@ -1,0 +1,13 @@
+---
+name: Removes a Rust compilation target for the active toolchain
+command: rustup target remove {{target}}
+tags:
+  - rust
+  - rustup
+  - target
+  - compilation
+  - remove
+arguments:
+  - name: target
+    description: The compilation target tuple. Use "rustup target list" to see all.
+author: Sutton Bradley

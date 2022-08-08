@@ -1,0 +1,14 @@
+---
+name: Add a local dependency to a Rust project
+command: cargo add --path {{path}}
+tags:
+  - rust
+  - cargo
+  - add
+  - dependency
+  - git
+description: Adds a dependency to a Rust project according to the Cargo.toml file in this or a parent directory (added in 1.62).
+arguments:
+  - name: path
+    description: The path of the local package that should be added to Cargo.toml.
+author: Sutton Bradley

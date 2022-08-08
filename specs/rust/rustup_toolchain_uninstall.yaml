@@ -1,0 +1,16 @@
+---
+name: Uninstall a Rust toolchain
+command: rustup toolchain uninstall {{toolchain}}
+tags:
+  - rust
+  - rustup
+  - toolchain
+  - uninstall
+  # Commonly associated with an install
+  - beta
+  - nightly
+description: Uninstals a Rust toolchain, removing its directory from $CARGO_HOME.
+arguments:
+  - name: toolchain
+    description: The name of the Rust toolchain (e.g. beta, nightly, nightly-yyyy-mm-dd).
+author: Sutton Bradley

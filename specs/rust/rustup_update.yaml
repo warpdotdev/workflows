@@ -1,0 +1,14 @@
+---
+name: Update Rust toolchain
+command: rustup update {{toolchain}}
+tags:
+  - rust
+  - rustup
+  - update
+  - toolchain
+description: Updates the specified Rust toolchain, or all toolchains if not specified.
+arguments:
+  - name: toolchain
+    description: The name of the Rust toolchain (e.g. stable, beta, nightly). Omit to update all.
+    default_value:  # Left blank to update all by default
+author: Sutton Bradley

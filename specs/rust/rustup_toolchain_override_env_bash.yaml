@@ -1,0 +1,15 @@
+---
+name: Configure Rust to use a specific toolchain via environment variable
+command: export RUSTUP_TOOLCHAIN={{toolchain}}
+tags:
+  - rust
+  - rustup
+  - toolchain
+  - override
+  - environment
+description: Sets the RUSTUP_TOOLCHAIN environment variable.
+arguments:
+  - name: toolchain
+    description: The name of the Rust toolchain (e.g. stable, beta, nightly, nightly-yyyy-mm-dd).
+shells: [zsh, bash]
+author: Sutton Bradley

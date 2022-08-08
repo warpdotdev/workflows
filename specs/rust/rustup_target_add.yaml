@@ -1,0 +1,13 @@
+---
+name: Adds a Rust compilation target for the active toolchain
+command: rustup target add {{target}}
+tags:
+  - rust
+  - rustup
+  - target
+  - compilation
+  - add
+arguments:
+  - name: target
+    description: The compilation target tuple. Use "rustup target list" to see all.
+author: Sutton Bradley

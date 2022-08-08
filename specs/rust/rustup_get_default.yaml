@@ -1,0 +1,10 @@
+---
+name: Show default Rust toolchain
+command: rustup default
+tags:
+  - rust
+  - rustup
+  - default
+  - toolchain
+  - get
+author: Sutton Bradley
