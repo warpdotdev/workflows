@@ -8,6 +8,7 @@ tags:
   - project
   - library
 description: Creates a directory with cargo & Rust starter files, including version control.
+arguments:
   - name: path
     description: The path to the new project, ending in the project's name.
 author: Sutton Bradley
