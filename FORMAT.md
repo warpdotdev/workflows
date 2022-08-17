@@ -51,7 +51,7 @@ You can specify which part of the Workflow command maps to an argument by surrou
 
 For example the workflow command:
 ```bash
-for {{variable} in {{sequence}}}; do
+for {{variable}} in {{sequence}}; do
   {{command}}
 done
 ```

@@ -1,0 +1,16 @@
+name: Change an SSH key comment
+command: ssh-keygen -c -C "{{new_comment}}" -f {{ssh_key_path}}
+tags:
+  - ssh
+  - ssl
+description: Change the comment stored in the public key of a pub/priv key pair.
+arguments:
+  - name: new_comment
+    description: The new comment that you want to replace the existing comment.
+    default_value:
+  - name: ssh_key_path
+    description: The path to the private key
+    default_value:
+author: Kia Matthews
+author_url: "https://www.github.com/kiamatthews"
+shells: []

@@ -1,0 +1,13 @@
+---
+name: Manually run a cookbook by name
+command: sudo chef client -o recipe['{{cookbook}}'] 
+tags:
+  - chef
+description: Use to run a cookbook manually
+arguments:
+  - name: cookbook
+    description: Name of the cookbook
+source_url: https://docs.chef.io/ctl_chef_client
+author: Amado Tejada
+author_url: https://github.com/amadotejada
+shells: []

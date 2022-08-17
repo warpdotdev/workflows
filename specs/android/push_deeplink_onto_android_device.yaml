@@ -1,0 +1,18 @@
+---
+name: Push a deeplink to your Android device
+command: adb shell am start
+  -W -a android.intent.action.VIEW
+  -d "{{deeplink}}" {{your_app_package_name}}
+tags:
+  - android
+  - adb
+description: Uses adb to push a deeplink onto an Android device.
+arguments:
+  - name: your_app_package_name
+    description: The package name of the app that you want to recieve the deeplink.
+    default_value: com.my.app.package
+  - name: deeplink
+    description: The deeplink you want to send (eg. `app://open.my.app`)
+author: Odin Asbjørnsen
+author_url: https://github.com/oas004
+shells: []
