@@ -1,0 +1,10 @@
+name: Run a single test file
+command: "npx playwright test {{pathToFile}}"
+arguments:
+  - name: pathToFile
+  - description: "The path to the test file to run."
+tags:
+  - playwright
+description: "Runs a single test file."
+source_url: "https://playwright.dev/docs/running-tests"
+author: DominusKelvin
