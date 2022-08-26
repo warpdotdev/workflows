@@ -1,0 +1,10 @@
+name: Run Playwright test with the title
+command: 'npx playwright test --g "{{testTitle}}"'
+arguments:
+  - name: testTitle
+    description: "The title of the test to run."
+tags:
+  - playwright
+description: "Runs Playwright test with the title."
+source_url: "https://playwright.dev/docs/test-cli#reference"
+author: DominusKelvin

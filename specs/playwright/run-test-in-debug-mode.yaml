@@ -1,0 +1,7 @@
+name: Run Playwright tests in debug mode
+command: "npx playwright test --debug"
+tags:
+  - playwright
+description: "Runs Playwright tests in debug mode."
+source_url: "https://playwright.dev/docs/debug#--debug"
+author: DominusKelvin

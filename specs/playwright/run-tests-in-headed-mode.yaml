@@ -1,0 +1,7 @@
+name: Run Playwright tests in headed mode
+command: "npx playwright test --headed"
+tags:
+  - playwright
+description: "Runs Playwright tests in headed mode."
+source_url: "https://playwright.dev/docs/test-cli#reference"
+author: DominusKelvin
