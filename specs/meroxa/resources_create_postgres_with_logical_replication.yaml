@@ -7,11 +7,8 @@ command: |-
 # Any tags that the workflow should be categorized with.
 tags:
   - meroxa
-  - data
-  - realtime
-  - postgresql
 # A description of the workflow.
-description: "Add a Postgres resource with logical replication to the Meroxa Platform using the following parameters:"
+description: Add a Postgres resource with logical replication to the Meroxa Platform
 # List of arguments within the command.
 arguments:
     # Name of the argument within the command. This must exactly match the name of the argument

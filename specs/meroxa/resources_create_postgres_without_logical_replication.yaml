@@ -1,17 +1,14 @@
 ---
 # The name of the workflow.
-name: Add a Postgres resource to the Meroxa Platform without logical replication
+name: Add a Postgres resource without logical replication to the Meroxa Platform
 # The corresponding command for the workflow. Any arguments should be surrounded with two curly braces. E.g `command {{arg}}`.
 command: |-
     meroxa resources create {{resource_name}} --type postgres --url "postgres://{{pg_username}}:{{pg_password}}@{{pg_url}}:{{pg_port}}/{{pg_database_name}}" 
 # Any tags that the workflow should be categorized with.
 tags:
   - meroxa
-  - data
-  - realtime
-  - postgresql
 # A description of the workflow.
-description: "Add a Postgres resource without logical replication to the Meroxa Platform using the following parameters:"
+description: Add a Postgres resource without logical replication to the Meroxa Platform
 # List of arguments within the command.
 arguments:
     # Name of the argument within the command. This must exactly match the name of the argument
