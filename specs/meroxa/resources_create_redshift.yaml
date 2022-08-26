@@ -9,6 +9,7 @@ tags:
   - meroxa
   - data
   - realtime
+  - redshift
 # A description of the workflow.
 description: "Add an Amazon Redshift resource to the Meroxa Platform using the following parameters:"
 # List of arguments within the command.

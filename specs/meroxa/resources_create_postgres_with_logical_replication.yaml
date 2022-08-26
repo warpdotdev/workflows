@@ -9,6 +9,7 @@ tags:
   - meroxa
   - data
   - realtime
+  - postgresql
 # A description of the workflow.
 description: "Add a Postgres resource with logical replication to the Meroxa Platform using the following parameters:"
 # List of arguments within the command.

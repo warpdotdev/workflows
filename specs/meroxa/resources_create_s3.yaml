@@ -9,6 +9,7 @@ tags:
   - meroxa
   - data
   - realtime
+  - s3
 # A description of the workflow.
 description: "Add an Amazon S3 resource to the Meroxa Platform using the following parameters:"
 # List of arguments within the command.

@@ -9,6 +9,7 @@ tags:
   - meroxa
   - data
   - realtime
+  - mongodb
 # A description of the workflow.
 description: "Add a MongoDB resource to the Meroxa Platform using the following parameters:"
 # List of arguments within the command.

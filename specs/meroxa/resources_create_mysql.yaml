@@ -9,6 +9,7 @@ tags:
   - meroxa
   - data
   - realtime
+  - mysql
 # A description of the workflow.
 description: "Add a MySQL resource to the Meroxa Platform using the following parameters:"
 # List of arguments within the command.

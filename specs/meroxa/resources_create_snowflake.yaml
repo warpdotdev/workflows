@@ -3,12 +3,13 @@
 name: Add a Snowflake resource to the Meroxa Platform
 # The corresponding command for the workflow. Any arguments should be surrounded with two curly braces. E.g `command {{arg}}`.
 command: |-
-    meroxa resource create {{resource_name}} --type snowflakedb --url snowflake://{{snowflake_url}}/meroxa_db/stream_data --username meroxa_user --password {{snowflake_private_key}}
+    meroxa resource create {{resource_name}} --type snowflakedb --url "snowflake://{{snowflake_url}}/meroxa_db/stream_data" --username meroxa_user --password {{snowflake_private_key}}
 # Any tags that the workflow should be categorized with.
 tags:
   - meroxa
   - data
   - realtime
+  - snowflake
 # A description of the workflow.
 description: "Add a Snowflake resource without logical replication to the Meroxa Platform using the following parameters:"
 # List of arguments within the command.
@@ -20,7 +21,7 @@ arguments:
     description: Name you want to use to identify this resource
     # The default value for the argument.
     default_value: ~
-   - name: snowflake_url
+  - name: snowflake_url
     # The description of the argument.
     description: Snowflake Account URL
     # The default value for the argument.
@@ -30,8 +31,6 @@ arguments:
     description: Snowflake private key created (see View Context for more information)
     # The default value for the argument.
     default_value: ~
-  
-
 # The source URL for where the workflow was generated from, if any.
 source_url: "https://docs.meroxa.com/platform/resources/snowflake#resource-configuration"
 # The author of the workflow.
