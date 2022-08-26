@@ -2,8 +2,8 @@ name: Run Playwright test in a specific browser
 command: "npx playwright test --browser={{browser}}"
 arguments:
   - name: browser
-  - description: "Browser to run tests in(either chromium, firefox, webkit or all)."
-  - default_value: "all"
+    description: "Browser to run tests in(either chromium, firefox, webkit or all)."
+    default_value: "all"
 tags:
   - playwright
 description: "Runs Playwright tests in a specific browser."

@@ -2,7 +2,7 @@ name: Run a single Playwright test file
 command: "npx playwright test {{pathToFile}}"
 arguments:
   - name: pathToFile
-  - description: "The path to the test file to run."
+    description: "The path to the test file to run."
 tags:
   - playwright
 description: "Runs a single Playwright test file."

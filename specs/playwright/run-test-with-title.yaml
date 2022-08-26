@@ -2,7 +2,7 @@ name: Run Playwright test with the title
 command: 'npx playwright test --g "{{testTitle}}"'
 arguments:
   - name: testTitle
-  - description: "The title of the test to run."
+    description: "The title of the test to run."
 tags:
   - playwright
 description: "Runs Playwright test with the title."
