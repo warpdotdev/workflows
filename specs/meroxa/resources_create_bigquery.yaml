@@ -30,7 +30,7 @@ arguments:
     # The description of the argument.
     description: Your BigQuery dataset name. GCP console will indicate your dataset ID as "project_id.dataset_name". Just include your dataset name here
     # The default value for the argument.
-    default_value: bigquery://$GCP_PROJECT_ID/$GCP_DATASET_NAME
+    default_value: ~
   - name: gcp_service_account_json_file
     # The description of the argument.
     description: Google BigQuery Valid Service Account credentials with access to BigQuery in JSON format

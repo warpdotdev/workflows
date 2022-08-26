@@ -23,11 +23,14 @@ arguments:
     default_value: ~
   - name: es_username
     description: Elasticsearch Username
+    default_value: ~
   - name: es_password
     description: Elasticsearch Password
+    default_value: ~
   - name: es_url
     # The description of the argument.
     description: Elasticsearch URL
+    default_value: ~
   - name: es_port
     # The description of the argument.
     description: "Elasticsearch port (e.g.: 9200)"
