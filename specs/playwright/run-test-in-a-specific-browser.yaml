@@ -1,4 +1,4 @@
-name: Run test in a specific browser
+name: Run Playwright test in a specific browser
 command: "npx playwright test --browser={{browser}}"
 arguments:
   - name: browser
@@ -6,6 +6,6 @@ arguments:
   - default_value: "all"
 tags:
   - playwright
-description: "Run tests in a specific browser"
+description: "Runs Playwright tests in a specific browser."
 source_url: "https://playwright.dev/docs/test-cli#reference"
 author: DominusKelvin

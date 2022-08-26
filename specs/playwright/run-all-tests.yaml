@@ -1,7 +1,7 @@
-name: Run all tests
+name: Run all Playwright tests
 command: "npx playwright test"
 tags:
   - playwright
-description: "Runs all tests"
+description: "Runs all Playwright tests"
 source_url: "https://playwright.dev/docs/intro#running-the-example-test"
 author: DominusKelvin
