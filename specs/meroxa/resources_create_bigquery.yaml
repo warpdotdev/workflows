@@ -1,0 +1,43 @@
+---
+# The name of the workflow.
+name: Add a Google BigQuery resource to the Meroxa Platform
+# The corresponding command for the workflow. Any arguments should be surrounded with two curly braces. E.g `command {{arg}}`.
+command: |-
+    meroxa resources create {{resource_name}} --type bigquery --url "bigquery://{{gcp_project_id}}/{{gcp_dataset_name}}" --client-key "$(cat {{gcp_service_account_json_file}})"
+# Any tags that the workflow should be categorized with.
+tags:
+  - meroxa
+# A description of the workflow.
+description: Add a Google BigQuery resource to the Meroxa Platform
+# List of arguments within the command.
+arguments:
+    # Name of the argument within the command. This must exactly match the name of the argument
+    # within the command (without the curly braces).
+  - name: resource_name
+    # The description of the argument.
+    description: Name you want to use to identify this Google BigQuery resource
+    # The default value for the argument.
+    default_value: ~
+  - name: gcp_project_id
+    # The description of the argument.
+    description: Google Cloud Project ID
+    # The default value for the argument.
+    default_value: ~
+  - name: gcp_dataset_name
+    # The description of the argument.
+    description: Your BigQuery dataset name. GCP console will indicate your dataset ID as "project_id.dataset_name". Just include your dataset name here
+    # The default value for the argument.
+    default_value: ~
+  - name: gcp_service_account_json_file
+    # The description of the argument.
+    description: Google BigQuery Valid Service Account credentials with access to BigQuery in JSON format
+    # The default value for the argument.
+    default_value: ~
+# The source URL for where the workflow was generated from, if any.
+source_url: "https://docs.meroxa.com/platform/resources/google-bigquery#resource-configuration"
+# The author of the workflow.
+author: Meroxa
+# The URL of original author of the Workflow. For example, if this workflow was generated from StackOverflow, the `author_url` would be the StackOverflow author's profile page.
+author_url: "https://github.com/meroxa"
+# The valid shells where this workflow should be active. If valid for all shells, this can be left empty.
+# See FORMAT.md for the full list of accepted values.
