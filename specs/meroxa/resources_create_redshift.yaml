@@ -1,0 +1,53 @@
+---
+# The name of the workflow.
+name: Add an Amazon Redshift resource to the Meroxa Platform
+# The corresponding command for the workflow. Any arguments should be surrounded with two curly braces. E.g `command {{arg}}`.
+command: |-
+    meroxa resources create {{resource_name}} --type redshift --url "redshift://{{redshift_username}}:{{redshift_password}}@{{redshift_url}}:{{redshift_port}}/{{redshift_db_name}}"
+# Any tags that the workflow should be categorized with.
+tags:
+  - meroxa
+# A description of the workflow.
+description: Add an Amazon Redshift resource to the Meroxa Platform
+# List of arguments within the command.
+arguments:
+    # Name of the argument within the command. This must exactly match the name of the argument
+    # within the command (without the curly braces).
+  - name: resource_name
+    # The description of the argument.
+    description: Name you want to use to identify this resource
+    # The default value for the argument.
+    default_value: ~
+  - name: redshift_username
+    # The description of the argument.
+    description: Redshift username
+    # The default value for the argument.
+    default_value: ~
+  - name: redshift_password
+    # The description of the argument.
+    description: Redshift password
+    # The default value for the argument.
+    default_value: ~
+  - name: redshift_url
+    # The description of the argument.
+    description: Redshift URL
+    # The default value for the argument.
+    default_value: ~
+  - name: redshift_port
+    # The description of the argument.
+    description: "Redshift Port (e.g.: 5439)"
+    # The default value for the argument.
+    default_value: 5439
+  - name: redshift_db_name
+    # The description of the argument.
+    description: "Redshift Database name"
+    # The default value for the argument.
+    default_value: ~
+# The source URL for where the workflow was generated from, if any.
+source_url: "https://docs.meroxa.com/platform/resources/amazon-redshift#setup"
+# The author of the workflow.
+author: Meroxa
+# The URL of original author of the Workflow. For example, if this workflow was generated from StackOverflow, the `author_url` would be the StackOverflow author's profile page.
+author_url: "https://github.com/meroxa"
+# The valid shells where this workflow should be active. If valid for all shells, this can be left empty.
+# See FORMAT.md for the full list of accepted values.

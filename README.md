@@ -65,7 +65,7 @@ To test a workflow within Warp before submitting, you can use it as a local work
 To do this:
 1) Copy the workflow to your local `~/.warp/workflows` directory:
     ```bash
-    mkdir -p ~/.warp/workflows && cp {{workflow}}.yaml; ~/.warp/workflows/
+    mkdir -p ~/.warp/workflows && cp {{workflow}}.yaml ~/.warp/workflows/
     ```
 2) Open Warp and open workflows by pressing `ctrl-shift-r` or using the command palette.
 3) Click on "My Workflows" on the left to filter for local workflows.
