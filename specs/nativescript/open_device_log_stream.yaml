@@ -1,0 +1,9 @@
+name: Open the device log stream using NativeScript CLI.
+command: "ns device log"
+tags:
+  - nativescript
+description: "NativeScript opens the device log stream for a selected connected Android or iOS device."
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/device/device-log.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

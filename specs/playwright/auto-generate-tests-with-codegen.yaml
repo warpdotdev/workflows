@@ -1,0 +1,11 @@
+name: Auto-generate Playwright tests with Codegen
+command: "npx playwright codegen {{url}}"
+arguments:
+  - name: url
+    description: "URL of the webpage."
+    default_value: "playwright.dev"
+tags:
+  - playwright
+description: "Auto-generates Playwright tests with Codegen."
+source_url: "https://playwright.dev/docs/codegen-intro#running-codegen"
+author: DominusKelvin

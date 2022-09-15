@@ -1,5 +1,5 @@
 name: Create a new Nx workspace
-command: "npx create-nx-worskpace@latest {{name}}"
+command: "npx create-nx-workspace@latest {{name}}"
 tags:
   - nx
 description: "Create a new Nx workspace using the latest version of Nx."

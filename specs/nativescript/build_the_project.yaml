@@ -1,0 +1,12 @@
+name: Build your NativeScript project for Android or iOS.
+command: "ns build {{platform}}"
+tags:
+  - nativescript
+description: "Builds your NativeScript project for Android or iOS and produces an application package that you can manually deploy on a device or native emulator."
+arguments:
+  - name: platform
+    description: The name of the platform. E.g. ios, android, etc.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/project/testing/build.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

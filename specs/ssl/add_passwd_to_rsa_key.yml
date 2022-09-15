@@ -1,0 +1,17 @@
+---
+name: Add password to private RSA key using AES256
+command: "openssl rsa -aes256 -in {{in_key}} -out {{out_pass_key}}"
+tags:
+  - ssl
+  - openssl
+description: "Add password to private RSA key using AES256."
+arguments:
+  - name: in_key
+    description: "Input RSA key without password."
+    default_value: in.key
+  - name: "out_pass_key"
+    description: "Output RSA key protected with password."
+    default_value: "out.key"
+author: Petr Stepan (Deworn)
+author_url: "https://github.com/deworn"
+shells: []

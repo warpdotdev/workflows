@@ -1,0 +1,14 @@
+---
+name: Change username of git
+command: "git config --global user.name '{{username}}'"
+tags:
+  - git
+description: Sets the username for git
+arguments:
+  - name: username
+    description: The new username git should use
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/22844806/how-to-change-my-git-username-in-terminal"
+author: Orils
+author_url: "https://stackoverflow.com/users/2817112/oriol"
+shells: []

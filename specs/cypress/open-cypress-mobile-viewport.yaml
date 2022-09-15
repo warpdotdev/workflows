@@ -1,0 +1,15 @@
+name: Open Cypress With a Mobile Viewport
+command: "npx cypress open --config viewportWidth={{width}},viewportHeight={{height}}"
+tags:
+  - cypress
+description: "Open the Cypress Test Runner with a Mobile Viewport."
+arguments:
+  - name: width
+    description: The width of the viewport in pixels
+    default_value: 375
+  - name: height
+    description: The height of the viewport in pixels
+    default_value: 667
+source_url: "https://docs.cypress.io/guides/getting-started/installing-cypress#Opening-Cypress"
+author: cypress-dx
+shells: []

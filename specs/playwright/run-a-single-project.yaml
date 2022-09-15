@@ -1,0 +1,10 @@
+name: Run a single Playwright project
+command: "npx playwright test --project={{projectName}}"
+arguments:
+  - name: projectName
+    description: "The project name."
+tags:
+  - playwright
+description: "Run Playwright tests in a project."
+source_url: "https://playwright.dev/docs/test-advanced#projects"
+author: DominusKelvin

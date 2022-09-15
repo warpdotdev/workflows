@@ -1,0 +1,7 @@
+name: Show report on Playwright tests
+command: "npx playwright show-report"
+tags:
+  - playwright
+description: "Opens a webpage showing a report on your Playwright tests."
+source_url: "https://playwright.dev/docs/running-tests#test-reports"
+author: DominusKelvin

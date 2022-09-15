@@ -1,0 +1,12 @@
+name: Generate all icons for Android and iOS platforms for your NativeScript project.
+command: "ns resources generate icons {{path_to_image}}"
+tags:
+  - nativescript
+description: "Generates all icons for Android and iOS platforms for your NativeScript. It places the generated images in the correct directories under App_Resources/<platform> directory."
+arguments:
+  - name: path_to_image
+    description: It is a valid path to an image that will be used to generate all icons.
+source_url: "https://github.com/NativeScript/nativescript-cli/blob/master/docs/man_pages/project/configuration/resources/resources-generate-icons.md"
+author: erodriguezh
+author_url: "https://github.com/erodriguezh"
+shells: []

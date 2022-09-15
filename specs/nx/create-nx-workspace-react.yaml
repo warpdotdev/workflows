@@ -1,0 +1,13 @@
+name: Create a new Nx workspace with a React application
+command: "npx create-nx-workspace@latest {{name}} --preset=react"
+tags:
+  - nx
+description: "Create a new Nx workspace with a React application using the latest version of Nx."
+arguments:
+  - name: name
+    description: The name of the workspace.
+    default_value: ~
+source_url: "https://nx.dev/cli/create-nx-workspace"
+author: mandarini
+author_url: "https://github.com/mandarini"
+shells: []
