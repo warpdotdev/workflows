@@ -1,9 +1,9 @@
 ---
-name: Search for specified file types and process the file
+name: Search for specified file types and run a certain command for each file
 command: "find -E {{path}} -iregex \".*\\.({{extensions}})\" -print | xargs -n1 -I _item {{command}} _item"
 tags:
   - shell
-description: Use the Find command to search for specified file types and process each file
+description: Use the Find command to search for specified file types and run a certain command for each file
 arguments:
   - name: path
     description: The path to search for files.
