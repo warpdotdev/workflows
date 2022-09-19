@@ -15,6 +15,6 @@ arguments:
     description: The filepath to the .sql dump file
     default_value: ~
 source_url: "https://dba.stackexchange.com/questions/17367/how-can-i-monitor-the-progress-of-an-import-of-a-large-sql-file"
-author: Coleary005
-author_url: "https://connoroleary.com"
+author: Rob
+author_url: "https://dba.stackexchange.com/users/15321/rob"
 shells: []
