@@ -1,5 +1,5 @@
 ---
-name: Uninstall a local NPM package
+name: Uninstall a local PNPM package
 command: "pnpm uninstall {{name}}"
 tags:
   - pnpm
