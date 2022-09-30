@@ -2,7 +2,7 @@
 name: Copy SSH key for GitHub
 command: "pbcopy < ~/.ssh/id_ed25519.pub"
 tags:
-  - npm
+  - github
 description: "Copies the SSH key for GitHub to the clipboard. This is useful for adding the SSH key to GitHub."
 arguments:
   - name: email
