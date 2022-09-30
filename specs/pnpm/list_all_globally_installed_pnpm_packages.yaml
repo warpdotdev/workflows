@@ -1,5 +1,5 @@
 ---
-name: List all globally installed NPM packages
+name: List all globally installed PNPM packages
 command: pnpm ls --depth 0
 tags:
   - pnpm
