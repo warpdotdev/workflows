@@ -2,7 +2,7 @@
 name: Generate new SSH key for GitHub
 command: "ssh-keygen -t ed25519 -C \"{{email}}\""
 tags:
-  - npm
+  - github
 description: "Generates a new SSH key for GitHub. The email address is optional. If you don't specify an email address, you'll be prompted to enter one."
 arguments:
   - name: email
