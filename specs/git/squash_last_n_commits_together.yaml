@@ -3,7 +3,7 @@ name: Squash last n commits together
 command: "git reset --soft HEAD~{{num_commits}} && git commit"
 tags:
   - git
-description: "Squashes the last n commits together. This approach requires rewriting a commit message for the new sqashed changes, unlike running `git rebase`."
+description: "Squashes the last n commits together. This approach requires rewriting a commit message for the new squashed changes, unlike running `git rebase`."
 arguments:
   - name: num_commits
     description: The number of commits that should be squashed together
