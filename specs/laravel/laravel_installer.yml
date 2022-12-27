@@ -1,0 +1,14 @@
+---
+name: Installing Laravel Installer
+command: |-
+     composer global require laravel/installer
+tags:
+     - composer
+     - laravel
+     - php
+description: Install Laravel Installer
+arguments: []
+source_url: "https://laravel.com/docs/5.4/installation"
+author: Charles Adu Boakye
+author_url: "https://www.linkedin.com/in/charles-adu-boakye/"
+shells: []
