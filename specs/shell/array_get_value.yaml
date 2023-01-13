@@ -1,0 +1,19 @@
+---
+name: Get a value from an array
+command: "echo ${{{array_name}}[{{index}}]}"
+tags:
+  - shell
+description: Gets a value from an array and prints it to stdout.
+arguments:
+  - name: array_name
+    description: The name of the array to get a value from
+    default_value: ~
+  - name: index
+    description: The index of the value to get (starting at 0)
+    default_value: ~
+source_url: "https://opensource.com/article/18/5/you-dont-know-bash-intro-bash-arrays"
+author: Wyatt-Stanke
+author_url: "https://github.com/Wyatt-Stanke"
+shells:
+  - Zsh
+  - Bash 
