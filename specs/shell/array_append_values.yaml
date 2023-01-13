@@ -1,4 +1,4 @@
---
+---
 name: Append value(s) to an array
 command: "{{array_name}}+=({{values}})"
 tags:

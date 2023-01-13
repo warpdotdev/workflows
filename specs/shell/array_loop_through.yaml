@@ -1,4 +1,4 @@
---
+---
 name: Loop through an array and run a command on each value
 command: "for i in ${{{array_name}}[@]}; do {{command}}; done"
 tags:
