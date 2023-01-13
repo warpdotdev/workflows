@@ -1,0 +1,16 @@
+---
+name: Optimize CosmWasm Workspace Project (Apple ARM Chips)
+command: >
+  docker run --rm -v "$(pwd)":/code
+  --mount type=volume,source="$(basename "$(pwd)")_cache",target=/code/target
+  --mount type=volume,source=registry_cache,target=/usr/local/cargo/registry
+  cosmwasm/workspace-optimizer-arm64:0.12.8
+tags: 
+  - cosmwasm
+description: >
+  Optimize a CosmWasm project that is organized as a workspace with multiple
+  member contracts. Requires Docker to be installed and running. Uses the
+  experimental arm64 variant for use with Apple's chips (M1 & M2 Macs, etc).
+source_url: https://github.com/CosmWasm/rust-optimizer
+author: chadoh
+author_url: https://chadoh.com
