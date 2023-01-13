@@ -4,7 +4,7 @@ command: "openssl req -x509 -newkey rsa:4096 -keyout {{key_file}} -out {{cert_fi
 tags:
   - ssl
   - openssl
-description: "Generates a self-signed SSL certificate using OpenSSL. Beware, self-signed certificates are typically not validated with any third party. It's recommended to use a certificate signed by a certifiate authority."
+description: "Generates a self-signed SSL certificate using OpenSSL. Beware, self-signed certificates are typically not validated with any third party. It's recommended to use a certificate signed by a certificate authority."
 arguments:
   - name: key_file
     description: ~

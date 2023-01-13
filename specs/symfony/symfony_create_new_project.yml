@@ -1,0 +1,15 @@
+---
+name: Create a new Symfony project
+command: "symfony new {{project_name}}"
+tags: 
+  - symfony
+  - php 
+description: Create a new Symfony project 
+arguments: 
+  - name: project_name
+    description: Name of project
+    default_value: my-app
+source_url: "https://symfony.com/doc/current/setup.html#creating-symfony-applications"
+author: Łukasz Jakutowicz 
+author_url: "https://github.com/lukaszjakutowicz"
+shells: []

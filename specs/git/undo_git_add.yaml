@@ -3,7 +3,7 @@ name: Undo git add
 command: "git reset {{file}}"
 tags:
   - git
-description: "Removes a file that was staged for commit by `git add`. Executing `git reset` withou any file name will unstage all changes."
+description: "Removes a file that was staged for commit by `git add`. Executing `git reset` without any file name will unstage all changes."
 arguments:
   - name: file
     description: The file to unstage
