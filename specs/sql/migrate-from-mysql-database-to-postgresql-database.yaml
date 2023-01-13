@@ -4,7 +4,7 @@ command: "pgloader mysql://{{mysql_username}}:{{mysql_password}}@{{mysql_hostnam
 tags:
   - postgresql
   - mysql
-description: Loads data from the MySQL database, transforms it to PostgresSQL compatible format and uploads it to the PostgresSQL database. Note -  it requires pgloader to be installed and both PostgresSQL and MySQL hosts are accessible from the machine running this script.
+description: Loads data from the MySQL database, transforms it to PostgreSQL compatible format and uploads it to the PostgreSQL database. Note -  it requires pgloader to be installed and both PostgreSQL and MySQL hosts are accessible from the machine running this script.
 arguments:
   - name: mysql_username
     description: The username for the MySQL database.
@@ -22,19 +22,19 @@ arguments:
     description: The name of the MySQL database.
     default_value: ~
   - name: postgres_username
-    description: The username for the Postgres database.
+    description: The username for the PostgreSQL database.
     default_value: ~
   - name: postgres_password
-    description: The password for the Postgres database.
+    description: The password for the PostgreSQL database.
     default_value: ~
   - name: postgres_hostname
-    description: The hostname for the Postgres database.
+    description: The hostname for the PostgreSQL database.
     default_value: ~
   - name: postgres_port
-    description: The port for the Postgres database.
+    description: The port for the PostgreSQL database.
     default_value: 5432
   - name: postgres_database_name
-    description: The name of the Postgres database.
+    description: The name of the PostgreSQL database.
     default_value: ~
 source_url: "https://docs.dipak.tech/database/postgres/postgres-migration"
 author: Dipak Parmar

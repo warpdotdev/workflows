@@ -3,7 +3,7 @@ name: Chain commands together by forwarding output as input to the next command 
 command: "{{command_1}} | {{command_2}}"
 tags:
   - shell
-description: Executs command_1 and passes the output as input to command_2
+description: Executes command_1 and passes the output as input to command_2
 arguments:
   - name: command_1
     description: The first command to run (whose output will be passed to the second command)
