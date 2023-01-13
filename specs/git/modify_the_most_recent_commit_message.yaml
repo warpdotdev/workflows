@@ -3,7 +3,7 @@ name: Modify the most recent commit message
 command: "git commit --amend -m \"{{new_commit_message}}\""
 tags:
   - git
-description: "Ammends the most recent git commit with a new message. This will not update the commit on a remote branch unless you force push the branch,"
+description: "Amends the most recent git commit with a new message. This will not update the commit on a remote branch unless you force push the branch,"
 arguments:
   - name: new_commit_message
     description: The new commit message
