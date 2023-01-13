@@ -103,7 +103,7 @@ fn write_workflows_function(
 /// }
 /// ```
 fn write_workflow(workflow: Workflow, file_name: &str) -> Result<()> {
-    let module = std::fs::File::create(&format!("src/generated_workflows/{}.rs", file_name))?;
+    let module = std::fs::File::create(format!("src/generated_workflows/{}.rs", file_name))?;
 
     writeln!(&module, "use warp_workflows_types::*;")?;
     writeln!(&module, r#"pub fn workflow() -> Workflow {{"#)?;
