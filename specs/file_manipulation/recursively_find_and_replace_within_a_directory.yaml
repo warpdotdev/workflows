@@ -5,7 +5,7 @@ tags:
   - file manipulation
   - sed
   - grep
-description: Replaces all occurences of a string recursively within a directory
+description: Replaces all occurrences of a string recursively within a directory
 arguments:
   - name: old_text
     description: The text that should be replaced
