@@ -1,0 +1,12 @@
+--- 
+name: Check all the requirements to develop and run Symfony application locally 
+command: symfony check:requirements
+tags: 
+  - symfony
+  - php 
+description: Check all the tools you need to develop and run your Symfony application locally
+arguments: [] 
+source_url: "https://symfony.com/doc/current/setup.html#technical-requirements" 
+author: Łukasz Jakutowicz 
+author_url: "https://github.com/lukaszjakutowicz"
+shells: []

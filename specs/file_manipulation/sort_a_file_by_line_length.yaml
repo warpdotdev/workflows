@@ -4,7 +4,7 @@ command: "cat {{file_name}} | awk '{ print length, $0 }' | sort -n -s | cut -d\"
 tags:
   - file manipulation
   - awk
-description: "Sorts a text file by line length (including spaces). The `-s` flag indicates that any lines that are the same length are kept in the relative order that they ocurred in the input."
+description: "Sorts a text file by line length (including spaces). The `-s` flag indicates that any lines that are the same length are kept in the relative order that they occurred in the input."
 arguments:
   - name: file_name
     description: The name of the file to sort.
