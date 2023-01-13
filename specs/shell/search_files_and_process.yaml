@@ -1,0 +1,20 @@
+---
+name: Search for specified file types and run a certain command for each file
+command: "find -E {{path}} -iregex \".*\\.({{extensions}})\" -print | xargs -n1 -I _item {{command}} _item"
+tags:
+  - shell
+description: Use the Find command to search for specified file types and run a certain command for each file
+arguments:
+  - name: path
+    description: The path to search for files.
+    default_value: .
+  - name: extensions
+    description: The file extensions to search for.
+    default_value: jpg|jpeg|png|bmp
+  - name: command
+    description: The command to execute on each file.
+    default_value: echo
+source_url: "https://linuxize.com/post/how-to-find-files-in-linux-using-the-command-line/"
+author: funnyzak
+author_url: "https://github.com/funnyzak"
+shells: []
