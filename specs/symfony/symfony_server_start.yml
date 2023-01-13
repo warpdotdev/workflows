@@ -1,0 +1,12 @@
+--- 
+name: Start Symfony local web server
+command: symfony server:start 
+tags: 
+  - symfony
+  - php 
+description: Start Symfony local web server 
+arguments: [] 
+source_url: "https://symfony.com/doc/current/setup/symfony_server.html" 
+author: Łukasz Jakutowicz 
+author_url: "https://github.com/lukaszjakutowicz"
+shells: []
