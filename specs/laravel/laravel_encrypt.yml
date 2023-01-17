@@ -6,7 +6,7 @@ tags:
      - laravel
      - php
 description: command to encrypt Laravel environment file
-source_url: "https://laravel.com/docs/9.x/configuration#pre-rendering-the-maintenance-mode-view"
+source_url: "https://laravel.com/docs/9.x/configuration#encrypting-environment-files"
 author: Charles Adu Boakye
 author_url: "https://github.com/4cyberlord"
 shells: []
