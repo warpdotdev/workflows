@@ -6,7 +6,7 @@ tags:
      - laravel
      - php
 description: List the application's events and listeners
-source_url: "https://artisan.page/#eventgenerate"
+source_url: "https://artisan.page/#eventlist"
 author: Charles Adu Boakye
 author_url: "https://github.com/4cyberlord"
 shells: []
