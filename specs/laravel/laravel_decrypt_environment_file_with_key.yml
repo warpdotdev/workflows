@@ -1,0 +1,16 @@
+---
+name: Decrypt Laravel environment file with key
+command: |-
+     php artisan env:decrypt --key={{decrypt_key}}
+tags:
+     - laravel
+     - php
+description: Command to decrypt Laravel environment file
+arguments:
+  - name: decrypt_key
+    description: Provide your laravel decrypt key to decrypt the environment file
+    default_value: ~
+source_url: "https://laravel.com/docs/9.x/configuration#decryption"
+author: Charles Adu Boakye
+author_url: "https://github.com/4cyberlord"
+shells: []
