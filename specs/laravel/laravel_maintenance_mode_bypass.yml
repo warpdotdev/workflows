@@ -6,7 +6,10 @@ tags:
      - laravel
      - php
 description: This command helps you bypass laravel maintenance mode by setting the secret key.
-arguments: []
+arguments:
+  - name: bypass_secret_key
+    description: Enter your laravel application key to bypass maintenance mode.
+    default_value: ~
 source_url: "https://laravel.com/docs/9.x/configuration#pre-rendering-the-maintenance-mode-view"
 author: Charles Adu Boakye
 author_url: "https://github.com/4cyberlord"
