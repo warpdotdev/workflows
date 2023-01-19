@@ -1,5 +1,5 @@
 ---
-name: Clear laravel events and listeners
+name: Clear Laravel events and listeners
 command: |-
     php artisan event:clear
 tags:
