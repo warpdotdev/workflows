@@ -1,5 +1,5 @@
 ---
-name: Bypass laravel maintenance mode 
+name: Bypass Laravel maintenance mode 
 command: |-
      php artisan down --secret="{{bypass_secret_key}}"
 tags:
