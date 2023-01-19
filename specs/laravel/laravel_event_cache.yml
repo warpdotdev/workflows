@@ -1,5 +1,5 @@
 ---
-name: Discover and Cache all Laravel application events and listeners
+name: Discover and cache all Laravel application events and listeners
 command: |-
      php artisan event:cache
 tags:
