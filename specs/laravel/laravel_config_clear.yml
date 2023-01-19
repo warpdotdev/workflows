@@ -1,5 +1,5 @@
 ---
-name: Clear laravel configuration
+name: Clear Laravel configuration
 command: |-
      php artisan config:clear
 tags:
