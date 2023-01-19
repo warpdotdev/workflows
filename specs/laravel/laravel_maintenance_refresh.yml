@@ -1,0 +1,16 @@
+---
+name: Automatically refresh Laravel maintenance mode
+command: |-
+     php artisan down --refresh={{refresh_duration}}
+tags:
+     - laravel
+     - php
+description: Refresh Laravel maintenance mode automatically after the specified number of seconds is due.
+arguments:
+  - name: refresh_duration
+    description: Specify the number of seconds the page should be refreshed.
+    default_value: ~
+source_url: "https://laravel.com/docs/5.4/installation"
+author: Charles Adu Boakye
+author_url: "https://www.linkedin.com/in/charles-adu-boakye/"
+shells: []

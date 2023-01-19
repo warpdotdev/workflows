@@ -1,0 +1,12 @@
+---
+name: Clear Laravel events and listeners
+command: |-
+    php artisan event:clear
+tags:
+     - laravel
+     - php
+description: Clear all cached events and listeners
+source_url: "https://artisan.page/#eventclear"
+author: Charles Adu Boakye
+author_url: "https://github.com/4cyberlord"
+shells: []

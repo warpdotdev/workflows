@@ -1,0 +1,12 @@
+---
+name: Clear Laravel configuration
+command: |-
+     php artisan config:clear
+tags:
+     - laravel
+     - php
+description: Remove the configuration cache file
+source_url: "https://artisan.page/#configclear"
+author: Charles Adu Boakye
+author_url: "https://github.com/4cyberlord"
+shells: []
