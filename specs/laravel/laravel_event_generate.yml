@@ -1,5 +1,5 @@
 ---
-name: Generate missing laravel events and listeners
+name: Generate missing Laravel events and listeners
 command: |-
     php artisan event:generate
 tags:
