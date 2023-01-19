@@ -1,5 +1,5 @@
 ---
-name: List all application's events listeners
+name: List all Laravel application's events listeners
 command: |-
     php artisan event:list
 tags:
