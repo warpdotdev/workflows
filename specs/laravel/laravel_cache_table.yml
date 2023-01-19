@@ -1,5 +1,5 @@
 ---
-name: Generate cache table
+name: Generate Laravel cache table
 command: |-
      php artisan cache:table
 tags:
