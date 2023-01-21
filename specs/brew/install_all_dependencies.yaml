@@ -1,6 +1,6 @@
 ---
 name: Install all dependencies from Brewfile
-command: brew bundle [install]
+command: brew bundle install [--file={{file_location}}]
 tags:
   - homebrew
 description: Install and upgrade (by default) all dependencies from the Brewfile.
