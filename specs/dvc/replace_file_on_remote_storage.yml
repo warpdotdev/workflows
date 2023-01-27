@@ -1,7 +1,6 @@
 ---
 name: Replace files on remote storage and/or an upstream repo
 command: >
-  echo
   dvc remove {{source}}.dvc &&
   dvc add {{source}} &&
   git add {{source}}.dvc .gitignore &&
