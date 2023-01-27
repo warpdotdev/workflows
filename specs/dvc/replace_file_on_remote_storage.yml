@@ -1,0 +1,19 @@
+---
+name: Replace files on remote storage and/or an upstream repo
+command: >
+  echo
+  dvc remove {{source}}.dvc &&
+  dvc add {{source}} &&
+  git add {{source}}.dvc .gitignore &&
+  git commit -m 'dvc: replace {{source}} with new data' --no-verify &&
+  dvc push &&
+  git push
+tags: ["dvc", "data version control"]
+description: Commits and pushes the '.dvc' file to git and the data to remote storage.
+arguments:
+  - name: "source"
+    description: "File or folder to replace."
+    required: true
+source_url: "https://dvc.org/doc/user-guide/how-to/update-tracked-data#replacing-files"
+author: Christopher Lemke
+author_url: "https://github.com/chrislemke"
