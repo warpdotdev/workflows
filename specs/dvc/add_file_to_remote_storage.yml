@@ -1,0 +1,32 @@
+---
+name: Add file to remote storage and/or an upstream repo
+command: >
+  if {{dvc_commit}} && ! [ -e ../dvc.lock ]; then echo "The parent
+  directory does not contain a 'dvc.lock' file. `dvc commit` will not be
+  executed."; fi; if git status --short | grep -q dvc.lock; then
+          echo Not committed 'dvc.lock' file found! Please commit it first.
+  else
+    dvc add {{target}} &&
+    if {{dvc_commit}} && [ -e ../dvc.lock ]; then
+      dvc commit &&
+      git add ../dvc.lock
+    fi
+    git commit -m 'dvc: add {{target}} to data' --no-verify &&
+    dvc push &&
+    git push
+  fi
+tags:
+  - dvc
+  - data version control
+description: Adds a new file to the remote storage and commits the '.dvc' file to git.
+arguments:
+  - name: target
+    description: File or folder to add.
+    required: true
+  - name: dvc_commit
+    description: Either to execute `dvc commit` or to skip it.
+    required: false
+    default_value: true
+source_url: https://dvc.org/doc/command-reference/add#add
+author: Christopher Lemke
+author_url: https://github.com/chrislemke
