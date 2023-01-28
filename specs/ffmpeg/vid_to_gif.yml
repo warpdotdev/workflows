@@ -1,0 +1,22 @@
+---
+name: ffmpeg to convert a video to gif
+command: $ ffmpeg -ss {{start}} -t {{length}} -i {{media_file_path}} -filter_complex "[0:v] fps=12,scale={{scale}}:-1,split [a][b];[a] palettegen [p];[b][p] paletteuse" {{media_file_path}}.gif
+tags:
+  - ffmpeg
+description: Convert a specified video to gif with parameters to optimize size and quality. Output gif will be in same path as input video. Uses 12 frames/second.
+arguments:
+  - name: media_file_path
+    description: Path of media file (may be local file path, http url or some other protocols described at https://ffmpeg.org/ffmpeg-protocols.html#Protocols)
+  - name: start
+    description: Start time in seconds of your input media file.
+    default_value: 0.0
+  - name: length
+    description: Output duration in seconds.
+    default_value: 2.5
+  - name: scale
+    description: output scale defined pixels (integer). Will maintain aspect ratio.
+    default_value: 1080
+source_url: "https://github.com/cyburgee/ffmpeg-guide"
+author: olsoma13
+author_url: "https://github.com/olsoma13"
+shells: []
