@@ -7,4 +7,4 @@ arguments:
   - name: pod_name
     description: The pod into which to exec
 
-tags: ["kubectl", "exec", "shell", "bash"]
+tags: ["kubectl"]
