@@ -1,0 +1,16 @@
+---
+name: Encrypt Laravel environment file with custom encryption key
+command: |-
+     php artisan env:encrypt --key={{custom_key}}
+tags:
+     - laravel
+     - php
+description: command to encrypt your Laravel environment file with custom encryption key
+arguments:
+  - name: custom_key
+    description: Specify custom encryption key for Laravel environment file.
+    default_value: ~
+source_url: "https://laravel.com/docs/9.x/configuration#encrypting-environment-files"
+author: Charles Adu Boakye
+author_url: "https://github.com/4cyberlord"
+shells: []
