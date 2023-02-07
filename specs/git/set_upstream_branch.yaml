@@ -1,8 +1,17 @@
 ---
 name: Set upstream branch
-command: git push -u origin HEAD
+command: git branch --set-upstream-to={{remote}}/{{remote_branch}} {{local_branch}}
+arguments:
+  - name: remote
+    description: The name of the remote
+    default_value: origin
+  - name: remote_branch
+    description: The name of the remote branch that the local branch should be point to
+    default_value: main
+  - name: local_branch
+    description: The name of the local branch that we want to set
+    default_value: main
 tags:
   - git
-description: Sync the local branch to the remote branch with the same name.
-arguments: []
+description: Sets the upstream for a local branch to a remote branch.
 shells: []
