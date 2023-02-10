@@ -1,0 +1,8 @@
+---
+name: Synchronize upstream branch
+command: git push -u origin HEAD
+tags:
+  - git
+description: Sync the local branch to the remote branch with the same name.
+arguments: []
+shells: []

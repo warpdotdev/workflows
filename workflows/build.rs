@@ -34,7 +34,7 @@ fn main() -> Result<()> {
 
             println!("attempting to generate workflow at {:?}", entry.path());
             let workflow: Workflow = serde_yaml::from_str(yaml_content)?;
-            println!("generated workflow is {:?}", workflow);
+            println!("generated workflow is {workflow:?}");
 
             let file_name = entry
                 .file_name()
@@ -43,14 +43,14 @@ fn main() -> Result<()> {
                 .replace(".yaml", "")
                 .replace(".yml", "")
                 .to_case(Case::Snake);
-            println!("file name is {:?}", file_name);
+            println!("file name is {file_name:?}");
 
             // Create a module for each Workflow within the parent module.
             workflows_added.push(file_name.clone());
 
             write_workflow(workflow, file_name.as_str())?;
 
-            writeln!(&parent_module, "pub mod {};", file_name)?;
+            writeln!(&parent_module, "pub mod {file_name};")?;
         }
     }
 
@@ -84,7 +84,7 @@ fn write_workflows_function(
     writeln!(parent_module, "pub fn workflows() -> Vec<Workflow> {{")?;
     writeln!(parent_module, "vec![")?;
     for workflows in workflows_added {
-        writeln!(parent_module, "{}::workflow(),", workflows)?;
+        writeln!(parent_module, "{workflows}::workflow(),")?;
     }
     writeln!(parent_module, "]")?;
     writeln!(parent_module, "}}")?;
@@ -103,7 +103,7 @@ fn write_workflows_function(
 /// }
 /// ```
 fn write_workflow(workflow: Workflow, file_name: &str) -> Result<()> {
-    let module = std::fs::File::create(&format!("src/generated_workflows/{}.rs", file_name))?;
+    let module = std::fs::File::create(format!("src/generated_workflows/{file_name}.rs"))?;
 
     writeln!(&module, "use warp_workflows_types::*;")?;
     writeln!(&module, r#"pub fn workflow() -> Workflow {{"#)?;

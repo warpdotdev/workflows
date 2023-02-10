@@ -1,0 +1,13 @@
+---
+name: Optimize Laravel Framework
+command: |-
+    php artisan optimize
+tags:
+  - php
+  - laravel
+description: Cache the framework bootstrap files
+arguments: []
+source_url: "https://artisan.page/#optimize"
+author: Charles Adu Boakye
+author_url: "https://github.com/4cyberlord"
+shells: []  
