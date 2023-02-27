@@ -1,0 +1,14 @@
+---
+name: Graphite - Checkout a branch
+command: "gt bco {{branch_name}}"
+tags:
+  - graphite
+description: "Often used when wanting to check out a singular branch for collaboration OR personal use."
+arguments:
+  - name: branch_name
+    description: The name of the branch that you want to checkout
+    default_value: main
+source_url: "https://graphite.dev/docs/graphite-cheatsheet"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []
