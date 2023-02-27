@@ -1,9 +1,9 @@
 ---
-name: Graphite - Get downstack from remote
-command: "gt downstack get {{branch_name}}"
+name: Graphite - Edit the branches
+command: "gt downstack edit"
 tags:
   - graphite
-description: "Alias `dsg`. Get branches from trunk to the specified branch from remote, prompting the user to resolve conflicts."
+description: "Alias `dse`. Edit the order of the branches between trunk and the current branch, restacking all of their descendants."
 arguments:
   - name: branch_name
     description: The name of the branch that you want to fetch from remote

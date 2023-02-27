@@ -1,0 +1,11 @@
+---
+name: Graphite - Run a command on every branch within a stack
+command: "gt downstack test"
+tags:
+  - graphite
+description: "Alias `dst`. From trunk to the current branch, run the provided command on each branch and aggregate the results."
+arguments: []
+source_url: "https://graphite.dev/docs/command-reference"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []

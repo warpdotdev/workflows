@@ -4,7 +4,7 @@ command: "gt branch fold"
 tags:
   - graphite
 description: "Alias: `bf`. Fold a branch's changes into its parent, update dependencies of descendants of the new combined branch, and restack."
-source_url: "https://graphite.dev/docs/graphite-cheatsheet"
+source_url: "https://graphite.dev/docs/command-reference"
 author: graphite
 author_url: "https://graphite.dev/"
 shells: []

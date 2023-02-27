@@ -4,7 +4,7 @@ command: "gt branch rename"
 tags:
   - graphite
 description: "Alias: `brn`. Rename a branch and update metadata referencing it. Note that this removes any associated GitHub pull request."
-source_url: "https://graphite.dev/docs/graphite-cheatsheet"
+source_url: "https://graphite.dev/docs/command-reference"
 author: graphite
 author_url: "https://graphite.dev/"
 shells: []

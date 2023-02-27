@@ -1,9 +1,9 @@
 ---
-name: Graphite - Jump to the top of the stack
-command: "gt bt"
+name: Graphite - Open the web dashboard
+command: "gt dash"
 tags:
   - graphite
-description: "Quickly move all the way up (bt) the stack"
+description: "Open the web dashboard."
 arguments: []
 source_url: "https://graphite.dev/docs/command-reference"
 author: graphite

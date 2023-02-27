@@ -5,7 +5,7 @@ tags:
   - graphite
 description: "Submit your changes across all PRs on a stack."
 arguments: []
-source_url: "https://graphite.dev/docs/graphite-cheatsheet"
+source_url: "https://graphite.dev/docs/command-reference"
 author: graphite
 author_url: "https://graphite.dev/"
 shells: []

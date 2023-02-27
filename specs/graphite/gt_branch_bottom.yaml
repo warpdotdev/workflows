@@ -1,9 +1,9 @@
 ---
-name: Graphite - Jump to the top of the stack
-command: "gt bt"
+name: Graphite - Jump to the bottom of the stack
+command: "gt branch bottom"
 tags:
   - graphite
-description: "Quickly move all the way up (bt) the stack"
+description: "Alias `bb`. Quickly move all the way down (bb) the stack"
 arguments: []
 source_url: "https://graphite.dev/docs/command-reference"
 author: graphite
