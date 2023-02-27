@@ -1,0 +1,11 @@
+---
+name: Graphite - Authorize the Graphite CLI
+command: "gt auth"
+tags:
+  - graphite
+description: "Add your auth token to enable Graphite CLI to create and update your PRs on GitHub."
+arguments: []
+source_url: "https://graphite.dev/docs/graphite-cheatsheet"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []

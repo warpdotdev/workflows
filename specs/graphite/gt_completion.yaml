@@ -1,9 +1,9 @@
 ---
-name: Graphite - Jump to the top of the stack
-command: "gt bt"
+name: Graphite - Set up bash or zsh tab completion.
+command: "gt completion"
 tags:
   - graphite
-description: "Quickly move all the way up (bt) the stack"
+description: "Set up bash or zsh tab completion."
 arguments: []
 source_url: "https://graphite.dev/docs/command-reference"
 author: graphite

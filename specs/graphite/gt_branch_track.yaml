@@ -1,0 +1,11 @@
+---
+name: Graphite - Starts tracking the current branch
+command: "gt branch track"
+tags:
+  - graphite
+description: "Alias: `btr`. Start tracking the current branch (by default) with Graphite by selecting its parent. This command can also be used to fix corrupted Graphite metadata."
+arguments: []
+source_url: "https://graphite.dev/docs/command-reference"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []
