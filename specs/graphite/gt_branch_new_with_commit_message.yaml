@@ -1,0 +1,14 @@
+---
+name: Graphite - Create a branch with an accompanying commit message
+command: "gt bc -am {{commit_message}}"
+tags:
+  - graphite
+description: "Creating some changes, staging those changes, creating a new branch and committing those changes to the new branch is way too much work. Create your changes and run this single-line command to do all of that in one go. Compare to: `git checkout -b <branch_name> && git add . && git commit -m <commit message>`"
+arguments:
+  - name: commit_message
+    description: The message to assign to this commit.
+    default_value: ~
+source_url: "https://graphite.dev/docs/graphite-cheatsheet"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []

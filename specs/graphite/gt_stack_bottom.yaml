@@ -1,0 +1,11 @@
+---
+name: Graphite - Jump to the bottom of the stack
+command: "gt bb"
+tags:
+  - graphite
+description: "Quickly move all the way down (bb) the stack"
+arguments: []
+source_url: "https://graphite.dev/docs/graphite-cheatsheet"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []
