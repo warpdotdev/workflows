@@ -3,7 +3,7 @@ name: Graphite - Checkout a branch
 command: "gt bco {{branch_name}}"
 tags:
   - graphite
-description: "Often used when wanting to check out a singular branch for collaboration OR personal use."
+description: "Switch to or checkout a branch. Similar to `git checkout <branch_name>`"
 arguments:
   - name: branch_name
     description: The name of the branch that you want to checkout

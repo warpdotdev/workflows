@@ -3,7 +3,7 @@ name: Graphite - Log or show the stacked branch tree
 command: "gt ls"
 tags:
   - graphite
-description: "This might be glaringly obvious, but any time branches are created/manipulated/changed, we run this command as if it were second nature. Most of our engineers prefer the truncated (ls) log to the full log."
+description: "Log all stacks tracked by Graphite, arranged to show dependencies. Similar to showing the commit log."
 source_url: "https://graphite.dev/docs/graphite-cheatsheet"
 author: graphite
 author_url: "https://graphite.dev/"
