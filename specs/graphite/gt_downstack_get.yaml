@@ -1,0 +1,14 @@
+---
+name: Graphite - Get downstack from remote
+command: "gt dsg {{branch_name}}"
+tags:
+  - graphite
+description: "A popular command for getting a stack locally that's been created/manipulated by someone else. Oftentimes followed up with gt bdl to delete irrelevant branches locally."
+arguments:
+  - name: branch_name
+    description: The name of the branch that you want to fetch from remote
+    default_value: main
+source_url: "https://graphite.dev/docs/graphite-cheatsheet"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []

@@ -1,0 +1,11 @@
+---
+name: Graphite - Submit stack
+command: "gt ss"
+tags:
+  - graphite
+description: "Submit your changes across all PRs on a stack."
+arguments: []
+source_url: "https://graphite.dev/docs/graphite-cheatsheet"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []

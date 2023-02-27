@@ -1,0 +1,14 @@
+---
+name: Graphite - Move down the stack of branches
+command: "gt branch down {{step}}"
+tags:
+  - graphite
+description: "Quickly move down a stack of branches. By default, takes a step argument of 1, but can add a step value (ex. gt branch up 2) to skip a certain number of branches."
+arguments:
+  - name: step
+    description: The number of branches to pass when traversing the stack of branches.
+    default_value: 1
+source_url: "https://graphite.dev/docs/graphite-cheatsheet"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []

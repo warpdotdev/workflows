@@ -1,0 +1,11 @@
+---
+name: Graphite - Jump to the top of the stack
+command: "gt bt"
+tags:
+  - graphite
+description: "Quickly move all the way up (bt) the stack"
+arguments: []
+source_url: "https://graphite.dev/docs/graphite-cheatsheet"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []
