@@ -1,0 +1,10 @@
+---
+name: Graphite - Run an interactive branch rebase
+command: "gt branch edit"
+tags:
+  - graphite
+description: "Alias: `be`. Run an interactive rebase on the current branch's commits and restack upstack branches."
+source_url: "https://graphite.dev/docs/graphite-cheatsheet"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []
