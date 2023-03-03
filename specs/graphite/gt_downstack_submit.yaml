@@ -1,0 +1,11 @@
+---
+name: Graphite - Push the parent branches to GitHub
+command: "gt downstack submit"
+tags:
+  - graphite
+description: "Alias `dss`.  Idempotently force push all branches from trunk to the current branch to GitHub, creating or updating distinct pull requests for each."
+arguments: []
+source_url: "https://graphite.dev/docs/command-reference"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []

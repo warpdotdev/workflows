@@ -1,0 +1,14 @@
+---
+name: Graphite - Edit the branches
+command: "gt downstack edit"
+tags:
+  - graphite
+description: "Alias `dse`. Edit the order of the branches between trunk and the current branch, restacking all of their descendants."
+arguments:
+  - name: branch_name
+    description: The name of the branch that you want to fetch from remote
+    default_value: main
+source_url: "https://graphite.dev/docs/command-reference"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []
