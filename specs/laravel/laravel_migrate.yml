@@ -1,0 +1,13 @@
+---
+name: Run Laravel database migrations
+command: |-
+    php artisan migrate
+tags:
+  - Laravel
+  - Php
+description: This command runs Laravel database migrations
+arguments: []
+source_url: "https://laravel.com/docs/10.x/migrations#running-migrations"
+author: Bert De Swaef
+author_url: "https://github.com/BurtDS"
+shells: []
