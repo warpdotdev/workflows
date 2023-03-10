@@ -1,0 +1,13 @@
+---
+name: Drop all tables and run Laravel's migrations
+command: |-
+    php artisan migrate:fresh
+tags:
+  - Laravel
+  - Php
+description: This command will drop all excisting tables and run Laravel database migrations after that
+arguments: []
+source_url: "https://laravel.com/docs/10.x/migrations#running-migrations"
+author: Bert De Swaef
+author_url: "https://github.com/BurtDS"
+shells: []
