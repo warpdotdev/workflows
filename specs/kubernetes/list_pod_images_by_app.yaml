@@ -1,7 +1,7 @@
 ---
 name: List images by app label of pods
 command: >
-  kubectl get pods -l app={{app}} -o jsonpath='{range .items[*]}{"\n"}{range .spec.containers[*]}{.name}{"\t"}{.image}{"\n"}{end}{end}'
+  kubectl get pods -l app={{app}} -o jsonpath='{range .items[*]}{"\n"}{range .spec.containers[*]}{.name}{"\t"}{.image}{"\n"}{end}{end}' | sort | uniq
 tags:
   - kubernetes
 description: Lists the images of pods fetched by app label
