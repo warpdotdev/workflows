@@ -1,0 +1,15 @@
+---
+name: List images by app label of pods
+command: >
+  kubectl get pods -l app={{app}} -o jsonpath='{range .items[*]}{"\n"}{range .spec.containers[*]}{.name}{"\t"}{.image}{"\n"}{end}{end}'
+tags:
+  - kubernetes
+description: Lists the images of pods fetched by app label
+arguments:
+  - name: app
+    description: The value of the app label
+    default_value: ~
+source_url: "https://stackoverflow.com/questions/51931113/kubectl-get-events-only-for-a-pod"
+author: pkaramol
+author_url: "https://www.linkedin.com/in/pkaramol/"
+shells: []
