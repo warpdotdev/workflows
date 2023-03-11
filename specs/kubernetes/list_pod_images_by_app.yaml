@@ -9,7 +9,7 @@ arguments:
   - name: app
     description: The value of the app label
     default_value: ~
-source_url: "https://stackoverflow.com/questions/51931113/kubectl-get-events-only-for-a-pod"
+source_url: "https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/"
 author: pkaramol
 author_url: "https://www.linkedin.com/in/pkaramol/"
 shells: []
