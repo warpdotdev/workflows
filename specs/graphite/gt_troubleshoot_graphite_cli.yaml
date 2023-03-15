@@ -1,0 +1,10 @@
+---
+name: Graphite - Troubleshoot the Graphite CLI
+command: "gt repo init --reset && gt dev cache --clear"
+tags:
+  - graphite
+description: "This combination of commands resets Graphite repo metadata and clears the cache."
+source_url: "https://graphite.dev/docs/command-reference"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []
