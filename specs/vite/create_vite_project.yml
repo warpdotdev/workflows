@@ -1,0 +1,12 @@
+---
+name: Create Vite Project
+command: |-
+    npm create vite@latest
+tags:
+  - vite
+description: Create any type of vite related project.
+arguments: []
+source_url: "https://vitejs.dev/guide/"
+author: Charles Adu Boakye
+author_url: "https://github.com/4cyberlord"
+shells: []  
