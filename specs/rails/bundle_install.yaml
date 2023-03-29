@@ -1,0 +1,11 @@
+---
+name: Use bundler to install al gems
+command: |-
+    bundle install
+tags:
+  - rails
+description: Uses rails bundler to install all the gem dependencies
+author: Diego Acero
+source_url: "https://bundler.io/guides/rails.html"
+author_url: "https://www.linkedin.com/in/diego-acero-arg%C3%BCelles-009010142/"
+shells: []

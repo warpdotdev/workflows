@@ -1,0 +1,15 @@
+---
+name: Runs rspec tests 
+command: |-
+    bundle exec rspec {{test_path}}
+tags:
+  - rails
+description: Uses bundler to run all the test suite or the test from the path used as parameter
+arguments:
+  - name: test_path
+    description: The path for the test you want to run
+    default_value: spec/
+source_url: "https://rspec.info/documentation/6.0/rspec-rails/"
+author: Diego Acero
+author_url: "https://www.linkedin.com/in/diego-acero-arg%C3%BCelles-009010142/"
+shells: []

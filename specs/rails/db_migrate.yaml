@@ -1,0 +1,11 @@
+---
+name: Apply database migrations
+command: |-
+    rails db:migrate
+tags:
+  - rails
+description: Uses the rails rake task for applying all the migrations
+source_url: "https://stackoverflow.com/questions/7323261/uninstall-remove-a-homebrew-package-including-all-its-dependencies"
+author: Diego Acero
+author_url: "https://www.linkedin.com/in/diego-acero-arg%C3%BCelles-009010142/"
+shells: []
