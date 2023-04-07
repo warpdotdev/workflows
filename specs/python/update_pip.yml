@@ -1,9 +1,0 @@
----
-name: Update all pip3 packages
-command: "pip3 install -U $(pip3 freeze | cut -d '=' -f 1)"
-tags: ["python"]
-description: Update all your python3 packages in one go.
-source_url: "https://coderwall.com/p/quwaxa/update-all-installed-python-packages-with-pip"
-author: xeonpinkswan 
-author_url: "https://coderwall.com/xeonpinkswan"
-shells: []
