@@ -1,0 +1,11 @@
+---
+name: Graphite - Synchronize with remote
+command: "gt rs -r"
+tags:
+  - graphite
+description: "A quick command to pull changes from your trunk branch and subsequently restack upstack changes. Same as `gt repo sync && gt stack restack` under the hood. Also deletes any branches that have been merged."
+arguments: []
+source_url: "https://graphite.dev/docs/command-reference"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []
