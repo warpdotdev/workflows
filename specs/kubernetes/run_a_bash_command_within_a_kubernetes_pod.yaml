@@ -1,10 +1,12 @@
 ---
 name: Run a Bash command within a Kubernetes pod
-command: 'kubectl exec -it --namespace=tools {{pod_name}} -- bash -c "{{bash_command}}"'
+command: 'kubectl exec -it --namespace={{namespace}} {{pod_name}} -- bash -c "{{bash_command}}"'
 tags:
   - kubernetes
 description: 'Runs a Bash command in a Kubernetes pod. The double dash symbol "--" is used to separate the command you want to run inside the container from the kubectl arguments.'
 arguments:
+  - name: namespace
+    description: The namespace in which the pod is located
   - name: pod_name
     description: The name of the pod
     default_value: ~
