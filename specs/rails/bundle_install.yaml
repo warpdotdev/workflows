@@ -1,5 +1,5 @@
 ---
-name: Use bundler to install al gems
+name: Use Rails bundler to install all gems
 command: |-
     bundle install
 tags:
