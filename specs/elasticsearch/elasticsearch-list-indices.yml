@@ -37,9 +37,11 @@
       # The default value for the argument.
       default_value: true
   # The source URL for where the workflow was generated from, if any.
-  # source_url: "https://stackoverflow.com/questions/7323261/uninstall-remove-a-homebrew-package-including-all-its-dependencies"
+  source_url: "https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html"
   # The author of the workflow.
   author: Olaf Klejnstrup-Jensen
+  # The URL of original author of the Workflow. For example, if this workflow was generated from StackOverflow, the `author_url` would be the StackOverflow author's profile page.
+  author_url: "https://github.com/fului"
   # The valid shells where this workflow should be active. If valid for all shells, this can be left empty.
   # See FORMAT.md for the full list of accepted values.
   shells: []

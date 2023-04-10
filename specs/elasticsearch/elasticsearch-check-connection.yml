@@ -33,6 +33,8 @@
       default_value: 9200
   # The author of the workflow.
   author: Olaf Klejnstrup-Jensen
+  # The URL of original author of the Workflow. For example, if this workflow was generated from StackOverflow, the `author_url` would be the StackOverflow author's profile page.
+  author_url: "https://github.com/fului"
   # The valid shells where this workflow should be active. If valid for all shells, this can be left empty.
   # See FORMAT.md for the full list of accepted values.
   shells: []
