@@ -1,0 +1,5 @@
+name: Sudo with FIngerprint
+command: cat <(head -n 1  /etc/pam.d/sudo) <(echo "auth       sufficient     pam_tid.so") <(tail -n +2 /etc/pam.d/sudo) > output && sudo mv output /etc/pam.d/sudo
+description: Enables TouchID authetification for sudo commands
+tags: ["macos"]
+author_url: https://www.imore.com/how-use-sudo-your-mac-touch-id
