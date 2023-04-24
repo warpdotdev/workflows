@@ -59,16 +59,12 @@ impl Workflow {
         &self.shells
     }
 
-    pub fn new(
-        name: impl Into<String>,
-        command: impl Into<String>,
-        description: Option<String>,
-    ) -> Self {
+    pub fn new(name: impl Into<String>, command: impl Into<String>) -> Self {
         Workflow {
             name: name.into(),
             command: command.into(),
             tags: vec![],
-            description,
+            description: None,
             arguments: vec![],
             source_url: None,
             author: None,
@@ -79,6 +75,11 @@ impl Workflow {
 
     pub fn with_arguments(mut self, arguments: Vec<Argument>) -> Self {
         self.arguments = arguments;
+        self
+    }
+
+    pub fn with_description(mut self, description: String) -> Self {
+        self.description = Some(description.clone());
         self
     }
 }
