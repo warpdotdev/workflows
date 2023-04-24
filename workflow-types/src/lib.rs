@@ -79,7 +79,7 @@ impl Workflow {
     }
 
     pub fn with_description(mut self, description: String) -> Self {
-        self.description = Some(description.clone());
+        self.description = Some(description);
         self
     }
 }
