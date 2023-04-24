@@ -59,12 +59,16 @@ impl Workflow {
         &self.shells
     }
 
-    pub fn new(name: impl Into<String>, command: impl Into<String>) -> Self {
+    pub fn new(
+        name: impl Into<String>,
+        command: impl Into<String>,
+        description: Option<String>,
+    ) -> Self {
         Workflow {
             name: name.into(),
             command: command.into(),
             tags: vec![],
-            description: None,
+            description,
             arguments: vec![],
             source_url: None,
             author: None,
