@@ -6,7 +6,6 @@ command: |-
   echo "old value:"
   defaults read -g com.apple.mouse.scaling 
   defaults write -g com.apple.mouse.scaling -integer {{acceleration_amount}}
-  echo "new value:"
 # Any tags that the workflow should be categorized with.
 tags:
   - MacOS
