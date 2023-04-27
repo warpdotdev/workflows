@@ -1,0 +1,10 @@
+name: Opens a Bash shell into Kubernetes pod
+command: kubectl -n {{namespace}} exec -it {{pod_name}} -- /bin/sh
+arguments:
+  - name: namespace
+    default_value: default
+    description: The namespace of the pod
+  - name: pod_name
+    description: The pod into which to exec
+
+tags: ["kubectl"]
