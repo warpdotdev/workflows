@@ -1,0 +1,12 @@
+---
+name: Generate Laravel application key
+command: |-
+     php artisan key:generate
+tags:
+     - laravel
+     - php
+description: Set laravel application key
+source_url: "https://artisan.page/#keygenerate"
+author: Charles Adu Boakye
+author_url: "https://github.com/4cyberlord"
+shells: []

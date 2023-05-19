@@ -1,0 +1,10 @@
+---
+name: Graphite - Restacks the current branch to its parent
+command: "gt branch restack"
+tags:
+  - graphite
+description: "Alias: `br`. Ensure the current branch is based on its parent, rebasing if necessary."
+source_url: "https://graphite.dev/docs/command-reference"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []

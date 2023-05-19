@@ -1,6 +1,6 @@
 {
   "name": "warp-workflows",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "Workflows used within Warp",
   "main": "dist/warp-workflows.js",
   "types": "dist/index.d.ts",

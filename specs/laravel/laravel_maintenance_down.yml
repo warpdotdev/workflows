@@ -1,0 +1,13 @@
+---
+name: Enable Laravel maintenance mode
+command: |-
+    php artisan down
+tags:
+  - Laravel
+  - Php
+description: This command enables maintenance mode in your laravel application
+arguments: []
+source_url: "https://laravel.com/docs/9.x/configuration#pre-rendering-the-maintenance-mode-view"
+author: Charles Adu Boakye
+author_url: "https://github.com/4cyberlord"
+shells: []
