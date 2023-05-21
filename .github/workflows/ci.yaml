@@ -41,3 +41,13 @@ jobs:
         with:
           command: clippy
           args: --tests -- -D warnings
+
+      - name: Install JSON schema validator
+        run: pip3 install jsonschema-cli
+
+      - name: Run jsonschema-cli validate
+        run: |
+          shopt -s extglob
+          for directory in specs/*; do
+            env -C "$directory" jsonschema-cli validate "../../schemas/theme.json" *.yaml
+          done
