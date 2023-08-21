@@ -1,0 +1,13 @@
+---
+name: Drop all tables and run Laravel's migrations and seeders
+command: |-
+    php artisan migrate:fresh --seed
+tags:
+  - Laravel
+  - Php
+description: This command will drop all excisting tables and run Laravel database migrations after that, with seeding the database at the end.
+arguments: []
+source_url: "https://laravel.com/docs/10.x/migrations#running-migrations"
+author: Bert De Swaef
+author_url: "https://github.com/BurtDS"
+shells: []
