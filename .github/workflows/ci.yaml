@@ -48,9 +48,7 @@ jobs:
       - name: Run jsonschema-cli validate
         run: |
           shopt -s extglob
-          for directory in specs/*; do
-            env -C "$directory" jsonschema-cli validate "../../schemas/theme.json" *.yaml
+          for file in specs/**/*.yaml; do
+            echo "Validating '$file'..."
+            jsonschema-cli validate ./schemas/workflow.json "$file"
           done
-      
-      - name: Test
-        run: pwd
