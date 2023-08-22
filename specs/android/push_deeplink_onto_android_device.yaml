@@ -9,7 +9,7 @@ tags:
 description: Uses adb to push a deeplink onto an Android device.
 arguments:
   - name: your_app_package_name
-    description: The package name of the app that you want to recieve the deeplink.
+    description: The package name of the app that you want to receive the deeplink.
     default_value: com.my.app.package
   - name: deeplink
     description: The deeplink you want to send (eg. `app://open.my.app`)
