@@ -1,0 +1,27 @@
+---
+name: Compression all subdirectories and output each directory as a zip file.
+command: "for dir in $(ls -d {{directory}}*/); do (zip -r {{opitons}} {{output}}$(basename $dir){{name_with_str}}.zip ${dir}{{zip_pattern}} && echo -e \"Compressed to {{output}}$(basename $dir){{name_with_str}}.zip.\"); done"
+tags:
+  - zip
+description: Use zip to compress all subdirectories under a folder and output each directory as a zip file.
+arguments:
+  - name: directory
+    description: Optional, The directory to execute. default is current directory.
+    default_value: ./
+  - name: opitons
+    description: Optional, The options of zip command.
+    default_value: -q
+  - name: zip_pattern
+    description: Optional, The pattern of match the files under each subdirectory to be compressed.
+    default_value: '*'
+  - name: output
+    description: Optional, The output directory of the zip files. default is the current directory.
+    default_value: ./
+  - name: name_with_str
+    description: Optional, Endwith string of each zip file name. default is now time string.
+    default_value: _$(date +%Y%m%d%H%M%S)
+source_url: "https://www.geeksforgeeks.org/zip-command-in-linux-with-examples/"
+author: funnyzak
+author_url: "https://github.com/funnyzak"
+shells:
+  - Bash

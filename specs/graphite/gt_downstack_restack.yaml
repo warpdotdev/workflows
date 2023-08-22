@@ -1,0 +1,11 @@
+---
+name: Graphite - Rebase the parent branches
+command: "gt downstack restack"
+tags:
+  - graphite
+description: "Alias `dsr`. From trunk to the current branch, ensure each is based on its parent, rebasing if necessary."
+arguments: []
+source_url: "https://graphite.dev/docs/command-reference"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []

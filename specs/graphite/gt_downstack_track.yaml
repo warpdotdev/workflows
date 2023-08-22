@@ -1,0 +1,11 @@
+---
+name: Graphite - Recursively track parent branches
+command: "gt downstack track"
+tags:
+  - graphite
+description: "Alias `dstr`. Track a series of untracked branches, by specifying each branch's parent, stopping when you reach a tracked branch."
+arguments: []
+source_url: "https://graphite.dev/docs/command-reference"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []

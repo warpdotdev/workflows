@@ -1,0 +1,11 @@
+---
+name: Graphite - Pushes (force) the current branch to GitHub
+command: "gt branch submit"
+tags:
+  - graphite
+description: "Alias: `bs`. Idempotently force push the current branch to GitHub, creating or updating a pull request."
+arguments: []
+source_url: "https://graphite.dev/docs/command-reference"
+author: graphite
+author_url: "https://graphite.dev/"
+shells: []

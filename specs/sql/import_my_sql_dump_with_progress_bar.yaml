@@ -1,0 +1,20 @@
+---
+name: Import a MySQL dump with progress bar into a MySQL server
+command: "pv {{mysql_dump_path}} | mysql -u {{username}} -p {{database_name}}"
+tags:
+  - mysql
+description: Import a mysqldump file into a MySQL server with a progress bar indicating time remaining
+arguments:
+  - name: username
+    description: The user to connect to the MySQL server as
+    default_value: ~
+  - name: database_name
+    description: The name of the database to import the dump into
+    default_value: ~
+  - name: mysql_dump_path
+    description: The filepath to the .sql dump file
+    default_value: ~
+source_url: "https://dba.stackexchange.com/questions/17367/how-can-i-monitor-the-progress-of-an-import-of-a-large-sql-file"
+author: Rob
+author_url: "https://dba.stackexchange.com/users/15321/rob"
+shells: []

@@ -1,0 +1,12 @@
+---
+name: Generate Laravel cache table
+command: |-
+     php artisan cache:table
+tags:
+     - laravel
+     - php
+description: Create a migration for the cache database table
+source_url: "https://artisan.page/#cachetable"
+author: Charles Adu Boakye
+author_url: "https://github.com/4cyberlord"
+shells: []

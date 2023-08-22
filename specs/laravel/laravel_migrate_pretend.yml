@@ -1,0 +1,13 @@
+---
+name: Pretend to run Laravel database migrations
+command: |-
+    php artisan migrate --pretend
+tags:
+  - Laravel
+  - Php
+description: This command will return the SQL statement that would be performed when we would run the migration
+arguments: []
+source_url: "https://laravel.com/docs/10.x/migrations#running-migrations"
+author: Bert De Swaef
+author_url: "https://github.com/BurtDS"
+shells: []

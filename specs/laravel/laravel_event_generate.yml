@@ -1,0 +1,12 @@
+---
+name: Generate missing Laravel events and listeners
+command: |-
+    php artisan event:generate
+tags:
+     - laravel
+     - php
+description: Generate the missing events and listeners based on registration
+source_url: "https://artisan.page/#eventgenerate"
+author: Charles Adu Boakye
+author_url: "https://github.com/4cyberlord"
+shells: []

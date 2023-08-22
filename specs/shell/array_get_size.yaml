@@ -1,0 +1,16 @@
+---
+name: Get number of elements in an array
+command: "echo ${#{{array_name}}[@]}"
+tags:
+  - shell
+description: Gets the number of elements in an array, and prints it to stdout.
+arguments:
+  - name: array_name
+    description: The name of the array to get the size of
+    default_value: ~
+source_url: "https://opensource.com/article/18/5/you-dont-know-bash-intro-bash-arrays"
+author: Wyatt-Stanke
+author_url: "https://github.com/Wyatt-Stanke"
+shells:
+  - Zsh
+  - Bash 
