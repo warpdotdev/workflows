@@ -1,0 +1,10 @@
+---
+name: Install all dependencies from Brewfile
+command: brew bundle install
+tags:
+  - homebrew
+description: Install and upgrade (by default) all dependencies from the Brewfile. Optionally you can pass [--file={{file_location}}], Otherwise homebrew finds Brewfile from the current location.
+source_url: "https://docs.brew.sh/Manpage"
+author: shivamkj
+author_url: "https://github.com/shivamkj"
+shells: []
