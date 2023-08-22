@@ -51,3 +51,6 @@ jobs:
           for directory in specs/*; do
             env -C "$directory" jsonschema-cli validate "../../schemas/theme.json" *.yaml
           done
+      
+      - name: Test
+        run: pwd
