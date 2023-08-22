@@ -1,0 +1,10 @@
+---
+name: Store / Backup all installed dependencies into Brewfile
+command: brew bundle dump
+tags:
+  - homebrew
+description: Write all installed casks/formulae/images/taps into a Brewfile in the current directory.
+source_url: "https://docs.brew.sh/Manpage"
+author: shivamkj
+author_url: "https://github.com/shivamkj"
+shells: []

@@ -1,0 +1,14 @@
+---
+name: Copy SSH key for GitHub
+command: "pbcopy < ~/.ssh/id_ed25519.pub"
+tags:
+  - github
+description: "Copies the SSH key for GitHub to the clipboard. This is useful for adding the SSH key to GitHub."
+arguments:
+  - name: email
+    description: "Your email address. This is used to identify the key."
+    default_value: ~
+source_url: "https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account"
+author: Tim Smith
+author_url: "https://timsmith.tech"
+shells: []
