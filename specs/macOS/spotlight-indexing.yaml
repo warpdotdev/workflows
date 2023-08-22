@@ -6,7 +6,6 @@ tags:
   - Apple
   - MacOS
   - mds_stores
-  - Spotlight
 description: mds_stores is a CPU intensive process that runs for Spotlight indexing. This command will enable or disable that process.
 arguments:
   - name: switch
