@@ -1,0 +1,14 @@
+---
+name: Generate new SSH key for GitHub
+command: "ssh-keygen -t ed25519 -C \"{{email}}\""
+tags:
+  - github
+description: "Generates a new SSH key for GitHub. The email address is optional. If you don't specify an email address, you'll be prompted to enter one."
+arguments:
+  - name: email
+    description: "Your email address. This is used to identify the key."
+    default_value: ~
+source_url: "https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"
+author: Tim Smith
+author_url: "https://timsmith.tech"
+shells: []
