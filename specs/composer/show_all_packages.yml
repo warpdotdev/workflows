@@ -1,0 +1,11 @@
+---
+name: Show a list of available Composer packages
+command: |-
+  composer show
+tags:
+  - composer
+  - php
+description: Show a list of available Composer packages
+source_url: "https://getcomposer.org/doc/03-cli.md#show"
+author: Rob Mellett
+author_url: "https://robmellett.com"
