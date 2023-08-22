@@ -1,0 +1,11 @@
+---
+name: Update Composer dependencies to their latest versions
+command: |-
+  composer update
+tags:
+  - composer
+  - php
+description: Updating Composer dependencies to their latest versions.
+source_url: "https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies"
+author: Rob Mellett
+author_url: "https://robmellett.com"
