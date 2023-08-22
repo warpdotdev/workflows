@@ -1,0 +1,17 @@
+---
+name: Start a local PHP server with a specific document root directory
+command: |-
+    php -S localhost:{{port}} -t {{directory}}
+tags:
+  - php
+description: A command that starts a PHP server in the specified directory.
+arguments:
+  - name: port
+    description: The port number you want to run, e.g. 8080.
+    default_value: 8080
+  - name: directory
+    description: The directory you want the server to run from, e.g. app/public.
+    default_value: app
+source_url: "https://www.php.net/manual/en/features.commandline.webserver.php"
+author: Nate Finch
+author_url: "https://github.com/n8finch"
