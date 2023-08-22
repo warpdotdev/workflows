@@ -77,6 +77,11 @@ impl Workflow {
         self.arguments = arguments;
         self
     }
+
+    pub fn with_description(mut self, description: String) -> Self {
+        self.description = Some(description);
+        self
+    }
 }
 
 #[derive(Clone, Debug, Deserialize, Serialize, Eq, PartialEq, Hash, PartialOrd)]

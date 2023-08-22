@@ -1,0 +1,13 @@
+---
+name: FFprobe file in json
+command: ffprobe -i {{media_file_path}} -show_streams -show_format -print_format json
+tags:
+  - ffprobe
+description: Show streams and format of media file in json format using ffprobe
+arguments:
+  - name: media_file_path
+    description: Path of media file (may be local file path, http url or some other protocols described at https://ffmpeg.org/ffmpeg-protocols.html#Protocols)
+source_url: "https://ffmpeg.org/ffprobe.html"
+author: tabroot
+author_url: "https://github.com/bvc3at"
+shells: []

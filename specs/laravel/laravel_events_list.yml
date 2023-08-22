@@ -1,0 +1,12 @@
+---
+name: List all Laravel application's events listeners
+command: |-
+    php artisan event:list
+tags:
+     - laravel
+     - php
+description: List the application's events and listeners
+source_url: "https://artisan.page/#eventlist"
+author: Charles Adu Boakye
+author_url: "https://github.com/4cyberlord"
+shells: []

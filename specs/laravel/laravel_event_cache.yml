@@ -1,0 +1,12 @@
+---
+name: Discover and cache all Laravel application events and listeners
+command: |-
+     php artisan event:cache
+tags:
+     - laravel
+     - php
+description: Discover and cache the application's events and listeners
+source_url: "https://artisan.page/#eventcache"
+author: Charles Adu Boakye
+author_url: "https://github.com/4cyberlord"
+shells: []

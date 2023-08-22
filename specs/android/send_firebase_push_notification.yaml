@@ -13,7 +13,7 @@ tags:
 description: Uses adb to push a Firebase push notification to your local emulator
 arguments:
   - name: your_app_package_name
-    description: The package name of the app that you want to recieve the notification. It has to have implemented the reciever for it to work.
+    description: The package name of the app that you want to receive the notification. It has to have implemented the receiver for it to work.
     default_value: com.my.app.package
   - name: notification_title
     description: The title of the notification
