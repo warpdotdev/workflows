@@ -1,5 +1,30 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
+    "definitions": {
+        "url": {
+            "oneOf": [
+                {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^https?://.+"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "nullable-string": {
+            "oneOf": [
+                {
+                    "type": "string",
+                    "minLength": 1
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        }
+    },
     "title": "workflow",
     "description": "A workflow",
     "type": "object",
@@ -31,7 +56,6 @@
             "description": "Tags of the current workflow\nhttps://github.com/EmilySeville7cfg/warp-workflows/blob/main/FORMAT.md#tags",
             "type": "array",
             "uniqueItems": true,
-            "minItems": 1,
             "items": {
                 "description": "A tag of the current workflow\nhttps://github.com/EmilySeville7cfg/warp-workflows/blob/main/FORMAT.md#tags",
                 "type": "string",
@@ -44,28 +68,22 @@
         "description": {
             "title": "description",
             "description": "A description of the current workflow\nhttps://github.com/EmilySeville7cfg/warp-workflows/blob/main/FORMAT.md#description",
-            "minLength": 1,
-            "$ref": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/base.json#definitions/nullable-string"
+            "$ref": "#/definitions/nullable-string"
         },
         "source_url": {
             "title": "source url",
             "description": "A source url of the current workflow\nhttps://github.com/EmilySeville7cfg/warp-workflows/blob/main/FORMAT.md#source_url",
-            "type": "string",
-            "minLength": 1,
-            "pattern": "^https?://.+"
+            "$ref": "#/definitions/url"
         },
         "author": {
             "title": "author",
             "description": "An author of the current workflow\nhttps://github.com/EmilySeville7cfg/warp-workflows/blob/main/FORMAT.md#author",
-            "type": "string",
-            "minLength": 1
+            "$ref": "#/definitions/nullable-string"
         },
         "author_url": {
             "title": "author url",
             "description": "An author url of the current workflow\nhttps://github.com/EmilySeville7cfg/warp-workflows/blob/main/FORMAT.md#author_url",
-            "type": "string",
-            "minLength": 1,
-            "pattern": "^https?://.+"
+            "$ref": "#/definitions/url"
         },
         "shells": {
             "title": "shells",
@@ -103,14 +121,17 @@
                     "description": {
                         "title": "description",
                         "description": "A description of the current argument\nhttps://github.com/EmilySeville7cfg/warp-workflows/blob/main/FORMAT.md#argumentsdescription",
-                        "type": "string",
-                        "minLength": 1
+                        "$ref": "#/definitions/nullable-string"
                     },
                     "default_value": {
                         "title": "default value",
                         "description": "A default value of the current argument\nhttps://github.com/EmilySeville7cfg/warp-workflows/blob/main/FORMAT.md#argumentsdefault_value",
-                        "minLength": 1,
-                        "$ref": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/base.json#definitions/nullable-string"
+                        "type": [
+                            "boolean",
+                            "number",
+                            "string",
+                            "null"
+                        ]
                     }
                 },
                 "additionalProperties": false
