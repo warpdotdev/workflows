@@ -15,5 +15,5 @@ source_url: "https://tldp.org/LDP/abs/html/io-redirection.html"
 author: Mendel Cooper
 author_url: ~
 shells:
-  - Zsh
-  - Bash
+  - zsh
+  - bash

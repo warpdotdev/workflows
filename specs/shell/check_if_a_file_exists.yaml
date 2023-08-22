@@ -12,5 +12,5 @@ source_url: "https://linuxhint.com/bash-test-command/"
 author: Sidratul Muntaha
 author_url: "https://linuxhint.com/author/lh_sidratul_muntaha/"
 shells:
-  - Zsh
-  - Bash
+  - zsh
+  - bash

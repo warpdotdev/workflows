@@ -12,5 +12,5 @@ source_url: "https://opensource.com/article/18/5/you-dont-know-bash-intro-bash-a
 author: Wyatt-Stanke
 author_url: "https://github.com/Wyatt-Stanke"
 shells:
-  - Zsh
-  - Bash 
+  - zsh
+  - bash 
