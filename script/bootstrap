@@ -2,19 +2,28 @@
 
 set -e
 
-if ! command -v brew; then
-    echo "Installing brew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    echo "Please make sure brew is set correctly in your PATH"
-    exit 1
-fi
+reset='\e[0m'
+red='\e[31m'
+green='\e[32m'
+cyan='\e[36m'
 
-if ! command -v cargo; then
-    echo "Installing rust..."
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-    echo "Please start a new terminal session so that cargo is in your PATH"
-    exit 1
-fi
+install_dependency() {
+    id_dependency="$1"
+    id_description="$2"
+    id_installation_command="$3"
+
+    if ! command -v "$id_dependency" > /dev/null; then
+        printf "${green}Installing '$red%s$green' ('$cyan%s$green' binary)\n$reset" "$id_description" "$id_dependency"
+        sh -c "$id_installation_command"
+        printf "${green}Installed '$cyan%s$green' successfully.
+Please make sure '$cyan%s$green' binary is in your \$PATH.\n$reset" "$id_dependency" "$id_dependency"
+        exit 1
+    fi
+}
+
+# shellcheck disable=SC2016
+install_dependency brew Homebrew '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+install_dependency rustc Rust 'curl --proto "=https" --tlsv1.2 -sSf https://sh.rustup.rs | sh'
 
 cargo install cargo-bundle
 cargo install cargo-diff-tools --git https://github.com/warpdotdev/cargo-diff-tools
@@ -23,3 +32,6 @@ cargo install cargo-diff-tools --git https://github.com/warpdotdev/cargo-diff-to
 brew update
 
 rustup component add clippy
+
+install_dependency python3-pip 'Python package manager' 'sudo apt install python3-pip'
+install_dependency jsonschema-cli 'JSON schema validator' 'pip3 install jsonschema-cli'
