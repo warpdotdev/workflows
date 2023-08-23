@@ -1,17 +1,18 @@
-#!/bin/bash
+#!/bin/sh
 
 # Script to run presubmit checks. Devs can run this script locally before sending out PRs for review to ensure
 # CI is passing for their PR.
 
 set -e
 cd "$(dirname "$0")/.."
-
+export -f f
 FMT_COMMAND="cargo fmt"
 echo "Running $FMT_COMMAND..."
 set -e
 EXIT_CODE=0
+# shellcheck enable=SC2000
 $FMT_COMMAND -- --check || EXIT_CODE=$?
-if [[ $EXIT_CODE -ne 0 ]]; then
+if [ $EXIT_CODE -ne 0 ]; then
     echo 'Run `'$FMT_COMMAND'` to fix.'
     exit $EXIT_CODE
 fi
@@ -27,5 +28,10 @@ echo "clippy succeeded..."
 echo "Running cargo test..."
 cargo test
 echo "Tests succeeded..."
+
+for file in specs/*/*.yaml; do
+    echo "Validating '$file'..."
+    jsonschema-cli validate ./schemas/workflow.json "$file"
+done
 
 echo "Congrats! All presubmits checks passed."
