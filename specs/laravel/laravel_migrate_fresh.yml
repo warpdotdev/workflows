@@ -5,7 +5,7 @@ command: |-
 tags:
   - Laravel
   - Php
-description: This command will drop all excisting tables and run Laravel database migrations after that
+description: This command will drop all existing tables and run Laravel database migrations after that
 arguments: []
 source_url: "https://laravel.com/docs/10.x/migrations#running-migrations"
 author: Bert De Swaef
