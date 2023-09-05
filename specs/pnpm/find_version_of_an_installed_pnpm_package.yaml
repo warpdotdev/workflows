@@ -1,0 +1,14 @@
+---
+name: Find version of an installed pnpm package
+command: "pnpm list {{package_name}}"
+tags:
+  - pnpm
+description: "Lists the version name of an installed package. To see the versions of all installed packages, run `pnpm list` without passing a package name."
+arguments:
+  - name: package_name
+    description: The name of the package
+    default_value: ~
+source_url: "https://pnpm.io/6.x/cli/list"
+author: Tim Smith
+author_url: "https://timsmith.tech"
+shells: []
