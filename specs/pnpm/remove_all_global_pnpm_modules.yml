@@ -1,0 +1,11 @@
+---
+name: Remove all global pnpm modules
+command: "rm -rf ~/.pnpm-store"
+tags:
+  - pnpm
+description: "Removes all global pnpm modules by removing the `~/.pnpm-store` folder."
+arguments: []
+source_url: "https://pnpm.io/6.x/uninstall"
+author: Tim Smith
+author_url: "https://timsmith.tech"
+shells: []

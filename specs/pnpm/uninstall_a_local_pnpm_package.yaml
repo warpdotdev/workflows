@@ -1,0 +1,14 @@
+---
+name: Uninstall a local PNPM package
+command: "pnpm uninstall {{name}}"
+tags:
+  - pnpm
+description: "Removes a module from `node_modules` and from `package.json`."
+arguments:
+  - name: name
+    description: The name of the package to uninstall
+    default_value: ~
+source_url: "https://pnpm.io/cli/remove"
+author: Tim Smith
+author_url: "https://timsmith.tech"
+shells: []
