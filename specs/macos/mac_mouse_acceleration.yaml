@@ -1,0 +1,29 @@
+---
+# The name of the workflow.
+name: MacOS 13+ - Disable/Enabled mouse acceleration
+# The corresponding command for the workflow. Any arguments should be surrounded with two curly braces. E.g `command {{arg}}`.
+command: |-
+  echo "old value:"
+  defaults read -g com.apple.mouse.scaling 
+  defaults write -g com.apple.mouse.scaling -integer {{acceleration_amount}}
+# Any tags that the workflow should be categorized with.
+tags:
+  - MacOS
+# A description of the workflow.
+description: Update mouse acceleration built into MacOS. Returns -1 when disabled. For MacOS 13+
+# List of arguments within the command.
+arguments:
+  # Name of the argument within the command. This must exactly match the name of the argument
+  # within the command (without the curly braces).
+  - name: acceleration_amount
+    # The description of the argument.
+    description: (-1) = disabled, (0-3) = enabled, amount of acceleration
+    # The default value for the argument.
+    default_value: -1
+# The source URL for where the workflow was generated from, if any.
+source_url: "https://productivityspot.com/how-to-turn-off-mac-mouse-acceleration/"
+# The author of the workflow.
+author: mikikiv
+# The valid shells where this workflow should be active. If valid for all shells, this can be left empty.
+# See FORMAT.md for the full list of accepted values.
+shells: []
