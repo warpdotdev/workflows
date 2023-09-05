@@ -1,0 +1,16 @@
+---
+name: Starts or stops the MacOS Spotlight indexing process mds_stores.
+command: |-
+    sudo mdutil -a -i {{switch}}
+tags:
+  - MacOS
+  - mds_stores
+description: mds_stores is a CPU intensive process that runs for Spotlight indexing. This command will enable or disable that process.
+arguments:
+  - name: switch
+    description: can be set to on or off.
+    default_value: off
+source_url: "https://electrictoolbox.com/disable-spotlight-indexing-mac-osx/"
+author: The Electric Toolbox
+author_url: "https://electrictoolbox.com/contact/"
+shells: []
