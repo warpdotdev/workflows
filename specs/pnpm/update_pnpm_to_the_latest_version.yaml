@@ -1,0 +1,11 @@
+---
+name: Update PNPM to the latest version
+command: pnpm update -g pnpm
+tags:
+  - pnpm
+description: Updates pnpm to the latest version.
+arguments: []
+source_url: "https://pnpm.io/cli/update"
+author: Tim Smith
+author_url: "https://timsmith.tech"
+shells: []
