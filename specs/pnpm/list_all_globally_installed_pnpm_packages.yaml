@@ -1,0 +1,11 @@
+---
+name: List all globally installed PNPM packages
+command: pnpm ls --depth 0
+tags:
+  - pnpm
+description: "Lists all globally installed PNPM packages, avoiding including any package's dependencies in the view."
+arguments: []
+source_url: "https://pnpm.io/6.x/cli/list#--depth-number"
+author: Tim Smith
+author_url: "https://timsmith.tech"
+shells: []

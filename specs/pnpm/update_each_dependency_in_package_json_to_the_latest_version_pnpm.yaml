@@ -1,0 +1,11 @@
+---
+name: Update each dependency in package.json to the latest version (PNPM)
+command: "npm config --global set strict-peer-dependencies=false && pnpm update --latest"
+tags:
+  - pnpm
+description: "Sets strict-peer-dependencies to false globally and updates each dependency in package.json to the latest version."
+arguments: []
+source_url: "https://github.com/pnpm/pnpm/issues/4651"
+author: Tim Smith
+author_url: "https://timsmith.tech"
+shells: []
