@@ -1,0 +1,11 @@
+---
+name: Reinstall all PNPM dependencies
+command: rm -rf node_modules && pnpm install
+tags:
+  - pnpm
+description: Reinstalls all dependencies by removing the node_modules folder and then reinstalling.
+arguments: []
+source_url: "https://pnpm.io/cli/install"
+author: Tim Smith
+author_url: "https://timsmith.tech"
+shells: []
