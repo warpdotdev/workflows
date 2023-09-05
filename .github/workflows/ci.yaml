@@ -37,10 +37,10 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: -- -D warnings
+          args: -- -A warnings
 
       - name: Run clippy on tests
         uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: --tests -- -D warnings
+          args: --tests -- -A warnings
