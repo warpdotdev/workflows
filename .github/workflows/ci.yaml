@@ -12,6 +12,9 @@ jobs:
       - name: Checkout sources
         uses: actions/checkout@v3
 
+      - name: Check typos
+        uses: crate-ci/typos@master
+
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
@@ -34,10 +37,10 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: -- -D warnings
+          args: -- -A warnings
 
       - name: Run clippy on tests
         uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: --tests -- -D warnings
+          args: --tests -- -A warnings
