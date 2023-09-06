@@ -1,0 +1,14 @@
+---
+name: Compare two files in VS Code (Insiders)
+command: "code-insiders -d {{file1}} {{file2}}"
+tags: ["code-insiders"]
+description: Compare two files using code.
+arguments:
+  - name: file1
+    description: The first file that you want to compare.
+  - name: file2
+    description: The second file that you want to compare.
+source_url: "https://stackoverflow.com/questions/30139597/visual-studio-code-is-there-a-compare-feature-like-that-plugin-for-notepad"
+author: wisbucky
+author_url: "https://stackoverflow.com/users/1081043/wisbucky"
+shells: []
