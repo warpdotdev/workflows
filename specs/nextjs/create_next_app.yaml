@@ -1,5 +1,5 @@
 ---
-name: Create Next.JS app
+name: Create Next.js App
 command: npx create-next-app {{project_name}} --use-{{package_manager}}
 tags:
   - react
@@ -12,7 +12,7 @@ arguments:
     description: The package manager to use for the application
     default_value: npm
 source_url: https://nextjs.org/docs/api-reference/create-next-app
-description: Create Next.JS application
+description: Create a new Next.js application
 author: Lukas Varkalis
 author_url: https://github.com/lukasvarkalis
 shells: []
