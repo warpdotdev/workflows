@@ -1,9 +1,11 @@
 ---
 name: Update all pip3 packages
-command: "pip3 list --outdated --format=freeze | cut -d = -f 1 | xargs -n1 pip3 install -U"
-tags: ["python"]
+command: pip3 list --outdated --format=columns | tail -n +3 | awk '{print $1}' | xargs -n1 pip3 install -U
+tags: [
+  "python"
+]
 description: Update all your pip3 packages in one go.
-source_url: "https://gist.github.com/kikulikov/898108545ad3297966111aeacf44def7"
-author: Kirill Kulikov
-author_url: "https://github.com/kikulikov"
+source_url: "https://github.com/warpdotdev/workflows/issues/149"
+author: Kirill Kulikov, csaper
+author_url: "https://github.com/kikulikov, https://github.com/csaper"
 shells: []
