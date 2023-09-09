@@ -1,5 +1,5 @@
 ---
-name: Generate a controller
+name: Generate a controller using Nest.js
 command: "nest g co {{controllerName}}"
 tags:
   - nestcli

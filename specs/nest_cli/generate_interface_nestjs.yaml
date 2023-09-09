@@ -1,5 +1,5 @@
 ---
-name: Generate a interface
+name: Generate a interface using Nest.js
 command: "nest g itf {{interfaceName}}"
 tags:
   - nestcli

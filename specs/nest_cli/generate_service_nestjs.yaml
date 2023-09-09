@@ -1,5 +1,5 @@
 ---
-name: Generate a service
+name: Generate a service using Nest.js
 command: "nest g s {{serviceName}}"
 tags:
   - nestcli

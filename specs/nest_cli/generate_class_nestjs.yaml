@@ -1,5 +1,5 @@
 ---
-name: Generate a class
+name: Generate a class using Nest.js
 command: "nest g cl {{className}}"
 tags:
   - nestcli

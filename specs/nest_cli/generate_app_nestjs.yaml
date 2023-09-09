@@ -1,5 +1,5 @@
 ---
-name: Generate an app
+name: Generate an app using Nest.js
 command: "nest g co {{appName}}"
 tags:
   - nestcli
