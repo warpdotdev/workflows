@@ -1,0 +1,14 @@
+---
+name: Generate a controller using Nest.js
+command: "nest g co {{controllerName}}"
+tags:
+  - nestcli
+description: Generate a controller with the given name.
+arguments:
+  - name: controllerName
+    description: the name for the controller to be generated
+    default_value: foo
+source_url: "https://docs.nestjs.com/cli/overview"
+author: nagauta
+author_url: "https://github.com/nagauta"
+shells: []

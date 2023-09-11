@@ -1,0 +1,14 @@
+---
+name: Generate a service using Nest.js
+command: "nest g s {{serviceName}}"
+tags:
+  - nestcli
+description: Generate a service with the given name.
+arguments:
+  - name: serviceName
+    description: the name for the service to be generated
+    default_value: foo
+source_url: "https://docs.nestjs.com/cli/overview"
+author: nagauta
+author_url: "https://github.com/nagauta"
+shells: []
