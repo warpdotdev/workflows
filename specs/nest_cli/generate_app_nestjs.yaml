@@ -1,0 +1,14 @@
+---
+name: Generate an app using Nest.js
+command: "nest g co {{appName}}"
+tags:
+  - nestcli
+description: Generate a app with the given name.
+arguments:
+  - name: appName
+    description: the name for the app to be generated
+    default_value: foo
+source_url: "https://docs.nestjs.com/cli/overview"
+author: nagauta
+author_url: "https://github.com/nagauta"
+shells: []
