@@ -8,4 +8,4 @@ arguments: []
 source_url: "https://docs.docker.com/engine/reference/commandline/image_ls/"
 author: guel-codes
 author_url: "https://github.com/guel-codes"
-shells: 
+shells: []
