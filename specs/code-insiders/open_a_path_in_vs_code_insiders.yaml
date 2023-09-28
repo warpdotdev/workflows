@@ -1,0 +1,13 @@
+---
+name: Open a path in VS Code (Insiders)
+command: "code-insiders {{path}}"
+tags: ["code-insiders"]
+description: This workflow opens the current or the specified folder in VS Code.
+arguments:
+  - name: path
+    description: The file or directory for VS Code to open. The default is the current directory.
+    default_value: "."
+source_url: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+author: pan93412
+author_url: "https://github.com/pan93412"
+shells: []

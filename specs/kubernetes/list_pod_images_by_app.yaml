@@ -1,0 +1,15 @@
+---
+name: List all Kubernetes pods by app label
+command: >
+  kubectl get pods -l app={{app}} -o jsonpath='{range .items[*]}{"\n"}{range .spec.containers[*]}{.name}{"\t"}{.image}{"\n"}{end}{end}' | sort | uniq
+tags:
+  - kubernetes
+description: Lists the images of pods fetched by app label
+arguments:
+  - name: app
+    description: The value of the app label
+    default_value: ~
+source_url: "https://kubernetes.io/docs/reference/kubectl/jsonpath/"
+author: pkaramol
+author_url: "https://www.linkedin.com/in/pkaramol/"
+shells: []
