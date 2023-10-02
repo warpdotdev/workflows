@@ -1,0 +1,10 @@
+---
+name: List docker images from local system
+command: docker image ls 
+tags:
+  - docker
+description: Lists all docker images currently stored on your system
+source_url: "https://docs.docker.com/engine/reference/commandline/image_ls/"
+author: guel-codes
+author_url: "https://github.com/guel-codes"
+shells: []
