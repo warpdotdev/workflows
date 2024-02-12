@@ -1,0 +1,14 @@
+---
+name: Generate a class using Nest.js
+command: "nest g cl {{className}}"
+tags:
+  - nestcli
+description: Generate a class with the given name.
+arguments:
+  - name: className
+    description: the name for the class to be generated
+    default_value: foo
+source_url: "https://docs.nestjs.com/cli/overview"
+author: nagauta
+author_url: "https://github.com/nagauta"
+shells: []

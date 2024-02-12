@@ -1,0 +1,14 @@
+---
+name: Generate a interface using Nest.js
+command: "nest g itf {{interfaceName}}"
+tags:
+  - nestcli
+description: Generate a interface with the given name.
+arguments:
+  - name: interfaceName
+    description: the name for the interface to be generated
+    default_value: foo
+source_url: "https://docs.nestjs.com/cli/overview"
+author: nagauta
+author_url: "https://github.com/nagauta"
+shells: []

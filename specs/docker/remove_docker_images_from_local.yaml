@@ -1,0 +1,14 @@
+---
+name: Remove docker images from local system
+command: docker rmi {{image_id}}
+tags:
+  - docker
+description: Remove docker images currently stored on your system
+arguments: 
+  - name: image_id
+    description: The container ID of the docker container.
+    default_value: ~
+source_url: "https://docs.docker.com/engine/reference/commandline/rmi/"
+author: guel-codes
+author_url: "https://github.com/guel-codes"
+shells: []
