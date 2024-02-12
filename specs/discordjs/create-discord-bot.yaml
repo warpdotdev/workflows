@@ -1,0 +1,18 @@
+---
+name: Create Discord Bot
+command: npx create-discord-bot --directory={{directory}} --{{language}}
+tags:
+  - discordjs
+  - discord
+arguments:
+  - name: directory
+    description: The directory to create
+    default_value: my-bot
+  - name: language
+    description: The language to use for the template.
+    default_value: typescript
+source_url: https://github.com/discordjs/discord.js/tree/main/packages/create-discord-bot
+description: Create a new Discord bot using Discord.js
+author: Suneet Tipirneni
+author_url: https://www.suneettipirneni.stream/
+shells: []
