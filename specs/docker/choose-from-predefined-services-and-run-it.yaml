@@ -1,0 +1,61 @@
+---
+name: Choose from predefined services and run it
+command: 'docker run -p {{port}}:{{port}} {{service_name}}'
+description: Run the dockerized service running in a port
+arguments:
+  - name: port
+    arg_type: Enum
+    enum_name: port
+    enum_variants:
+      - '3000' # Grafana, nodejs (default or usual)
+      - '5000' # python flask app
+      - '5432' # postgres (default)
+      - '3306' # mysql, mariadb (default)
+      - '6379' # redis, In-memory data structure store (default)
+      - '27017' # mangodb (default)
+      - '443' # https web (default)
+      - '80' # http web (default)
+      - '9200' # Elasticsearch http (default)
+      - '9300' # Elasticsearch tcp (default)
+      - '5672' # Rabbitmq AMQP protocol (default)
+      - '9090' # Prometheus monitoring (default)
+      - '5601' # Kibana Visualization for elasticsearch (default)
+      - '8080' # Jenkins CI/CD tool (default)
+      - '8500' # Consul HTTP API (default)
+      - '8300' # Consul (Serf/Raft communication) (default)
+      - '9092' # Kafka (Distributed event streaming platform) (default)
+      - '8443' # Tomcat https
+    description: Port where service is running
+    default_value: ~
+  - name: service_name
+    arg_type: Enum
+    enum_name: service_name
+    # List is generated using ChatGPT: https://chatgpt.com/share/66f039ce-9cb0-8005-a10a-6ff8697eb4ba
+    enum_variants:
+      - db
+      - flask
+      - postgres
+      - mysql
+      - redis
+      - mangodb
+      - nginx
+      - elasticsearch
+      - elasticsearch_tcp
+      - rabbitmq
+      - prometheus
+      - grafana
+      - kibana
+      - jenkins
+      - consul
+      - kafka
+      - mariadb
+      - tomcat
+    description: Service name
+    default_value: ~
+tags:
+  - docker
+  - compose
+source_url: ~
+author: Peramanathan Sathyamoorthy
+author_url: https://github.com/p10ns11y
+shells: []
