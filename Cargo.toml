@@ -3,3 +3,8 @@ members = [
     "workflow-types",
     "workflows",
 ]
+
+[workspace.package]
+authors = ["Warp Team <dev@warp.dev>"]
+license = "Apache-2.0"
+publish = false
