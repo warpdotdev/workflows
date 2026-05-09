@@ -1,0 +1,17 @@
+---
+name: Display certificate infromation from a certificate file with openssl
+command: "openssl x509 -text -noout -inform {{inform}} -in {{certificate}}"
+tags: 
+  - openssl
+description: Display certificate infromation from a certificate file with openssl
+arguments:
+  - name: inform
+    description: "Encoding format of the certificate file. Either 'pem' or 'der'"
+    default_value: pem
+  - name: certificate
+    description: Path to the certificate file
+    default_value: ~
+source_url: https://www.openssl.org/docs/manpages.html
+author: paulikt
+author_url: ~
+shells: []
