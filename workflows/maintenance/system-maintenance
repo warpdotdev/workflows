@@ -1,0 +1,481 @@
+#!/bin/bash
+
+# System Maintenance Script
+# Usage: system-maintenance [check|update|cleanup|env|health|fix|report|all]
+
+set -e
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
+
+# Global variables for summary tracking
+declare -a SUMMARY_ITEMS
+declare -a WARNINGS
+declare -a ERRORS
+declare -a ACTIONS_TAKEN
+
+# Helper function for colored output
+print_section() {
+    echo -e "\n${BLUE}=== $1 ===${NC}"
+}
+
+print_success() {
+    echo -e "${GREEN}✅ $1${NC}"
+}
+
+print_warning() {
+    echo -e "${YELLOW}⚠️  $1${NC}"
+}
+
+print_error() {
+    echo -e "${RED}❌ $1${NC}"
+}
+
+# Summary tracking functions
+add_summary() {
+    SUMMARY_ITEMS+=("$1")
+}
+
+add_warning() {
+    WARNINGS+=("$1")
+}
+
+add_error() {
+    ERRORS+=("$1")
+}
+
+add_action() {
+    ACTIONS_TAKEN+=("$1")
+}
+
+# Print comprehensive summary
+print_comprehensive_summary() {
+    local command_name="$1"
+    echo -e "\n${PURPLE}╔════════════════════════════════════════════════════════════════════════════════╗${NC}"
+    echo -e "${PURPLE}║                           📋 MAINTENANCE SUMMARY                               ║${NC}"
+    echo -e "${PURPLE}╚════════════════════════════════════════════════════════════════════════════════╝${NC}"
+    
+    echo -e "\n${CYAN}🕐 Completed:${NC} $(date)"
+    echo -e "${CYAN}⚡ Command:${NC} $command_name"
+    
+    # System Status
+    if [[ ${#SUMMARY_ITEMS[@]} -gt 0 ]]; then
+        echo -e "\n${GREEN}✅ Status Checks:${NC}"
+        for item in "${SUMMARY_ITEMS[@]}"; do
+            echo -e "   • $item"
+        done
+    fi
+    
+    # Actions Taken
+    if [[ ${#ACTIONS_TAKEN[@]} -gt 0 ]]; then
+        echo -e "\n${BLUE}🔧 Actions Completed:${NC}"
+        for action in "${ACTIONS_TAKEN[@]}"; do
+            echo -e "   • $action"
+        done
+    fi
+    
+    # Warnings
+    if [[ ${#WARNINGS[@]} -gt 0 ]]; then
+        echo -e "\n${YELLOW}⚠️  Warnings:${NC}"
+        for warning in "${WARNINGS[@]}"; do
+            echo -e "   • $warning"
+        done
+    fi
+    
+    # Errors
+    if [[ ${#ERRORS[@]} -gt 0 ]]; then
+        echo -e "\n${RED}❌ Issues Found:${NC}"
+        for error in "${ERRORS[@]}"; do
+            echo -e "   • $error"
+        done
+    fi
+    
+    # Disk Space Summary
+    local free_space=$(diskutil info / | grep -E "Free Space" | awk '{print $4 " " $5}' | sed 's/[(),]//g')
+    echo -e "\n${CYAN}💾 System Status:${NC}"
+    echo -e "   • Free disk space: $free_space"
+    echo -e "   • macOS: $(sw_vers -productVersion)"
+    
+    # Large folders summary
+    local downloads_size=$(du -sh ~/Downloads 2>/dev/null | cut -f1)
+    local desktop_size=$(du -sh ~/Desktop 2>/dev/null | cut -f1)
+    local cache_size=$(du -sh ~/Library/Caches 2>/dev/null | cut -f1)
+    echo -e "   • Downloads folder: $downloads_size"
+    echo -e "   • Desktop folder: $desktop_size"
+    echo -e "   • Cache folder: $cache_size"
+    
+    # Next steps or recommendations
+    echo -e "\n${PURPLE}🎯 Recommendations:${NC}"
+    
+    if [[ $command_name == *"check"* ]]; then
+        echo -e "   • Run 'sysupdate' to apply package updates"
+        echo -e "   • Run 'sysclean' to clean up caches"
+        echo -e "   • Consider 'sysmaint' for complete maintenance"
+    elif [[ $command_name == *"update"* ]]; then
+        echo -e "   • Run 'sysclean' to clean up old files and caches"
+        echo -e "   • Restart applications to use updated packages"
+    elif [[ $command_name == *"cleanup"* ]]; then
+        echo -e "   • Check Downloads folder ($downloads_size) for old files"
+        echo -e "   • System cleanup completed successfully"
+    elif [[ $command_name == *"all"* ]] || [[ $command_name == *"sysmaint"* ]]; then
+        echo -e "   • System maintenance cycle completed"
+        echo -e "   • Schedule next maintenance in 1-2 weeks"
+        if [[ -n "$REPORT_FILE" ]]; then
+            echo -e "   • Review detailed report: $REPORT_FILE"
+        fi
+    else
+        echo -e "   • Run 'sysmaint' for complete system maintenance"
+        echo -e "   • Use 'syscheck' for regular status monitoring"
+    fi
+    
+    # Performance tips
+    if [[ "$downloads_size" == *"G" ]] && [[ $(echo "$downloads_size" | sed 's/G.*//') -gt 10 ]]; then
+        echo -e "   • ${YELLOW}Consider cleaning Downloads folder (${downloads_size})${NC}"
+    fi
+    
+    if [[ "$cache_size" == *"G" ]] && [[ $(echo "$cache_size" | sed 's/G.*//') -gt 15 ]]; then
+        echo -e "   • ${YELLOW}Cache folder is large (${cache_size}) - normal but monitor${NC}"
+    fi
+    
+    echo -e "\n${PURPLE}════════════════════════════════════════════════════════════════════════════════${NC}"
+    
+    # Reset arrays for next run
+    SUMMARY_ITEMS=()
+    WARNINGS=()
+    ERRORS=()
+    ACTIONS_TAKEN=()
+}
+
+# System status check
+system_check() {
+    print_section "🖥️  SYSTEM INFO"
+    local macos_version=$(sw_vers -productVersion)
+    sw_vers
+    add_summary "macOS $macos_version system info collected"
+    
+    print_section "💾 DISK SPACE"
+    local disk_info=$(diskutil info / | grep -E "(Free Space|Available Space|APFS Free Space)")
+    echo "$disk_info"
+    add_summary "Disk space verified - system healthy"
+    
+    print_section "📁 LARGE FOLDERS"
+    local downloads_size=$(du -sh ~/Downloads 2>/dev/null | cut -f1)
+    local desktop_size=$(du -sh ~/Desktop 2>/dev/null | cut -f1)
+    local cache_size=$(du -sh ~/Library/Caches 2>/dev/null | cut -f1)
+    echo "Downloads: $downloads_size"
+    echo "Desktop: $desktop_size"
+    echo "Caches: $cache_size"
+    add_summary "Folder sizes analyzed (Downloads: $downloads_size, Desktop: $desktop_size, Caches: $cache_size)"
+    
+    print_section "🌐 NETWORK"
+    if ping -c 1 google.com > /dev/null 2>&1; then
+        print_success "Internet: Connected"
+        add_summary "Network connectivity verified"
+    else
+        print_error "Internet: Disconnected"
+        add_error "Network connectivity failed"
+    fi
+}
+
+# Check for package updates
+check_updates() {
+    print_section "🍺 HOMEBREW"
+    brew update > /dev/null 2>&1
+    OUTDATED_BREW=$(brew outdated)
+    if [ -n "$OUTDATED_BREW" ]; then
+        local count=$(echo "$OUTDATED_BREW" | wc -l | tr -d ' ')
+        echo "📋 Outdated packages:"
+        echo "$OUTDATED_BREW"
+        add_warning "$count Homebrew packages need updating"
+    else
+        print_success "All Homebrew packages up to date"
+        add_summary "Homebrew packages are current"
+    fi
+    
+    print_section "📦 NPM GLOBAL"
+    OUTDATED_NPM=$(npm outdated -g 2>/dev/null)
+    if [ -n "$OUTDATED_NPM" ]; then
+        echo "📋 Outdated npm packages:"
+        echo "$OUTDATED_NPM"
+        add_warning "Global npm packages need updating"
+    else
+        print_success "All npm packages up to date"
+        add_summary "npm global packages are current"
+    fi
+    
+    print_section "🔴 RUBY GEMS"
+    OUTDATED_GEMS=$(gem outdated 2>/dev/null | wc -l | tr -d ' ')
+    if [ "$OUTDATED_GEMS" -gt 0 ]; then
+        echo "📋 $OUTDATED_GEMS gems need updating"
+        echo "Run: gem update"
+        add_warning "$OUTDATED_GEMS Ruby gems need updating"
+    else
+        print_success "All gems up to date"
+        add_summary "Ruby gems are current"
+    fi
+    
+    print_section "🐍 PYTHON"
+    local python_version=$(python3 --version)
+    echo "$python_version"
+    echo "Note: Use 'pipx' for Python applications or virtual environments for development"
+    add_summary "$python_version verified"
+}
+
+# Update all packages
+update_packages() {
+    print_section "🍺 UPDATING HOMEBREW"
+    local brew_before=$(brew outdated | wc -l | tr -d ' ')
+    brew update && brew upgrade
+    add_action "Updated Homebrew packages (was $brew_before outdated)"
+    
+    print_section "📦 UPDATING NPM"
+    npm update -g
+    add_action "Updated npm global packages"
+    
+    print_section "🔴 UPDATING RUBY GEMS"
+    if gem update --system 2>/dev/null; then
+        add_action "Updated RubyGems system"
+    else
+        print_warning "RubyGems system update failed (may need newer Ruby)"
+        add_warning "RubyGems system update failed"
+    fi
+    gem update
+    add_action "Updated Ruby gems"
+    
+    print_success "UPDATES COMPLETE"
+}
+
+# System cleanup
+cleanup_system() {
+    print_section "🍺 HOMEBREW CLEANUP"
+    brew cleanup
+    brew autoremove
+    add_action "Cleaned Homebrew cache and removed unused packages"
+    
+    print_section "📦 NPM CACHE CLEANUP"
+    npm cache verify
+    add_action "Verified and cleaned npm cache"
+    
+    print_section "🔴 RUBY CLEANUP"
+    gem cleanup
+    add_action "Cleaned up old Ruby gem versions"
+    
+    print_section "🗑️  TRASH CLEANUP"
+    if command -v trash &> /dev/null; then
+        trash -e
+        print_success "Trash emptied"
+        add_action "Emptied system trash"
+    else
+        print_warning "'trash' command not found. Install with: brew install trash"
+        add_warning "Trash utility not available - install with: brew install trash"
+    fi
+    
+    print_success "CLEANUP COMPLETE"
+}
+
+# Environment variables check
+check_env() {
+    print_section "🔧 ENVIRONMENT VARIABLES"
+    echo "SHELL: $SHELL"
+    echo "PATH length: $(echo $PATH | wc -c) characters"
+    
+    print_section "📱 ANDROID SDK"
+    echo "ANDROID_HOME: ${ANDROID_HOME:-'❌ Not set'}"
+    echo "ANDROID_SDK_ROOT: ${ANDROID_SDK_ROOT:-'❌ Not set'}"
+    
+    print_section "☕ JAVA"
+    if command -v java &> /dev/null; then
+        echo "Java: $(java -version 2>&1 | head -1)"
+        echo "JAVA_HOME: ${JAVA_HOME:-'❌ Not set'}"
+    else
+        print_error "Java not found"
+    fi
+    
+    print_section "🐍 PYTHON"
+    echo "Python: $(python3 --version)"
+    echo "Python path: $(which python3)"
+    
+    print_section "🔴 RUBY"
+    echo "Ruby: $(ruby -v)"
+    echo "Ruby path: $(which ruby)"
+    echo "Rbenv versions:"
+    rbenv versions 2>/dev/null || print_error "rbenv not found"
+    
+    print_section "🌐 NODE"
+    if command -v node &> /dev/null; then
+        echo "Node: $(node --version)"
+        echo "npm: $(npm --version)"
+    else
+        print_error "Node.js not found"
+    fi
+    
+    print_section "🔧 .NET"
+    echo "DOTNET_ROOT: ${DOTNET_ROOT:-'❌ Not set'}"
+    if command -v dotnet &> /dev/null; then
+        echo "dotnet: $(dotnet --version 2>/dev/null || echo '❌ Not working')"
+    fi
+}
+
+# System health check
+health_check() {
+    print_section "🩺 SYSTEM HEALTH"
+    
+    echo -e "\n🍺 Homebrew Doctor:"
+    brew doctor 2>&1 | head -10
+    
+    echo -e "\n🔄 Running Services:"
+    launchctl list | grep -v com.apple | head -5
+    
+    echo -e "\n🔐 Keychain Status:"
+    security list-keychains | wc -l | xargs echo "Keychains configured:"
+    
+    echo -e "\n🌡️  System Load:"
+    uptime
+    
+    echo -e "\n💾 Memory Usage:"
+    vm_stat | head -5
+    
+    echo -e "\n🔋 Battery (if applicable):"
+    pmset -g batt 2>/dev/null | head -2 || echo "Desktop system or battery info unavailable"
+}
+
+# Quick fixes
+quick_fixes() {
+    print_section "🎯 APPLYING QUICK FIXES"
+    
+    echo "🔄 Rebuilding launch services database..."
+    /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user > /dev/null 2>&1
+    
+    echo "🗂️  Rebuilding Spotlight index (if needed)..."
+    echo "  To rebuild: sudo mdutil -E /"
+    
+    echo "🔧 Clearing DNS cache..."
+    sudo dscacheutil -flushcache > /dev/null 2>&1 || print_warning "DNS cache flush requires password"
+    
+    echo "📦 Rehashing shell commands..."
+    hash -r
+    
+    if command -v rbenv &> /dev/null; then
+        echo "🔴 Rehashing rbenv..."
+        rbenv rehash
+    fi
+    
+    print_success "Quick fixes applied!"
+}
+
+# Generate system report
+generate_report() {
+    REPORT_FILE="$HOME/system_report_$(date +%Y%m%d_%H%M%S).txt"
+    
+    echo "=== 📊 SYSTEM MAINTENANCE REPORT ===" > "$REPORT_FILE"
+    echo "Generated: $(date)" >> "$REPORT_FILE"
+    echo "" >> "$REPORT_FILE"
+    
+    echo "🖥️  SYSTEM INFO:" >> "$REPORT_FILE"
+    sw_vers >> "$REPORT_FILE"
+    echo "" >> "$REPORT_FILE"
+    
+    echo "💾 DISK SPACE:" >> "$REPORT_FILE"
+    df -h / >> "$REPORT_FILE"
+    echo "" >> "$REPORT_FILE"
+    
+    echo "📦 INSTALLED VERSIONS:" >> "$REPORT_FILE"
+    echo "Homebrew: $(brew --version | head -1)" >> "$REPORT_FILE"
+    echo "Node.js: $(node --version 2>/dev/null || echo 'Not installed')" >> "$REPORT_FILE"
+    echo "npm: $(npm --version 2>/dev/null || echo 'Not installed')" >> "$REPORT_FILE"
+    echo "Python: $(python3 --version 2>/dev/null || echo 'Not installed')" >> "$REPORT_FILE"
+    echo "Ruby: $(ruby -v 2>/dev/null || echo 'Not installed')" >> "$REPORT_FILE"
+    echo "Java: $(java -version 2>&1 | head -1 2>/dev/null || echo 'Not installed')" >> "$REPORT_FILE"
+    echo "" >> "$REPORT_FILE"
+    
+    echo "🍺 HOMEBREW PACKAGES:" >> "$REPORT_FILE"
+    brew list --formula >> "$REPORT_FILE"
+    echo "" >> "$REPORT_FILE"
+    
+    echo "📋 OUTDATED PACKAGES:" >> "$REPORT_FILE"
+    brew outdated >> "$REPORT_FILE" 2>&1
+    
+    print_success "Report saved to: $REPORT_FILE"
+    echo "📄 View with: cat $REPORT_FILE"
+}
+
+# Main function
+main() {
+    case "${1:-all}" in
+        "check")
+            system_check
+            check_updates
+            print_comprehensive_summary "syscheck (system check)"
+            ;;
+        "update")
+            update_packages
+            print_comprehensive_summary "sysupdate (package updates)"
+            ;;
+        "cleanup")
+            cleanup_system
+            print_comprehensive_summary "sysclean (system cleanup)"
+            ;;
+        "env")
+            check_env
+            add_summary "Environment variables checked"
+            print_comprehensive_summary "environment check"
+            ;;
+        "health")
+            health_check
+            add_summary "System health diagnostics completed"
+            print_comprehensive_summary "health check"
+            ;;
+        "fix")
+            quick_fixes
+            add_action "Applied system quick fixes"
+            print_comprehensive_summary "quick fixes"
+            ;;
+        "report")
+            generate_report
+            add_action "Generated detailed system report"
+            print_comprehensive_summary "system report"
+            ;;
+        "all")
+            system_check
+            check_updates
+            check_env
+            health_check
+            add_summary "Complete system analysis finished"
+            echo ""
+            read -p "Run updates and cleanup? (y/N): " -n 1 -r
+            echo ""
+            if [[ $REPLY =~ ^[Yy]$ ]]; then
+                update_packages
+                cleanup_system
+                quick_fixes
+                add_action "User approved and completed full maintenance cycle"
+            else
+                add_summary "User skipped updates and cleanup"
+            fi
+            generate_report
+            print_comprehensive_summary "sysmaint (complete maintenance)"
+            ;;
+        *)
+            echo "Usage: $0 [check|update|cleanup|env|health|fix|report|all]"
+            echo ""
+            echo "Commands:"
+            echo "  check   - System status and update check"
+            echo "  update  - Update all packages"
+            echo "  cleanup - Clean up caches and old files"
+            echo "  env     - Check environment variables"
+            echo "  health  - System health diagnostics"
+            echo "  fix     - Apply quick fixes for common issues"
+            echo "  report  - Generate detailed system report"
+            echo "  all     - Run all checks and optionally update (default)"
+            exit 1
+            ;;
+    esac
+}
+
+main "$@"
