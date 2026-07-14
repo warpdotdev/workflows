@@ -2,13 +2,13 @@ export interface Workflow {
   slug: WorkflowSlug;
   name: string;
   command: string;
-  tags?: [string];
+  tags?: string[];
   description?: string;
-  arguments?: [Argument];
+  arguments?: Argument[];
   source_url?: string;
   author?: string;
   author_url?: string;
-  shells?: [Shell];
+  shells?: Shell[];
   relative_git_url: string;
 }
 
