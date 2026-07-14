@@ -1,22 +1,33 @@
-use anyhow::Result;
-use convert_case::{Case, Casing};
+use anyhow::{bail, Context, Result};
+use std::collections::HashMap;
 use std::ffi::OsStr;
 use std::fs::File;
 use std::io::Write;
+use std::path::PathBuf;
 use std::process::Command;
 use walkdir::WalkDir;
 use warp_workflows_types::Workflow;
+
+// The module-name derivation is shared with the library (see `workflows/src/lib.rs`) so it can be
+// unit tested; build scripts are compiled as a separate crate with no test harness.
+#[path = "src/module_name.rs"]
+mod module_name;
+use module_name::module_name;
 
 /// Generates Workflows as rust files from the yaml stored in /specs. Each Workflow is stored within
 /// its own mod within the `generated_workflows` module. Additionally, a function called `workflows`
 /// is generated that returns a vector of all the `Workflow`s that were created.
 fn main() -> Result<()> {
     println!("cargo:rerun-if-changed=../specs");
+    println!("cargo:rerun-if-changed=src/module_name.rs");
 
     std::fs::create_dir_all("src/generated_workflows")?;
     let parent_module = std::fs::File::create("src/generated_workflows/mod.rs")?;
 
     let mut workflows_added = Vec::new();
+    // Maps each derived module name to the first spec path that produced it, so colliding specs are
+    // caught and reported instead of silently overwriting one another's generated file.
+    let mut module_names: HashMap<String, PathBuf> = HashMap::new();
 
     for entry in WalkDir::new("../specs") {
         let entry = entry?;
@@ -36,14 +47,24 @@ fn main() -> Result<()> {
             let workflow: Workflow = serde_yaml::from_str(yaml_content)?;
             println!("generated workflow is {workflow:?}");
 
-            let file_name = entry
-                .file_name()
-                .to_str()
-                .expect("OsStr should convert to str")
-                .replace(".yaml", "")
-                .replace(".yml", "")
-                .to_case(Case::Snake);
+            let raw_name = entry.file_name().to_str().with_context(|| {
+                format!("spec file name is not valid UTF-8: {:?}", entry.path())
+            })?;
+            let file_name = module_name(raw_name);
             println!("file name is {file_name:?}");
+
+            // Two specs whose names normalize to the same module would silently overwrite each
+            // other's generated file and emit a duplicate `pub mod`, so fail fast with both paths.
+            if let Some(existing) =
+                module_names.insert(file_name.clone(), entry.path().to_path_buf())
+            {
+                bail!(
+                    "workflow module name collision: {} and {} both normalize to module name `{}`; rename one of the spec files",
+                    existing.display(),
+                    entry.path().display(),
+                    file_name
+                );
+            }
 
             // Create a module for each Workflow within the parent module.
             workflows_added.push(file_name.clone());
