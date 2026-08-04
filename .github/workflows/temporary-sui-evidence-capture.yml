@@ -59,10 +59,9 @@ jobs:
           retention-days: 7
 
       - name: Commit captures to dedicated branch
-        if: github.event_name != 'pull_request'
         run: |
           git config user.name 'Sui Evidence Bot'
           git config user.email 'actions@users.noreply.github.com'
           git add -f website-evidence-output
-          git commit -m 'Capture live Sui website evidence [skip ci]'
+          git commit -m 'Capture live Sui website evidence [skip ci]' || exit 0
           git push origin HEAD:website-evidence-capture-20260804-v2
