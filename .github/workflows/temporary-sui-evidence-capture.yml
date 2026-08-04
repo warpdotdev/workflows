@@ -6,6 +6,12 @@ on:
       - main
     paths:
       - .github/workflows/temporary-sui-evidence-capture.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - website-evidence/**
+      - .github/workflows/website-evidence-capture.yml
   workflow_dispatch:
 
 permissions:
@@ -53,6 +59,7 @@ jobs:
           retention-days: 7
 
       - name: Commit captures to dedicated branch
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name 'Sui Evidence Bot'
           git config user.email 'actions@users.noreply.github.com'
