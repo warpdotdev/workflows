@@ -1,0 +1,61 @@
+name: Temporary Sui Website Evidence Capture
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/temporary-sui-evidence-capture.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Check out dedicated evidence branch
+        uses: actions/checkout@v4
+        with:
+          ref: website-evidence-capture-20260804-v2
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install browser and image tooling
+        working-directory: website-evidence
+        run: |
+          npm init -y
+          npm install --no-audit --no-fund playwright@1.57.0 sharp@0.33.5
+          npx playwright install --with-deps chromium
+
+      - name: Capture live website screenshots
+        run: node website-evidence/capture.mjs
+
+      - name: Verify generated evidence
+        run: |
+          find website-evidence-output -maxdepth 3 -type f -printf '%p\t%s bytes\n' | sort
+          test -f website-evidence-output/README.txt
+          test -f website-evidence-output/MANIFEST.json
+
+      - name: Upload evidence artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SUI_WEBSITE_EVIDENCE_2026-08-04
+          path: website-evidence-output
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Commit captures to dedicated branch
+        run: |
+          git config user.name 'Sui Evidence Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -f website-evidence-output
+          git commit -m 'Capture live Sui website evidence [skip ci]'
+          git push origin HEAD:website-evidence-capture-20260804-v2
