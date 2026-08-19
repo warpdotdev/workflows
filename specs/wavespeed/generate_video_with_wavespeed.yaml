@@ -1,0 +1,18 @@
+---
+name: Generate a video with WaveSpeed
+command: "wavespeed run {{model}} -i prompt=\"{{prompt}}\""
+tags:
+  - wavespeed
+  - ai
+description: Generates a video from a text prompt using a model on the wavespeed.ai catalog. Requires the WaveSpeed CLI (npm i -g @wavespeed/cli) and a WAVESPEED_API_KEY.
+arguments:
+  - name: model
+    description: Model id from the wavespeed.ai catalog
+    default_value: bytedance/seedance-2.5/text-to-video
+  - name: prompt
+    description: Text prompt describing the video
+    default_value: ~
+source_url: "https://github.com/WaveSpeedAI/wavespeed-cli"
+author: WaveSpeedAI
+author_url: "https://wavespeed.ai"
+shells: []
