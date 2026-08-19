@@ -1,6 +1,6 @@
 ---
 name: Generate an image with WaveSpeed
-command: "wavespeed run {{model}} -i prompt=\"{{prompt}}\""
+command: "wavespeed run {{model}} -p \"{{prompt}}\" --download"
 tags:
   - wavespeed
   - ai
