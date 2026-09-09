@@ -11,7 +11,8 @@
   "author": "Warp Team (eng@warp.dev)",
   "license": "MIT",
   "overrides": {
-    "brace-expansion": ">=1.1.16"
+    "brace-expansion": ">=1.1.16",
+    "browserslist": ">=4.28.7"
   },
   "devDependencies": {
     "@types/webpack-env": "^1.16.3",
