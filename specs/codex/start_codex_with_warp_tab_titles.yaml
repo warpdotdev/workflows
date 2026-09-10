@@ -1,0 +1,12 @@
+---
+name: Start Codex with Warp tab title status
+command: codex --config 'tui.terminal_title=["run-state", "thread-title"]'
+tags:
+  - codex
+description: Starts Codex with its run state and thread title shown in the Warp tab title for this session. This does not change the saved Codex configuration.
+source_url: "https://github.com/warp-context/rightStage/pull/1"
+author: warp-context
+author_url: "https://github.com/warp-context"
+shells:
+  - bash
+  - zsh
