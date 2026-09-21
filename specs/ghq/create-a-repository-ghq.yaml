@@ -1,0 +1,10 @@
+name: Create new repository
+command: |-
+    ghq create {{repository_name}}
+tags:
+  - ghq
+description: Creates new repository.
+source_url: "https://github.com/x-motemen/ghq"
+author: nagauta
+author_url: "https://github.com/nagauta"
+shells: []

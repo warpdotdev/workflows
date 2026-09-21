@@ -1,0 +1,10 @@
+name: Print repositories' root
+command: |-
+    ghq root
+tags:
+  - ghq
+description: Print repositories' root (i.e., `ghq.root`). Without '--all' option, the primary one is shown.
+source_url: "https://github.com/x-motemen/ghq"
+author: nagauta
+author_url: "https://github.com/nagauta"
+shells: []

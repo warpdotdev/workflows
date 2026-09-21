@@ -1,0 +1,14 @@
+name: Remove local repository
+command: |-
+    ghq rm {{repository_name}}
+tags:
+  - ghq
+description: Remove local repository. If '--dry-run' option is given, the repository is not actually removed but the path to it is printed.
+arguments:
+  - name: repository_name
+    description: The name of the repository to be removed. optionally with --dry-run, the repository is not actually removed but the path to it is printed. (e.g., )
+    default_value: ~
+source_url: "https://github.com/x-motemen/ghq"
+author: nagauta
+author_url: "https://github.com/nagauta"
+shells: []
