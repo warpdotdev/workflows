@@ -6,7 +6,7 @@ arguments:
     description: The name of the remote
     default_value: origin
   - name: remote_branch
-    description: The name of the remote branch that the local branch should be point to
+    description: The name of the remote branch that the local branch should point to
     default_value: main
   - name: local_branch
     description: The name of the local branch that we want to set
