@@ -1,0 +1,28 @@
+---
+name: Copy files or directories from containers to local.
+command: >
+    kubectl cp {{namespace}}/{{pod}}:{{pod_file_path}} {{local_file_path}}
+tags:
+  - kubernetes
+description: 'Copy file or directories from a container to local filesystem.'
+arguments:
+  - name: namespace
+    description: Namespace the pod resides in.
+    default_value: default
+    
+  - name: pod
+    description: Name of pod.
+    default_value: ~
+
+  - name: pod_file_path
+    description: Source path of the file or directory in the container.
+    default_value: ~
+
+  - name: local_file_path
+    description: Destination path of the file or directory in local filesystem.
+    default_value: ~
+
+source_url: "https://kubernetes.io/docs/reference/kubectl/generated/kubectl_cp/"
+author: Abdullahxz
+author_url: "https://github.com/Abdullahxz"
+shells: []
