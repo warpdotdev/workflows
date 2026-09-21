@@ -1,0 +1,38 @@
+---
+name: Convert a PDF file to Markdown with cURL and Brainiall
+command: |-
+  set +x
+  : "${BRAINIALL_API_KEY:?Set BRAINIALL_API_KEY before running this workflow}"
+  test -f "{{pdf_path}}" || { echo "PDF not found: {{pdf_path}}" >&2; exit 1; }
+  test "$(head -c 5 "{{pdf_path}}")" = "%PDF-" || { echo "Input is not a PDF file" >&2; exit 1; }
+  headers_file="$(mktemp)" || exit 1
+  trap 'rm -f "$headers_file"' EXIT
+  chmod 600 "$headers_file"
+  printf 'Authorization: Bearer %s\nOcp-Apim-Subscription-Key: %s\n' "$BRAINIALL_API_KEY" "$BRAINIALL_API_KEY" > "$headers_file"
+  curl --silent --show-error --fail --proto '=https' --tlsv1.2 --connect-timeout 20 --max-time 600 \
+    --request POST \
+    --header "@$headers_file" \
+    --form "pdf=@{{pdf_path}};type=application/pdf" \
+    --form-string "page_range={{page_range}}" \
+    --form-string "output_format=markdown" \
+    --output "{{output_path}}" \
+    https://api.brainiall.com/v1/document/pdf-to-markdown/file
+tags:
+  - curl
+description: Converts an authorized local PDF to Markdown through the hosted Brainiall API while keeping the API key out of command-line arguments and output.
+arguments:
+  - name: pdf_path
+    description: Path to the authorized local PDF file to convert.
+    default_value: input.pdf
+  - name: page_range
+    description: Positive page number or inclusive range to convert, such as 1-20.
+    default_value: 1-20
+  - name: output_path
+    description: Local Markdown file to create or replace only after a successful API response.
+    default_value: output.md
+source_url: "https://www.brainiall.com/en/apis/pdf-to-markdown?utm_source=warp&utm_medium=workflow&utm_campaign=pdf_to_markdown_c20"
+author: BRAINIALL
+author_url: "https://www.brainiall.com"
+shells:
+  - zsh
+  - bash
