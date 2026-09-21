@@ -1,0 +1,17 @@
+---
+name: Rename a Docker container
+command: "docker container rename {{old_container}} {{new_container}}"
+tags:
+  - docker
+description: Renames a Docker container.
+arguments:
+  - name: old_container
+    description: The name of the old container
+    default_value: ~
+  - name: new_container
+    description: The name of the new container
+    default_value: ~
+source_url: "https://docs.docker.com/engine/reference/commandline/container_rename/"
+author: 14sprouj
+author_url: "https://github.com/14sprouj"
+shells: []
