@@ -1,0 +1,14 @@
+---
+name: Display certificate signing request (CSR/PKCS10) information with openssl
+command: "openssl req -text -noout -in {{pkcs10}}"
+tags: 
+  - openssl
+description: Display certificate signing request (CSR/PKCS10) information with openssl
+arguments:
+  - name: pkcs10
+    description: Path to the PKCS10 file
+    default_value: ~
+source_url: https://www.openssl.org/docs/manpages.html
+author: paulikt
+author_url: ~
+shells: []

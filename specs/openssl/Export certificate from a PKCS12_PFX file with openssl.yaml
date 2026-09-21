@@ -1,0 +1,17 @@
+---
+name: Export certificate from a PKCS12/PFX file with openssl
+command: "openssl pkcs12 -in {{pfx}} -clcerts -nokeys -out {{out_file}}"
+tags: 
+  - openssl
+description: Export certificate  from a PKCS12/PFX file with openssl
+arguments:
+  - name: pfx
+    description: Path to the PFX file
+    default_value: ~
+  - name: out_file
+    description: Path to the output file
+    default_value: certificate.pem
+source_url: https://www.openssl.org/docs/manpages.html
+author: paulikt
+author_url: ~
+shells: []

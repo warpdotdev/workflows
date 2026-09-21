@@ -1,0 +1,20 @@
+---
+name: Generate EC (elliptic curve) keypair using openssl
+command: "openssl ecparam -out {{keyfile}} -genkey -name {{curve}}\nopenssl req -new -key {{keyfile}} -sha256 -out {{csrfile}}"
+tags: 
+  - openssl
+description: Generate EC (elliptic curve) keypair using openssl
+arguments:
+  - name: keyfile
+    description: Output path for the private key file
+    default_value: private.key
+  - name: curve
+    description: Elliptic curve definition
+    default_value: prime256v1
+  - name: csrfile
+    description: Output path for the certificate request file
+    default_value: certificaterequest.csr
+source_url: https://www.openssl.org/docs/manpages.html
+author: paulikt
+author_url: ~
+shells: []

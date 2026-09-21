@@ -1,0 +1,17 @@
+---
+name: Convert a DER formatted certificate file to PEM using openssl
+command: "openssl x509 -inform der -outform pem -in {{infile}} -out {{outfile}}"
+tags:
+  - openssl
+description: Convert a DER formatted certificate file to PEM using openssl
+arguments:
+  - name: infile
+    description: Path to a DER formatted certificate file.
+    default_value: ~
+  - name: outfile
+    description: Output path for the PEM formatted certificate
+    default_value: certificate.pem
+source_url: https://www.openssl.org/docs/manpages.html
+author: paulikt
+author_url: ~
+shells: []

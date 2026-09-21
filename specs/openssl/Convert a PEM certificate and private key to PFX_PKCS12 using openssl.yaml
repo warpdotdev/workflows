@@ -1,0 +1,23 @@
+---
+name: Convert a PEM certificate and private key to PFX/PKCS12 using openssl
+command: "openssl pkcs12 -export -out {{outfile}} -inkey {{privatekey}} -in {{certificate}} -certfile {{ca_bundle}}\n\n\n"
+tags: 
+  - openssl
+description: Convert a PEM certificate and private key to PFX/PKCS12 using openssl
+arguments:
+  - name: outfile
+    description: Output path for the PFX/PKCS12 keystore file
+    default_value: keystore.pfx
+  - name: privatekey
+    description: Path to the file containing the private key
+    default_value: ~
+  - name: certificate
+    description: Path to the PEM file containing the certificate
+    default_value: ~
+  - name: ca_bundle
+    description: "Path to the PEM file containing the issuer  certificate chain of the certificate. Optional, delete the '-certfile' param also if omitted."
+    default_value: ~
+source_url: https://www.openssl.org/docs/manpages.html
+author: paulikt
+author_url: ~
+shells: []

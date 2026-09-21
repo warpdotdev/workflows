@@ -1,0 +1,14 @@
+---
+name: Display certificate infromation from a PKCS12/PFX file with openssl
+command: "openssl pkcs12 -in {{pfx}} -clcerts -nokeys | openssl x509 -text -noout"
+tags: 
+  - openssl
+description: Display certificate infromation from a PKCS12/PFX file with openssl
+arguments:
+  - name: pfx
+    description: Path to the PFX file
+    default_value: ~
+source_url: https://www.openssl.org/docs/manpages.html
+author: paulikt
+author_url: ~
+shells: []
