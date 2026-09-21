@@ -1,0 +1,10 @@
+---
+name: Quick install docker on ubuntu 20+
+command: "for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done\n\n# Add Docker's official GPG key:\nsudo apt-get update\nsudo apt-get install -y ca-certificates curl gnupg\nsudo install -m 0755 -d /etc/apt/keyrings\ncurl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg\nsudo chmod a+r /etc/apt/keyrings/docker.gpg\n\n# Add the repository to Apt sources:\necho \\\n  \"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \\\n  $(. /etc/os-release && echo \"$VERSION_CODENAME\") stable\" | \\\n  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null\nsudo apt-get update\nsudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin\n\nsudo groupadd docker\nsudo usermod -aG docker $USER\nnewgrp docker"
+description: Be careful! Removes previous docker/podman installations
+arguments: []
+tags: ["docker", "linux", "ubuntu"]
+source_url: "https://docs.docker.com/desktop/install/linux/ubuntu/"
+author: ~
+author_url: ~
+shells: ["bash"]
