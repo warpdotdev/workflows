@@ -9,6 +9,10 @@ license.workspace = true
 [dependencies]
 warp-workflows-types = {path = "../workflow-types" }
 
+[dev-dependencies]
+# Needed to compile `src/module_name.rs` (shared with `build.rs`) under `cfg(test)` for its unit tests.
+convert_case = "0.11.0"
+
 [build-dependencies]
 anyhow = "1.0"
 convert_case = "0.11.0"
