@@ -1,0 +1,15 @@
+---
+name: Find deleted-but-open files holding disk space
+command: |-
+    lsof +L1 | head -30
+tags:
+  - lsof
+  - disk
+  - cleanup
+description: "Lists open files whose directory entries were deleted (shown as '(deleted)'). Classic hidden disk-space eater: long-lived daemons keep the FD open after a log rotation or a database file swap, so `df` stays full even though nothing is visible on disk. Restarting the offending service releases the space."
+source_url: "https://man7.org/linux/man-pages/man8/lsof.8.html"
+author: Gromykoss
+author_url: "https://github.com/Gromykoss"
+shells:
+  - bash
+  - zsh

@@ -1,0 +1,16 @@
+---
+name: Find deleted-but-open SQLite WAL/SHM sidecars
+command: |-
+    lsof +L1 | grep -E "\.(db|sqlite)(-wal|-shm)?" | head -20
+tags:
+  - sqlite
+  - database
+  - health
+  - wal
+description: "Detects live processes holding file descriptors to deleted SQLite WAL/SHM sidecars. This happens when a helper opens and closes an ordinary descriptor on the same path: the open/close cycle drops the process-owned POSIX record locks, causing SQLite to recreate the sidecars while the old connection keeps stale handles - later checkpointing fails with SQLITE_IOERR / disk I/O errors. Healthy state: zero lines."
+source_url: "https://github.com/stephenschoettler/hermes-lcm/issues/588"
+author: Gromykoss
+author_url: "https://github.com/Gromykoss"
+shells:
+  - bash
+  - zsh
