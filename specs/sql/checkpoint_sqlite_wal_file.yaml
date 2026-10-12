@@ -1,0 +1,15 @@
+---
+name: Checkpoint SQLite WAL file into the main database
+command: |-
+    sqlite3 "{{database_path}}" "PRAGMA wal_checkpoint(TRUNCATE);"
+tags:
+  - sqlite
+  - database
+  - wal
+description: "Runs a TRUNCATE checkpoint: moves WAL content into the main database and truncates the -wal file to zero bytes. Useful when a -wal file has grown large because a long-lived connection never releases its read snapshot. Requires no other connections to be writing; busy connections simply block the checkpoint and it reports busy."
+source_url: "https://www.sqlite.org/pragma.html#pragma_wal_checkpoint"
+author: Gromykoss
+author_url: "https://github.com/Gromykoss"
+shells:
+  - bash
+  - zsh

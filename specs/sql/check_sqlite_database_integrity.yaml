@@ -1,0 +1,15 @@
+---
+name: Check SQLite database integrity
+command: |-
+    sqlite3 "{{database_path}}" "PRAGMA integrity_check;"
+tags:
+  - sqlite
+  - database
+  - health
+description: "Runs a full integrity check on a SQLite database file. Reports 'ok' or a list of corrupted pages. Use quick_check (via the related workflow) for a faster, lighter pass on large databases."
+source_url: "https://www.sqlite.org/pragma.html#pragma_integrity_check"
+author: Gromykoss
+author_url: "https://github.com/Gromykoss"
+shells:
+  - bash
+  - zsh
