@@ -11,7 +11,7 @@
   "author": "Warp Team (eng@warp.dev)",
   "license": "MIT",
   "overrides": {
-    "brace-expansion": ">=1.1.16",
+    "brace-expansion": ">=5.0.12",
     "browserslist": ">=4.28.7"
   },
   "devDependencies": {
